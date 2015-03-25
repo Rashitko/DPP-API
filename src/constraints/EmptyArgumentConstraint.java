@@ -1,6 +1,6 @@
 package constraints;
 
-public class EmptyArgumentConstraint implements OptionConstraint<String> {
+public class EmptyArgumentConstraint implements ArgumentConstraint<String> {
 
     @Override
     public boolean isFulfilled(String argument) {

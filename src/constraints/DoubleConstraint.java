@@ -1,6 +1,6 @@
 package constraints;
 
-public interface DoubleConstraint extends OptionConstraint<Double> {
+public interface DoubleConstraint extends ArgumentConstraint<Double> {
 
     @Override
     boolean isFulfilled(Double argument);

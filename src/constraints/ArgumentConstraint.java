@@ -1,6 +1,6 @@
 package constraints;
 
-public interface OptionConstraint<E> {
+public interface ArgumentConstraint<E> {
 
     public boolean isFulfilled(E argument);
 
