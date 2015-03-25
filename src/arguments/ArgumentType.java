@@ -1,7 +1,5 @@
 package arguments;
 
-import constraints.ArgumentConstraint;
-
 import java.util.List;
 
 public class ArgumentType<E> {

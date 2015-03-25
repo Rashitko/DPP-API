@@ -6,6 +6,6 @@ abstract class Option {
 
     private final String shortOption;
     private final List<String> longOptions;
-    private final boolean optional;
+    private final boolean isOptional;
 
 }

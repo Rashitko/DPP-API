@@ -3,9 +3,12 @@ package options;
 public class Parser {
 
     private OptionsDefinition optionsDefinition;
-    private String[] arguments;
 
-    public MagicClass fillOptions() {
+    public Parser(OptionsDefinition optionsDefinition) {
+        this.optionsDefinition = optionsDefinition;
+    }
+
+    public ArgumentMatcher resolveOptions(String[] arguments) {
         return false;
     }
 

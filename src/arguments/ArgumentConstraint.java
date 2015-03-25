@@ -1,4 +1,4 @@
-package constraints;
+package arguments;
 
 public interface ArgumentConstraint<E> {
 
