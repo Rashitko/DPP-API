@@ -1,15 +1,12 @@
 package arguments;
 
-import java.util.ArrayList;
 
-public class Argument<T> {
+import java.util.List;
 
-    private final ArgumentType<T> type;
-    private final ArgumentValue<T> value;
+public class Argument<E> {
 
-    public T getValue() {
-        return value.getValue();
-        new ArrayList<>()
-    }
+    private List<ArgumentConstraint<E>> constraints;
+    private ArgumentParser<E> parser;
+    private E value;
 
 }

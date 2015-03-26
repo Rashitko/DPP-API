@@ -19,12 +19,4 @@ public class ResolvedOption {
         return null;
     }
 
-    public <T> T getArgAsType(Class<T> clazz) {
-        if (underlyingOption instanceof OptionWithArgument) {
-            return (T) ((OptionWithArgument) underlyingOption).getArgument();
-        }
-        return null;
-    }
-
-
 }
