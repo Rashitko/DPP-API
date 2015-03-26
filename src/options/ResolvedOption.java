@@ -1,15 +1,30 @@
 package options;
 
-import arguments.ArgumentValue;
-
-/**
- * Created by aku on 26.3.15.
- */
 public class ResolvedOption {
-    private final Option underlyingOption;
-    private final ArgumentValue;
 
-    public ArgumentValue getValue(){
-        // returns value of the argument if the option has a value, otherwise returns null
+    private final Option underlyingOption;
+
+    public ResolvedOption(Option underlyingOption) {
+        this.underlyingOption = underlyingOption;
     }
+
+    public String getArgAsString() {
+        return (String) getObject();
+    }
+
+    public Object getObject(){
+        if (underlyingOption instanceof OptionWithArgument) {
+            return  ((OptionWithArgument) underlyingOption).getArgument();
+        }
+        return null;
+    }
+
+    public <T> T getArgAsType(Class<T> clazz) {
+        if (underlyingOption instanceof OptionWithArgument) {
+            return (T) ((OptionWithArgument) underlyingOption).getArgument();
+        }
+        return null;
+    }
+
+
 }
