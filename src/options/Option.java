@@ -40,12 +40,12 @@ public class Option {
     }
 
     public boolean hasShortOption(Option option) {
-        //TODO: Chceck if shortOptions contains option
+        //TODO: Check if shortOptions contains option
         return false;
     }
 
     public boolean hasLongOption(Option option) {
-        //TODO: Chceck if longOptions contains option
+        //TODO: Check if longOptions contains option
         return false;
     }
 
