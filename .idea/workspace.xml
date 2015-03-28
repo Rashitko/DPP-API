@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Pridany Parser pre String.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constraints/ByteConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constraints/LongConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constraints/NumericBiggestConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constraints/NumericLowestConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constraints/NumericRangeConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constraints/ShortConstraint.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/IntegerRangeConstraint.java" afterPath="" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Pridane constrainty pre Byte, Long, Short.&#10;Pridane constrainty pre NumericRange, NumericLowest a Numeric Biggest.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/StringLengthConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/StringLengthConstraint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -89,14 +83,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NumericBiggestConstraint.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NumericBiggestConstraint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/constraints/NumericBiggestConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23580787" vertical-offset="0" max-vertical-offset="916">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
               <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding>
                 <element signature="e#327#328#0" expanded="true" />
                 <element signature="e#378#379#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringLengthConstraint.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/constraints/StringLengthConstraint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27510917" vertical-offset="0" max-vertical-offset="916">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+              <folding>
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#390#391#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/arguments/IntgerParser.java" />
         <option value="$PROJECT_DIR$/src/arguments/IntegerParser.java" />
         <option value="$PROJECT_DIR$/src/options/ArgumentPresence.java" />
-        <option value="$PROJECT_DIR$/src/constraints/StringLengthConstraint.java" />
         <option value="$PROJECT_DIR$/src/MotherOfOptions.java" />
         <option value="$PROJECT_DIR$/src/options/MotherOfOptions.java" />
         <option value="$PROJECT_DIR$/src/options/OptionsDefinition.java" />
@@ -168,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/constraints/NumericBiggestConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/NumericLowestConstraint.java" />
+        <option value="$PROJECT_DIR$/src/constraints/StringLengthConstraint.java" />
       </list>
     </option>
   </component>
@@ -498,7 +505,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427541673026</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Pridane constrainty pre Byte, Long, Short.&#10;Pridane constrainty pre NumericRange, NumericLowest a Numeric Biggest.">
+      <created>1427543044427</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1427543044427</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -572,7 +585,8 @@
     <MESSAGE value="Pridany Builder do Option.&#10;Vymazane OptionWith a OptionWithouArgument." />
     <MESSAGE value="Pridane Parsery pre zakladne typy." />
     <MESSAGE value="Pridany Parser pre String." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pridany Parser pre String." />
+    <MESSAGE value="Pridane constrainty pre Byte, Long, Short.&#10;Pridane constrainty pre NumericRange, NumericLowest a Numeric Biggest." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridane constrainty pre Byte, Long, Short.&#10;Pridane constrainty pre NumericRange, NumericLowest a Numeric Biggest." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -646,6 +660,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="360">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -716,6 +731,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="432">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -759,13 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
           <caret line="5" column="23" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/StringLengthConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1043,12 +1052,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/constraints/NumericBiggestConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23580787" vertical-offset="0" max-vertical-offset="916">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
           <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding>
             <element signature="e#327#328#0" expanded="true" />
             <element signature="e#378#379#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constraints/StringLengthConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27510917" vertical-offset="0" max-vertical-offset="916">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

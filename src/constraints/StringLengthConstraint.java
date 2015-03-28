@@ -12,7 +12,6 @@ public class StringLengthConstraint implements StringConstraint {
 
     @Override
     public boolean isFulfilled(String argument) {
-        boolean result = argument.length() >= min && argument.length() <= max;
-        return result;
+        return argument.length() >= min && argument.length() <= max;
     }
 }
