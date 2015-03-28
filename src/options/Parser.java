@@ -2,7 +2,7 @@ package options;
 
 public class Parser {
 
-    private OptionsDefinition optionsDefinition;
+    private final OptionsDefinition optionsDefinition;
 
     public Parser(OptionsDefinition optionsDefinition) {
         this.optionsDefinition = optionsDefinition;

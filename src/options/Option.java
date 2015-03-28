@@ -9,9 +9,9 @@ public class Option {
 
     private final Set<String> shortOptions;
     private final Set<String> longOptions;
-    private boolean required;
-    private Argument argument;
-    private Option.ArgumentPresence argumentPresence;
+    private final boolean required;
+    private final Argument argument;
+    private final Option.ArgumentPresence argumentPresence;
 
     private Option(Builder builder) {
         this.shortOptions = builder.shortOptions;

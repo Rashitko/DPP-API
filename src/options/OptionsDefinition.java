@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class OptionsDefinition {
 
-    private Set<Option> options;
+    private final Set<Option> options;
 
     public OptionsDefinition() {
         options = new HashSet<Option>();

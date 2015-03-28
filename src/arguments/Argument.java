@@ -5,8 +5,8 @@ import java.util.Set;
 
 public class Argument<T> {
 
-    private Set<ArgumentConstraint<T>> constraints;
-    private ArgumentParser<T> parser;
+    private final Set<ArgumentConstraint<T>> constraints;
+    private final ArgumentParser<T> parser;
     private T value;
 
     private Argument(Builder<T> builder) {
@@ -27,9 +27,13 @@ public class Argument<T> {
         return value;
     }
 
+    public void setValue(T value) {
+        this.value = value;
+    }
+
     public static class Builder<T> {
 
-        private Set<ArgumentConstraint<T>> constraints;
+        private final Set<ArgumentConstraint<T>> constraints;
         private ArgumentParser<T> parser;
         private T value;
 
