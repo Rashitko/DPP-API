@@ -13,10 +13,12 @@ public class Option {
     private Argument argument;
     private Option.ArgumentPresence argumentPresence;
 
-    private Option(Set<String> shortOptions, Set<String> longOptions, boolean required) {
-        this.shortOptions = shortOptions;
-        this.longOptions = longOptions;
-        this.required = required;
+    private Option(Builder builder) {
+        this.shortOptions = builder.shortOptions;
+        this.longOptions = builder.longOptions;
+        this.required = builder.required;
+        this.argument = builder.argument;
+        this.argumentPresence = builder.argumentPresence;
     }
 
     public Set<String> getShortOptions() {
@@ -55,35 +57,47 @@ public class Option {
 
     public static class Builder {
 
-        private final Option option;
+        private final Set<String> shortOptions;
+        private final Set<String> longOptions;
+        private boolean required;
+        private Argument argument;
+        private Option.ArgumentPresence argumentPresence = ArgumentPresence.OPTIONAL;
+
+        public Builder(String shortOption) {
+            this.shortOptions = new HashSet<String>();
+            this.shortOptions.add(shortOption);
+            longOptions = new HashSet<String>();
+        }
 
         public Builder(Set<String> shortOptions) {
-            this.option = new Option(shortOptions, new HashSet<String>(), false);
+            this.shortOptions = new HashSet<String>();
+            this.shortOptions.addAll(shortOptions);
+            longOptions = new HashSet<String>();
         }
 
         public Builder addShortOption(String shortOption) {
-            option.shortOptions.add(shortOption);
+            this.shortOptions.add(shortOption);
             return this;
         }
 
         public Builder addLongOption(String longOption) {
-            option.longOptions.add(longOption);
+            this.longOptions.add(longOption);
             return this;
         }
 
         public Builder setRequired(boolean required) {
-            option.required = required;
+            this.required = required;
             return this;
         }
 
         public Builder setArgument(Argument argument, ArgumentPresence presence) {
-            option.argument = argument;
-            option.argumentPresence = presence;
+            this.argument = argument;
+            this.argumentPresence = presence;
             return this;
         }
 
         public Option build() {
-            return option;
+            return new Option(this);
         }
 
     }

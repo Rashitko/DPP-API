@@ -9,8 +9,10 @@ public class Argument<T> {
     private ArgumentParser<T> parser;
     private T value;
 
-    private Argument() {
-        constraints = new HashSet<ArgumentConstraint<T>>();
+    private Argument(Builder<T> builder) {
+        constraints = builder.constraints;
+        parser = builder.parser;
+        value = builder.value;
     }
 
     public Set<ArgumentConstraint<T>> getConstraints() {
@@ -27,29 +29,31 @@ public class Argument<T> {
 
     public static class Builder<T> {
 
-        private final Argument<T> argument;
+        private Set<ArgumentConstraint<T>> constraints;
+        private ArgumentParser<T> parser;
+        private T value;
 
         public Builder() {
-            argument = new Argument<T>();
+            constraints = new HashSet<ArgumentConstraint<T>>();
         }
 
         public Builder<T> addConstraint(ArgumentConstraint<T> constraint) {
-            argument.constraints.add(constraint);
+            this.constraints.add(constraint);
             return this;
         }
 
         public Builder<T> setParser(ArgumentParser<T> parser) {
-            argument.parser = parser;
+            this.parser = parser;
             return this;
         }
 
         public Builder<T> setValue(T value) {
-            argument.value = value;
+            this.value = value;
             return this;
         }
 
         public Argument<T> build() {
-            return argument;
+            return new Argument<T>(this);
         }
     }
 
