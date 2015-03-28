@@ -1,17 +1,16 @@
 package options;
 
-import java.util.List;
-
+import java.util.Set;
 
 public class ArgumentMatcher {
-    private List<ResolvedOption> resolvedOptions;
-    private List<String> regularArguments;
+    private Set<ResolvedOption> resolvedOptions;
+    private Set<String> regularArguments;
 
-    public List<String> getRegularArguments() {
+    public Set<String> getRegularArguments() {
         return regularArguments;
     }
 
-    public List<ResolvedOption> getResolvedOptions() {
+    public Set<ResolvedOption> getResolvedOptions() {
         return resolvedOptions;
     }
 
@@ -24,7 +23,6 @@ public class ArgumentMatcher {
         //TODO: return if resolvedOptions contains option
         return false;
     }
-
 
     public ResolvedOption getResolvedOption(Option option) {
         //TODO: return desired option

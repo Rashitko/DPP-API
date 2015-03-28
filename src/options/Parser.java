@@ -9,7 +9,8 @@ public class Parser {
     }
 
     public ArgumentMatcher resolveOptions(String[] arguments) {
-        return false;
+        //TODO: Fill-in argument values and return modified optionsDefinition
+        return null;
     }
 
 }

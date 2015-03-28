@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Opravene dve typa">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/arguments/Argument.java" afterPath="$PROJECT_DIR$/src/arguments/Argument.java" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="ArgumentMatcher - Listy zmenene za Sety.&#10;OptionsDefinition - Listy zmenene za Sety. Pridany Konstruktor. Pridane TODO poznamky.&#10;Parser - opravena navratova hodnota v resolveOptions(), pridana TODO poznamka.&#10;ResolvedOption - opravena navratova hodnota v getObject().">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/ArgumentMatcher.java" afterPath="$PROJECT_DIR$/src/options/ArgumentMatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/OptionsDefinition.java" afterPath="$PROJECT_DIR$/src/options/OptionsDefinition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Parser.java" afterPath="$PROJECT_DIR$/src/options/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/ResolvedOption.java" afterPath="$PROJECT_DIR$/src/options/ResolvedOption.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -28,10 +31,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Argument.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ResolvedOption.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/options/ResolvedOption.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#314#315#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Argument.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/arguments/Argument.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2139738" vertical-offset="200" max-vertical-offset="1116">
+            <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="1116">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -47,6 +62,55 @@
                 <element signature="e#681#682#0" expanded="true" />
                 <element signature="e#1137#1138#0" expanded="true" />
                 <element signature="e#1176#1177#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArgumentMatcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/options/ArgumentMatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/options/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2161572" vertical-offset="0" max-vertical-offset="916">
+              <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+              <folding>
+                <element signature="e#146#147#0" expanded="true" />
+                <element signature="e#204#205#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Option.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/options/Option.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="1512">
+              <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OptionsDefinition.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/options/OptionsDefinition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#166#167#0" expanded="true" />
+                <element signature="e#213#214#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,12 +153,8 @@
         <option value="$PROJECT_DIR$/src/options/ArgumentPresence.java" />
         <option value="$PROJECT_DIR$/src/MotherOfOptions.java" />
         <option value="$PROJECT_DIR$/src/options/MotherOfOptions.java" />
-        <option value="$PROJECT_DIR$/src/options/OptionsDefinition.java" />
-        <option value="$PROJECT_DIR$/src/options/Parser.java" />
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/src/options/OptionWithoutArgument.java" />
-        <option value="$PROJECT_DIR$/src/options/ArgumentMatcher.java" />
-        <option value="$PROJECT_DIR$/src/options/ResolvedOption.java" />
         <option value="$PROJECT_DIR$/src/arguments/ArgumentType.java" />
         <option value="$PROJECT_DIR$/src/arguments/ArgumentValue.java" />
         <option value="$PROJECT_DIR$/src/options/OptionWithArgument.java" />
@@ -118,6 +178,10 @@
         <option value="$PROJECT_DIR$/src/constraints/StringLengthConstraint.java" />
         <option value="$PROJECT_DIR$/src/options/Option.java" />
         <option value="$PROJECT_DIR$/src/arguments/Argument.java" />
+        <option value="$PROJECT_DIR$/src/options/ArgumentMatcher.java" />
+        <option value="$PROJECT_DIR$/src/options/ResolvedOption.java" />
+        <option value="$PROJECT_DIR$/src/options/OptionsDefinition.java" />
+        <option value="$PROJECT_DIR$/src/options/Parser.java" />
       </list>
     </option>
   </component>
@@ -197,7 +261,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="arguments" />
+              <option name="myItemId" value="options" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -466,7 +530,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427543144166</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Pridany Builder pre Argument.">
+      <created>1427543466229</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1427543466229</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -542,13 +612,16 @@
     <MESSAGE value="Pridany Parser pre String." />
     <MESSAGE value="Pridane constrainty pre Byte, Long, Short.&#10;Pridane constrainty pre NumericRange, NumericLowest a Numeric Biggest." />
     <MESSAGE value="Opravene dve typa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Opravene dve typa" />
+    <MESSAGE value="Pridany Builder pre Argument." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridany Builder pre Argument." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -584,7 +657,7 @@
           <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding>
             <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -617,8 +690,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="360">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#390#391#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -658,7 +731,7 @@
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
             <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -691,8 +764,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="432">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#390#391#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -762,14 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/options/OptionsDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119205296" vertical-offset="0" max-vertical-offset="604">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27317882" vertical-offset="1599" max-vertical-offset="19998">
@@ -793,17 +858,6 @@
         <state vertical-scroll-proportion="-7.0877485" vertical-offset="6549" max-vertical-offset="20034">
           <caret line="149" column="11" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/options/ArgumentMatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11790393" vertical-offset="0" max-vertical-offset="916">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -964,35 +1018,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#390#391#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/options/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/options/Option.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72707427" vertical-offset="0" max-vertical-offset="1512">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/options/ResolvedOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2161572" vertical-offset="0" max-vertical-offset="916">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,7 +1042,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/arguments/Argument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2139738" vertical-offset="200" max-vertical-offset="1116">
+        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="1116">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1030,6 +1058,57 @@
             <element signature="e#681#682#0" expanded="true" />
             <element signature="e#1137#1138#0" expanded="true" />
             <element signature="e#1176#1177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/options/ResolvedOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#314#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/options/OptionsDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/options/Option.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="596" max-vertical-offset="1512">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/options/ArgumentMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/options/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2161572" vertical-offset="0" max-vertical-offset="916">
+          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+          <folding>
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
           </folding>
         </state>
       </provider>

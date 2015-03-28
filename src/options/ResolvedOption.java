@@ -12,11 +12,8 @@ public class ResolvedOption {
         return (String) getObject();
     }
 
-    public Object getObject(){
-        if (underlyingOption instanceof OptionWithArgument) {
-            return  ((OptionWithArgument) underlyingOption).getArgument();
-        }
-        return null;
+    public Object getObject() {
+        return underlyingOption.getArgument().getValue();
     }
 
 }
