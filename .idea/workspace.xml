@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Pridany Builder do Option.&#10;Vymazane OptionWith a OptionWithouArgument.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/BooleanParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/ByteParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/DoubleParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/FloatParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/LongParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/ShortParser.java" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Pridany Parser pre String.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/StringParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -33,110 +28,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Option.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/options/Option.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1728">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#575#576#0" expanded="true" />
-                <element signature="e#610#611#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-                <element signature="e#687#688#0" expanded="true" />
-                <element signature="e#722#723#0" expanded="true" />
-                <element signature="e#753#754#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#821#822#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#913#914#0" expanded="true" />
-                <element signature="e#2144#2145#0" expanded="true" />
-                <element signature="e#2181#2182#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntegerParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parsers/IntegerParser.java">
+      <file leaf-file-name="IntegerConstraint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/constraints/IntegerConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FloatParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parsers/FloatParser.java">
+      <file leaf-file-name="FloatConstraint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/constraints/FloatConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-              <folding>
-                <element signature="e#167#168#0" expanded="true" />
-                <element signature="e#216#217#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoubleParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parsers/DoubleParser.java">
+      <file leaf-file-name="StringParser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/parsers/StringParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+            <state vertical-scroll-proportion="0.11790393" vertical-offset="0" max-vertical-offset="916">
               <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding>
                 <element signature="e#170#171#0" expanded="true" />
-                <element signature="e#221#222#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ByteParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parsers/ByteParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="e#163#164#0" expanded="true" />
-                <element signature="e#210#211#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShortParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parsers/ShortParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-              <folding>
-                <element signature="e#167#168#0" expanded="true" />
-                <element signature="e#216#217#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArgumentParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/arguments/ArgumentParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LongParser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/parsers/LongParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2161572" vertical-offset="0" max-vertical-offset="916">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#164#165#0" expanded="true" />
-                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#201#202#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -201,6 +120,7 @@
         <option value="$PROJECT_DIR$/src/parsers/CharParser.java" />
         <option value="$PROJECT_DIR$/src/parsers/LongParser.java" />
         <option value="$PROJECT_DIR$/src/parsers/ShortParser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/StringParser.java" />
       </list>
     </option>
   </component>
@@ -281,46 +201,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="du2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="constraints" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="du2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arguments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -535,7 +415,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427541144135</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Pridane Parsery pre zakladne typy.">
+      <created>1427541584233</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1427541584233</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -572,7 +458,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944915" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -607,7 +493,9 @@
     <MESSAGE value="Pridane Argument stuff triedy a veci." />
     <MESSAGE value="Sranice s generics" />
     <MESSAGE value="Pridany Builder do Option.&#10;Vymazane OptionWith a OptionWithouArgument." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pridany Builder do Option.&#10;Vymazane OptionWith a OptionWithouArgument." />
+    <MESSAGE value="Pridane Parsery pre zakladne typy." />
+    <MESSAGE value="Pridany Parser pre String." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridany Parser pre String." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -850,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/FloatConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119205296" vertical-offset="0" max-vertical-offset="604">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constraints/StringConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
@@ -882,13 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="225">
           <caret line="4" column="73" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/IntegerConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="225">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1021,8 +895,8 @@
         <state vertical-scroll-proportion="0.11790393" vertical-offset="0" max-vertical-offset="916">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1032,8 +906,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#164#165#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1094,6 +968,33 @@
           <folding>
             <element signature="e#164#165#0" expanded="true" />
             <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constraints/IntegerConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="225">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constraints/FloatConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/StringParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11790393" vertical-offset="0" max-vertical-offset="916">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#201#202#0" expanded="true" />
           </folding>
         </state>
       </provider>
