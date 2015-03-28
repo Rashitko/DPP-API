@@ -34,20 +34,16 @@ public class Argument<T> {
     public static class Builder<T> {
 
         private final Set<ArgumentConstraint<T>> constraints;
-        private ArgumentParser<T> parser;
+        private final ArgumentParser<T> parser;
         private T value;
 
-        public Builder() {
+        public Builder(ArgumentParser<T> parser) {
+            this.parser = parser;
             constraints = new HashSet<ArgumentConstraint<T>>();
         }
 
         public Builder<T> addConstraint(ArgumentConstraint<T> constraint) {
             this.constraints.add(constraint);
-            return this;
-        }
-
-        public Builder<T> setParser(ArgumentParser<T> parser) {
-            this.parser = parser;
             return this;
         }
 
