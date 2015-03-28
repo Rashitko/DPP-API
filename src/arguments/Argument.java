@@ -1,12 +1,12 @@
 package arguments;
 
-import constraints.ArgumentConstraint;
 
 import java.util.List;
 
-public class ArgumentType<E> {
+public class Argument<E> {
 
     private List<ArgumentConstraint<E>> constraints;
     private ArgumentParser<E> parser;
+    private E value;
 
 }
