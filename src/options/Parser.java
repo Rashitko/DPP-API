@@ -10,9 +10,8 @@ public class Parser {
         this.optionsSet = optionsSet;
     }
 
-    public ResolvedInputArgs resolveOptions(String[] arguments) {
+    public ParsingResult resolveOptions(String[] arguments) {
         //TODO: Fill-in argument values and return modified optionsDefinition
         return null;
     }
-
 }

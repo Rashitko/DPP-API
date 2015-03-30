@@ -33,6 +33,16 @@ public class Argument<T> {
         this.value = value;
     }
 
+    public Set<String> getErrorMessage() {
+        HashSet<String> result = new HashSet<String>();
+        for (ArgumentConstraint<T> constraint : constraints) {
+            if (!constraint.isFulfilled(getValue())) {
+                result.add(constraint.getErrorMessage(getValue()));
+            }
+        }
+        return result;
+    }
+
     public static class Builder<T> {
 
         private final Set<ArgumentConstraint<T>> constraints;

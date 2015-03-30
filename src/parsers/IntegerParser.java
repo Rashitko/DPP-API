@@ -6,4 +6,9 @@ public class IntegerParser implements ArgumentParser<Integer> {
     public Integer parse(String argument) {
         return Integer.parseInt(argument);
     }
+
+    @Override
+    public String getError(String argument) {
+        return null;
+    }
 }

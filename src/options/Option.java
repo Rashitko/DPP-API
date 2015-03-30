@@ -11,6 +11,7 @@ public class Option {
     private final Argument argument;
     private final Option.ArgumentPresence argumentPresence;
     private final String description;
+    private ParseError parseError;
 
     private Option(Builder builder) {
         this.shortSwitches = builder.shortSwitches;
@@ -86,6 +87,10 @@ public class Option {
 
     public static enum ArgumentPresence {
         OPTIONAL, REQUIRED, FORBIDDEN
+    }
+
+    public static enum ParseError {
+        MISSING_ARGUMENT, WRONG_ARGUMENT_TYPE, FAILED_CONSTRAINT
     }
 
     public static class Builder {

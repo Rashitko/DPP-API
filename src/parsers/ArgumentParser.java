@@ -4,4 +4,6 @@ public interface ArgumentParser<E> {
 
     public E parse(String argument);
 
+    public String getError(E argument);
+
 }
