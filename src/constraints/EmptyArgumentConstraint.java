@@ -1,7 +1,5 @@
 package constraints;
 
-import arguments.ArgumentConstraint;
-
 public class EmptyArgumentConstraint implements ArgumentConstraint<String> {
 
     @Override

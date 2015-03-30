@@ -1,4 +1,7 @@
-package arguments;
+package options;
+
+import constraints.ArgumentConstraint;
+import parsers.ArgumentParser;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,7 +15,6 @@ public class Argument<T> {
     private Argument(Builder<T> builder) {
         constraints = builder.constraints;
         parser = builder.parser;
-        value = builder.value;
     }
 
     public Set<ArgumentConstraint<T>> getConstraints() {
@@ -27,7 +29,7 @@ public class Argument<T> {
         return value;
     }
 
-    public void setValue(T value) {
+    void setValue(T value) {
         this.value = value;
     }
 
@@ -35,7 +37,6 @@ public class Argument<T> {
 
         private final Set<ArgumentConstraint<T>> constraints;
         private final ArgumentParser<T> parser;
-        private T value;
 
         public Builder(ArgumentParser<T> parser) {
             this.parser = parser;
@@ -44,11 +45,6 @@ public class Argument<T> {
 
         public Builder<T> addConstraint(ArgumentConstraint<T> constraint) {
             this.constraints.add(constraint);
-            return this;
-        }
-
-        public Builder<T> setValue(T value) {
-            this.value = value;
             return this;
         }
 

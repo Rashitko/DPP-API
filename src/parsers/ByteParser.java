@@ -1,7 +1,5 @@
 package parsers;
 
-import arguments.ArgumentParser;
-
 public class ByteParser implements ArgumentParser<Byte> {
 
     @Override

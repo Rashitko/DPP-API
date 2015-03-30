@@ -1,7 +1,5 @@
 package constraints;
 
-import arguments.ArgumentConstraint;
-
 public interface ShortConstraint extends ArgumentConstraint<Short> {
 
     @Override

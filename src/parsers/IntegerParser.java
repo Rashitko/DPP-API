@@ -1,7 +1,5 @@
 package parsers;
 
-import arguments.ArgumentParser;
-
 public class IntegerParser implements ArgumentParser<Integer> {
 
     @Override

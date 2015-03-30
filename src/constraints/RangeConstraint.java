@@ -1,13 +1,11 @@
 package constraints;
 
-import arguments.ArgumentConstraint;
-
-public class NumericRangeConstraint<T extends Number & Comparable<T>> implements ArgumentConstraint<T> {
+public class RangeConstraint<T extends Comparable<T>> implements ArgumentConstraint<T> {
 
     private final T min;
     private final T max;
 
-    public NumericRangeConstraint(T min, T max) {
+    public RangeConstraint(T min, T max) {
         this.min = min;
         this.max = max;
     }

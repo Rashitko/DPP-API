@@ -1,14 +1,16 @@
 package options;
 
+import java.util.Set;
+
 public class Parser {
 
-    private final OptionsDefinition optionsDefinition;
+    private final Set<Option> optionsSet;
 
-    public Parser(OptionsDefinition optionsDefinition) {
-        this.optionsDefinition = optionsDefinition;
+    public Parser(Set<Option> optionsSet) {
+        this.optionsSet = optionsSet;
     }
 
-    public ArgumentMatcher resolveOptions(String[] arguments) {
+    public ResolvedInputArgs resolveOptions(String[] arguments) {
         //TODO: Fill-in argument values and return modified optionsDefinition
         return null;
     }

@@ -1,4 +1,4 @@
-package arguments;
+package parsers;
 
 public interface ArgumentParser<E> {
 

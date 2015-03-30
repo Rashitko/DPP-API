@@ -2,19 +2,24 @@ package options;
 
 import java.util.Set;
 
-public class ArgumentMatcher {
-    private Set<ResolvedOption> resolvedOptions;
+public class ResolvedInputArgs {
+    private Set<Option> resolvedOptions;
     private Set<String> regularArguments;
+
+    public Set<Option> getResolvedOptions() {
+        return resolvedOptions;
+    }
 
     public Set<String> getRegularArguments() {
         return regularArguments;
     }
 
-    public Set<ResolvedOption> getResolvedOptions() {
-        return resolvedOptions;
+    public Option getResolvedOption(Option option) {
+        //TODO: return desired option
+        return null;
     }
 
-    public boolean hasResolvedOptions() {
+    public boolean hasAnyResolvedOptions() {
         //TODO: true if resolvedOptions is not empty
         return false;
     }
@@ -22,10 +27,5 @@ public class ArgumentMatcher {
     public boolean hasResolvedOption(Option option) {
         //TODO: return if resolvedOptions contains option
         return false;
-    }
-
-    public ResolvedOption getResolvedOption(Option option) {
-        //TODO: return desired option
-        return null;
     }
 }

@@ -1,7 +1,5 @@
 package parsers;
 
-import arguments.ArgumentParser;
-
 public class BooleanParser implements ArgumentParser<Boolean> {
 
     @Override

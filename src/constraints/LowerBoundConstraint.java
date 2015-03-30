@@ -1,12 +1,10 @@
 package constraints;
 
-import arguments.ArgumentConstraint;
-
-public class NumericLowestConstraint<T extends Number & Comparable<T>> implements ArgumentConstraint<T> {
+public class LowerBoundConstraint<T extends Comparable<T>> implements ArgumentConstraint<T> {
 
     private final T min;
 
-    public NumericLowestConstraint(T min) {
+    public LowerBoundConstraint(T min) {
         this.min = min;
     }
 
