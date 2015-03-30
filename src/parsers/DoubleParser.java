@@ -1,9 +1,14 @@
 package parsers;
 
-public class DoubleParser implements ArgumentParser<Double> {
+public class DoubleParser extends AbstractParser<Double> {
+
+    DoubleParser() {
+        super("double");
+    }
 
     @Override
     public Double parse(String argument) {
+        this.argument = argument;
         return Double.parseDouble(argument);
     }
 }

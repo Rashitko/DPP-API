@@ -1,9 +1,14 @@
 package parsers;
 
-public class BooleanParser implements ArgumentParser<Boolean> {
+public class BooleanParser extends AbstractParser<Boolean> {
+
+    BooleanParser() {
+        super("boolean");
+    }
 
     @Override
     public Boolean parse(String argument) {
+        this.argument = argument;
         return Boolean.parseBoolean(argument);
     }
 }
