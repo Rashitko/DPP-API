@@ -1,5 +1,8 @@
 package parsers;
 
+/**
+ * Standard integer parser
+ */
 public class IntegerParser extends AbstractParser<Integer> {
 
     IntegerParser() {
