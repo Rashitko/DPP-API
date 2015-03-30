@@ -40,7 +40,7 @@ public class Argument<T> {
 
     /**
      * Gets value of the argument
-     * @return value of the argument
+     * @return value of the argument or null if the value is not set
      */
     public T getValue() {
         return value;
@@ -48,10 +48,20 @@ public class Argument<T> {
 
     /**
      * Sets the value of the argument
+     *
      * @param value value to be set
      */
     void setValue(T value) {
         this.value = value;
+    }
+
+    /**
+     * Checks whether this argument has option or not
+     * @return true if this argument has value, otherwise false
+     */
+    public boolean hasValue() {
+        //TODO:
+        return true;
     }
 
     /**
@@ -62,23 +72,27 @@ public class Argument<T> {
     public Set<String> getErrorMessages() {
         HashSet<String> result = new HashSet<String>();
         if (value == null) {
-            getParsingErrors(result);
+            result.addAll(getParsingErrors());
         } else {
-            getConstraintErrors(result);
+            result.addAll(getConstraintErrors());
         }
         return result;
     }
 
-    private void getParsingErrors(HashSet<String> result) {
+    private Set<String> getParsingErrors() {
+        HashSet<String> result = new HashSet<String>();
         result.add(parser.getParseErrorMessage());
+        return result;
     }
 
-    private void getConstraintErrors(HashSet<String> result) {
+    private Set<String> getConstraintErrors() {
+        HashSet<String> result = new HashSet<String>();
         for (ArgumentConstraint<T> constraint : constraints) {
             if (!constraint.isFulfilled(getValue())) {
                 result.add(constraint.getErrorMessage(getValue()));
             }
         }
+        return result;
     }
 
     /**

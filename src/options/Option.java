@@ -16,6 +16,7 @@ public class Option {
     private final Argument argument;
     private final ArgumentPresence argumentPresence;
     private final String description;
+    private final String messageArgMissing;
     private ParseError parseError;
 
     /**
@@ -30,6 +31,7 @@ public class Option {
         this.argument = builder.argument;
         this.argumentPresence = builder.argumentPresence;
         this.description = builder.description;
+        this.messageArgMissing = builder.messageArgMissing;
     }
 
     /**
@@ -82,7 +84,7 @@ public class Option {
      * Checks whether this option takes argument
      * @return true if this option does take an argument, otherwise false
      */
-    public boolean hasArgument() {
+    public boolean takesArgument() {
         //TODO:
         return argument != null;
     }
@@ -113,6 +115,29 @@ public class Option {
         return description;
     }
 
+    /**
+     * Gets the set of error messages which occurred during parsing and possibly during constraints checking
+     *
+     * @return the set of error messages which occurred during parsing and possibly during constraints checking
+     */
+    public Set<String> getErrorMessages() {
+        HashSet<String> result = new HashSet<String>();
+        switch (argumentPresence) {
+            case MANDATORY:
+                if (!argument.hasValue()) {
+                    result.add(messageArgMissing);
+                } else {
+                    result.addAll(argument.getErrorMessages());
+                }
+                break;
+            case OPTIONAL:
+                if (argument.hasValue()) {
+                    result.addAll(argument.getErrorMessages());
+                }
+                break;
+        }
+        return result;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -150,6 +175,7 @@ public class Option {
         private Argument argument;
         private ArgumentPresence argumentPresence = ArgumentPresence.OPTIONAL;
         private String description;
+        private String messageArgMissing;
 
         /**
          * This constructor sets the short switch
@@ -267,9 +293,10 @@ public class Option {
          * @param argument argument
          * @return Builder object
          */
-        public Builder setMandatoryArgument(Argument argument) {
+        public Builder setMandatoryArgument(Argument argument, String messageArgMissing) {
             this.argument = argument;
             this.argumentPresence = ArgumentPresence.MANDATORY;
+            this.messageArgMissing = messageArgMissing;
             return this;
         }
 
