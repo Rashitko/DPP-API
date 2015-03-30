@@ -1,7 +1,7 @@
 package constraints;
 
 /**
- * Basic interface for all integer constrains
+ * Basic interface for all integer constraints
  */
 public interface IntegerConstraint extends ArgumentConstraint<Integer> {
 

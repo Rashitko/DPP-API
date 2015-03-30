@@ -1,7 +1,7 @@
 package constraints;
 
 /**
- * Basic interface for all float constrains
+ * Basic interface for all float constraints
  */
 public interface FloatConstraint extends ArgumentConstraint<Float> {
     @Override

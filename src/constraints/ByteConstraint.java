@@ -1,7 +1,7 @@
 package constraints;
 
 /**
- * Basic interface for all byte constrains
+ * Basic interface for all byte constraints
  */
 public interface ByteConstraint extends ArgumentConstraint<Byte> {
 
