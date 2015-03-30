@@ -1,8 +1,10 @@
 package parsers;
 
-public class IntegerParser implements ArgumentParser<Integer> {
+public class IntegerParser extends AbstractParser<Integer> {
 
-    private String argument;
+    IntegerParser() {
+        super("int");
+    }
 
     @Override
     public Integer parse(String argument) {
@@ -10,8 +12,4 @@ public class IntegerParser implements ArgumentParser<Integer> {
         return Integer.parseInt(argument);
     }
 
-    @Override
-    public String getParseErrorMessage() {
-        return argument + " cannot be parsed as Integer";
-    }
 }
