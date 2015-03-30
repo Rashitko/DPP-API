@@ -35,12 +35,24 @@ public class Argument<T> {
 
     public Set<String> getErrorMessage() {
         HashSet<String> result = new HashSet<String>();
+        if (value == null) {
+            getParsingErrors(result);
+        } else {
+            getConstraintErrors(result);
+        }
+        return result;
+    }
+
+    private void getParsingErrors(HashSet<String> result) {
+        result.add(parser.getParseErrorMessage());
+    }
+
+    private void getConstraintErrors(HashSet<String> result) {
         for (ArgumentConstraint<T> constraint : constraints) {
             if (!constraint.isFulfilled(getValue())) {
                 result.add(constraint.getErrorMessage(getValue()));
             }
         }
-        return result;
     }
 
     public static class Builder<T> {

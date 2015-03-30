@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Pridany AllowedSetConstraint.java">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constraints/ConstraintException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constraints/WrongTypeException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/options/ResolvedInputArgs.java" afterPath="$PROJECT_DIR$/src/options/ParsingResult.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Rozpracovane chybove hlasky">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Argument.java" afterPath="$PROJECT_DIR$/src/options/Argument.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/ArgumentConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/ArgumentConstraint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ArgumentParser.java" afterPath="$PROJECT_DIR$/src/parsers/ArgumentParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/IntegerParser.java" afterPath="$PROJECT_DIR$/src/parsers/IntegerParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Option.java" afterPath="$PROJECT_DIR$/src/options/Option.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Parser.java" afterPath="$PROJECT_DIR$/src/options/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -38,16 +30,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Argument.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Argument.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/options/Argument.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1170">
-              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.47682118" vertical-offset="216" max-vertical-offset="1368">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#746#754#0" expanded="true" />
-                <element signature="e#1025#1026#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#787#795#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+                <element signature="e#1079#1080#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,14 +120,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntegerParser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IntegerParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parsers/IntegerParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20860927" vertical-offset="0" max-vertical-offset="604">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
               <folding>
-                <element signature="e#249#250#0" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,9 +242,9 @@
         <option value="$PROJECT_DIR$/src/options/Option.java" />
         <option value="$PROJECT_DIR$/src/constraints/ArgumentConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" />
-        <option value="$PROJECT_DIR$/src/options/Argument.java" />
-        <option value="$PROJECT_DIR$/src/parsers/ArgumentParser.java" />
         <option value="$PROJECT_DIR$/src/parsers/IntegerParser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/ArgumentParser.java" />
+        <option value="$PROJECT_DIR$/src/options/Argument.java" />
       </list>
     </option>
   </component>
@@ -394,6 +388,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="SearchEverywhereHistoryKey" value="Builder&#9;PSI&#9;JAVA://options.Option.Builder" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -679,7 +674,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427707847446</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Rozpracovane chybove hlasky">
+      <created>1427710342209</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1427710342209</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -761,7 +762,8 @@
     <MESSAGE value="Pridany parser do Argument.Builder konstruktoru." />
     <MESSAGE value="Premenovania, kontrola s Kubom" />
     <MESSAGE value="Pridany AllowedSetConstraint.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pridany AllowedSetConstraint.java" />
+    <MESSAGE value="Rozpracovane chybove hlasky" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rozpracovane chybove hlasky" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1194,19 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/options/Argument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1170">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#746#754#0" expanded="true" />
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
@@ -1244,11 +1233,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parsers/IntegerParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20860927" vertical-offset="0" max-vertical-offset="604">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
           <folding>
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/options/Argument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47682118" vertical-offset="216" max-vertical-offset="1368">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#787#795#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
           </folding>
         </state>
       </provider>
