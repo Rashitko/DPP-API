@@ -135,27 +135,44 @@ public class Option {
         return super.hashCode();
     }
 
+    /**
+     * Builder class which is used to create new options
+     */
     public static class Builder {
 
         private final Set<String> shortSwitches;
         private final Set<String> longSwitches;
         private boolean required;
         private Argument argument;
-        private Option.ArgumentPresence argumentPresence = ArgumentPresence.OPTIONAL;
+        private ArgumentPresence argumentPresence = ArgumentPresence.OPTIONAL;
         private String description;
 
+        /**
+         * This constructor sets the short switch
+         *
+         * @param shortSwitch short switch
+         */
         public Builder(String shortSwitch) {
             this.shortSwitches = new HashSet<String>();
             this.shortSwitches.add(shortSwitch);
             longSwitches = new HashSet<String>();
         }
 
+        /**
+         * This constructor sets the list of short switches
+         * @param shortSwitches the list of short switches
+         */
         public Builder(Set<String> shortSwitches) {
             this.shortSwitches = new HashSet<String>();
             this.shortSwitches.addAll(shortSwitches);
             longSwitches = new HashSet<String>();
         }
 
+        /**
+         * This constructor sets the short or long switch.
+         * @param optionSwitch switch
+         * @param switchType switch type, ie if the short or long switch should be set
+         */
         public Builder(String optionSwitch, SwitchType switchType) {
             this.shortSwitches = new HashSet<String>();
             longSwitches = new HashSet<String>();
@@ -171,6 +188,11 @@ public class Option {
             }
         }
 
+        /**
+         * This constructor sets the list of short or long switches.
+         * @param optionSwitches the list of switches
+         * @param switchType switch type, ie if the list of short or long switches should be set
+         */
         public Builder(Set<String> optionSwitches, SwitchType switchType) {
             this.shortSwitches = new HashSet<String>();
             longSwitches = new HashSet<String>();
@@ -186,46 +208,89 @@ public class Option {
             }
         }
 
+        /**
+         * Adds short switch
+         * @param shortSwitch short switch
+         * @return Builder object
+         */
         public Builder addShortSwitch(String shortSwitch) {
             this.shortSwitches.add(shortSwitch);
             return this;
         }
 
+        /**
+         * Adds long switch
+         * @param longSwitch long switch
+         * @return Builder object
+         */
         public Builder addLongSwitch(String longSwitch) {
             this.longSwitches.add(longSwitch);
             return this;
         }
 
+        /**
+         * Adds the list of short switches
+         * @param shortSwitches the list of short switches
+         * @return Builder object
+         */
         public Builder addShortSwitches(Set<String> shortSwitches) {
             this.shortSwitches.addAll(shortSwitches);
             return this;
         }
 
+        /**
+         * Adds the list of long switches
+         * @param longSwitches the list of long switches
+         * @return Builder object
+         */
         public Builder addLongSwitches(Set<String> longSwitches) {
             this.longSwitches.addAll(longSwitches);
             return this;
         }
 
+        /**
+         * Sets this option to be mandatory or not
+         * @param required true if the option is mandatory, otherwise false
+         * @return Builder object
+         */
         public Builder setRequired(boolean required) {
             this.required = required;
             return this;
         }
 
+        /**
+         * Binds the argument with the option
+         * @param argument argument
+         * @param presence Enum specifying if the argument is optional or forbidden for the option
+         * @return Builder object
+         */
         public Builder setArgument(Argument argument, ArgumentPresence presence) {
             this.argument = argument;
             this.argumentPresence = presence;
             return this;
         }
 
+        /**
+         * Sets the option description
+         * @param description description
+         * @return Builder object
+         */
         public Builder setDescription(String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * Creates the Option object
+         * @return the Option object
+         */
         public Option build() {
             return new Option(this);
         }
 
+        /**
+         * Enum used to specify if the switch is short or long
+         */
         public enum SwitchType {
             SHORT_SWITCH, LONG_SWITCH
         }
