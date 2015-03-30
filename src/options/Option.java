@@ -96,10 +96,12 @@ public class Option {
     }
 
     /**
-     * Checks if this option has mandatory, optional of forbidden argument
-     * @return the enum containing the information whether this option has mandatory, optional of forbidden argument
+     * Checks if this option has mandatory or optional argument
+     * @return the enum containing the information whether this option has mandatory or optional argument,
+     * returns null if this option does not take any parameter
      */
     public ArgumentPresence getArgumentPresence() {
+        //TODO:
         return argumentPresence;
     }
 
@@ -110,6 +112,7 @@ public class Option {
     public String getDescription() {
         return description;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -134,6 +137,7 @@ public class Option {
 //        return result;
         return super.hashCode();
     }
+
 
     /**
      * Builder class which is used to create new options
@@ -259,14 +263,25 @@ public class Option {
         }
 
         /**
-         * Binds the argument with the option
+         * Sets the mandatory argument to the option
          * @param argument argument
-         * @param presence Enum specifying if the argument is optional or forbidden for the option
          * @return Builder object
          */
-        public Builder setArgument(Argument argument, ArgumentPresence presence) {
+        public Builder setMandatoryArgument(Argument argument) {
             this.argument = argument;
-            this.argumentPresence = presence;
+            this.argumentPresence = ArgumentPresence.MANDATORY;
+            return this;
+        }
+
+        /**
+         * Sets the optional argument to the option
+         *
+         * @param argument argument
+         * @return Builder object
+         */
+        public Builder setOptionalArgument(Argument argument) {
+            this.argument = argument;
+            this.argumentPresence = ArgumentPresence.OPTIONAL;
             return this;
         }
 

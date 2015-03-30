@@ -152,7 +152,7 @@ public class ParsingResult {
      * Checks whether any errors occurred during parsing
      * @return true if any errors occurred during parsing, otherwise false
      */
-    public boolean hasErrors() {
+    public boolean anyErrorHappened() {
         //TODO: return whether errors occurred during parsing
         return true;
     }
