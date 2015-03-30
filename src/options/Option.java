@@ -1,5 +1,7 @@
 package options;
 
+import parsers.ParseError;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -137,9 +139,6 @@ public class Option {
         OPTIONAL, REQUIRED, FORBIDDEN
     }
 
-    public static enum ParseError {
-        MISSING_ARGUMENT, WRONG_ARGUMENT_TYPE, FAILED_CONSTRAINT
-    }
 
     public static class Builder {
 
