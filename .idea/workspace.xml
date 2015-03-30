@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Pulka Option okomentovana, zmeny parametry u hasShortSwitch na (String shortSwitch) z (Option option) a odpovidajicne u hasLongSwitch">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/ParseError.java" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="ParseError enum vytahnut z option tridy a vytvoren pro nej vlastni soubor uvnitr parses balicku">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/options/ArgumentPresence.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Option.java" afterPath="$PROJECT_DIR$/src/options/Option.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -42,7 +42,7 @@
       <file leaf-file-name="Option.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/options/Option.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08866995" vertical-offset="0" max-vertical-offset="4158">
+            <state vertical-scroll-proportion="-4.034483" vertical-offset="1674" max-vertical-offset="4068">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -51,11 +51,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ArgumentPresence.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/options/ArgumentPresence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+              <caret line="3" column="99" selection-start-line="3" selection-start-column="99" selection-end-line="3" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ParseError.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parsers/ParseError.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="3" column="68" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -114,21 +124,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringMinLengthConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constraints/StringMinLengthConstraint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="648">
-              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-              <folding>
-                <element signature="e#419#420#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
-                <element signature="e#514#515#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StringMaxLengthConstraint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/constraints/StringMaxLengthConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -170,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/arguments/ArgumentParser.java" />
         <option value="$PROJECT_DIR$/src/arguments/IntgerParser.java" />
         <option value="$PROJECT_DIR$/src/arguments/IntegerParser.java" />
-        <option value="$PROJECT_DIR$/src/options/ArgumentPresence.java" />
         <option value="$PROJECT_DIR$/src/MotherOfOptions.java" />
         <option value="$PROJECT_DIR$/src/options/MotherOfOptions.java" />
         <option value="$PROJECT_DIR$/src/options/OptionsDefinition.java" />
@@ -202,6 +196,7 @@
         <option value="$PROJECT_DIR$/src/options/ParsingResult.java" />
         <option value="$PROJECT_DIR$/src/options/Parser.java" />
         <option value="$PROJECT_DIR$/src/parsers/ParseError.java" />
+        <option value="$PROJECT_DIR$/src/options/ArgumentPresence.java" />
         <option value="$PROJECT_DIR$/src/options/Option.java" />
       </list>
     </option>
@@ -533,7 +528,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427743342663</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ParseError enum vytahnut z option tridy a vytvoren pro nej vlastni soubor uvnitr parses balicku">
+      <created>1427743535570</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1427743535570</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -607,7 +608,8 @@
     <MESSAGE value="Okomentovan ParsinResult" />
     <MESSAGE value="Okomentovan Parser" />
     <MESSAGE value="Pulka Option okomentovana, zmeny parametry u hasShortSwitch na (String shortSwitch) z (Option option) a odpovidajicne u hasLongSwitch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pulka Option okomentovana, zmeny parametry u hasShortSwitch na (String shortSwitch) z (Option option) a odpovidajicne u hasLongSwitch" />
+    <MESSAGE value="ParseError enum vytahnut z option tridy a vytvoren pro nej vlastni soubor uvnitr parses balicku" />
+    <option name="LAST_COMMIT_MESSAGE" value="ParseError enum vytahnut z option tridy a vytvoren pro nej vlastni soubor uvnitr parses balicku" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -933,14 +935,22 @@
     <entry file="file://$PROJECT_DIR$/src/parsers/ParseError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="3" column="68" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/options/ArgumentPresence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <caret line="3" column="99" selection-start-line="3" selection-start-column="99" selection-end-line="3" selection-end-column="99" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/options/Option.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08866995" vertical-offset="0" max-vertical-offset="4158">
+        <state vertical-scroll-proportion="-4.034483" vertical-offset="1674" max-vertical-offset="4068">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />

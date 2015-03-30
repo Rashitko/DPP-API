@@ -14,7 +14,7 @@ public class Option {
     private final Set<String> longSwitches;
     private final boolean required;
     private final Argument argument;
-    private final Option.ArgumentPresence argumentPresence;
+    private final ArgumentPresence argumentPresence;
     private final String description;
     private ParseError parseError;
 
@@ -134,11 +134,6 @@ public class Option {
 //        return result;
         return super.hashCode();
     }
-
-    public static enum ArgumentPresence {
-        OPTIONAL, REQUIRED, FORBIDDEN
-    }
-
 
     public static class Builder {
 
