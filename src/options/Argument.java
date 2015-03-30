@@ -6,6 +6,11 @@ import parsers.ArgumentParser;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Class representing option's argument
+ *
+ * @param <T> Type used in the argument
+ */
 public class Argument<T> {
 
     private final Set<ArgumentConstraint<T>> constraints;
@@ -17,23 +22,44 @@ public class Argument<T> {
         parser = builder.parser;
     }
 
+    /**
+     * Gets set of argument constrains for this argument
+     * @return set of argument constrains for this argument
+     */
     public Set<ArgumentConstraint<T>> getConstraints() {
         return constraints;
     }
 
+    /**
+     * Gets parser for this argument
+     * @return parser for this argument
+     */
     public ArgumentParser<T> getParser() {
         return parser;
     }
 
+    /**
+     * Gets value of the argument
+     * @return value of the argument
+     */
     public T getValue() {
         return value;
     }
 
+    /**
+     * Sets the value of the argument
+     * @param value value to be set
+     */
     void setValue(T value) {
         this.value = value;
     }
 
-    public Set<String> getErrorMessage() {
+    /**
+     * Gets the set of error messages which occurred during parsing and possibly during constraints checking
+     *
+     * @return the set of error messages which occurred during parsing and possibly during constraints checking
+     */
+    public Set<String> getErrorMessages() {
         HashSet<String> result = new HashSet<String>();
         if (value == null) {
             getParsingErrors(result);
@@ -55,21 +81,39 @@ public class Argument<T> {
         }
     }
 
+    /**
+     * This class is used to create arguments
+     *
+     * @param <T> Argument type
+     */
     public static class Builder<T> {
 
         private final Set<ArgumentConstraint<T>> constraints;
         private final ArgumentParser<T> parser;
 
+        /**
+         * Argument's builder constructor
+         * @param parser argument's parser
+         */
         public Builder(ArgumentParser<T> parser) {
             this.parser = parser;
             constraints = new HashSet<ArgumentConstraint<T>>();
         }
 
+        /**
+         * Sets constraint for the argument
+         * @param constraint constraint to be set
+         * @return Builder object
+         */
         public Builder<T> addConstraint(ArgumentConstraint<T> constraint) {
             this.constraints.add(constraint);
             return this;
         }
 
+        /**
+         * Creates argument object
+         * @return created argument object
+         */
         public Argument<T> build() {
             return new Argument<T>(this);
         }

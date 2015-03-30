@@ -1,5 +1,8 @@
 package parsers;
 
+/**
+ * Standard float parser
+ */
 public class FloatParser extends AbstractParser<Float> {
 
     FloatParser() {

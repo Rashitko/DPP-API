@@ -1,5 +1,8 @@
 package parsers;
 
+/**
+ * Standard long parser
+ */
 public class LongParser extends AbstractParser<Long> {
 
     LongParser() {

@@ -1,5 +1,8 @@
 package parsers;
 
+/**
+ * Standard short parser
+ */
 public class ShortParser extends AbstractParser<Short> {
 
     ShortParser(String typeName) {

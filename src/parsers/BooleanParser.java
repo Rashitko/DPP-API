@@ -1,5 +1,8 @@
 package parsers;
 
+/**
+ * Standard boolean parser
+ */
 public class BooleanParser extends AbstractParser<Boolean> {
 
     BooleanParser() {

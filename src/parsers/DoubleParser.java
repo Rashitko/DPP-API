@@ -1,5 +1,8 @@
 package parsers;
 
+/**
+ * Standard double parser
+ */
 public class DoubleParser extends AbstractParser<Double> {
 
     DoubleParser() {

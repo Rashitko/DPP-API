@@ -1,5 +1,8 @@
 package parsers;
 
+/**
+ * Standard string parser
+ */
 public class StringParser extends AbstractParser<String> {
 
     StringParser() {

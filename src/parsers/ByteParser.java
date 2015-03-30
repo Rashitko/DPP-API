@@ -1,5 +1,9 @@
 package parsers;
 
+
+/**
+ * Standard byte parser
+ */
 public class ByteParser extends AbstractParser<Byte> {
 
     ByteParser() {
