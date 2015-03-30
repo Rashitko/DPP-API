@@ -10,6 +10,7 @@ public class Option {
     private final boolean required;
     private final Argument argument;
     private final Option.ArgumentPresence argumentPresence;
+    private final String description;
 
     private Option(Builder builder) {
         this.shortSwitches = builder.shortSwitches;
@@ -17,6 +18,7 @@ public class Option {
         this.required = builder.required;
         this.argument = builder.argument;
         this.argumentPresence = builder.argumentPresence;
+        this.description = builder.description;
     }
 
     public boolean hasShortSwitch(Option option) {
@@ -54,6 +56,10 @@ public class Option {
         return argumentPresence;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     @Override
     public boolean equals(Object o) {
 //        TODO: Redefine equals
@@ -89,6 +95,7 @@ public class Option {
         private boolean required;
         private Argument argument;
         private Option.ArgumentPresence argumentPresence = ArgumentPresence.OPTIONAL;
+        private String description;
 
         public Builder(String shortSwitch) {
             this.shortSwitches = new HashSet<String>();
@@ -160,6 +167,11 @@ public class Option {
         public Builder setArgument(Argument argument, ArgumentPresence presence) {
             this.argument = argument;
             this.argumentPresence = presence;
+            return this;
+        }
+
+        public Builder setDescription(String description) {
+            this.description = description;
             return this;
         }
 
