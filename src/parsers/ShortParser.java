@@ -5,7 +5,7 @@ package parsers;
  */
 public class ShortParser extends AbstractParser<Short> {
 
-    ShortParser(String typeName) {
+    public ShortParser(String typeName) {
         super("short");
     }
 

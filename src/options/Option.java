@@ -91,7 +91,7 @@ public class Option {
 
     /**
      * Gets the argument associated with this option
-     * @return the argument associated with this option
+     * @return the argument associated with this option or null if this option does not take any argument
      */
     public Argument getArgument() {
         return argument;
@@ -283,7 +283,7 @@ public class Option {
          * @param required true if the option is mandatory, otherwise false
          * @return Builder object
          */
-        public Builder setRequired(boolean required) {
+        public Builder setMandatory(boolean required) {
             this.required = required;
             return this;
         }

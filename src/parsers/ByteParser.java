@@ -6,7 +6,7 @@ package parsers;
  */
 public class ByteParser extends AbstractParser<Byte> {
 
-    ByteParser() {
+    public ByteParser() {
         super("byte");
     }
 

@@ -5,7 +5,7 @@ package parsers;
  */
 public class BooleanParser extends AbstractParser<Boolean> {
 
-    BooleanParser() {
+    public BooleanParser() {
         super("boolean");
     }
 

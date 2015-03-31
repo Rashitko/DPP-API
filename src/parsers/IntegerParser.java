@@ -5,7 +5,7 @@ package parsers;
  */
 public class IntegerParser extends AbstractParser<Integer> {
 
-    IntegerParser() {
+    public IntegerParser() {
         super("int");
     }
 

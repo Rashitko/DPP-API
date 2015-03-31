@@ -5,7 +5,7 @@ package parsers;
  */
 public class DoubleParser extends AbstractParser<Double> {
 
-    DoubleParser() {
+    public DoubleParser() {
         super("double");
     }
 
