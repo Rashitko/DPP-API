@@ -5,7 +5,7 @@ package parsers;
  */
 public class FloatParser extends AbstractParser<Float> {
 
-    FloatParser() {
+    public FloatParser() {
         super("float");
     }
 

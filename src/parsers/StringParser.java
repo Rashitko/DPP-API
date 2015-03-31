@@ -5,7 +5,7 @@ package parsers;
  */
 public class StringParser extends AbstractParser<String> {
 
-    StringParser() {
+    public StringParser() {
         super("string");
     }
 

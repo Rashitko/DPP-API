@@ -5,7 +5,7 @@ package parsers;
  */
 public class LongParser extends AbstractParser<Long> {
 
-    LongParser() {
+    public LongParser() {
         super("long");
     }
 

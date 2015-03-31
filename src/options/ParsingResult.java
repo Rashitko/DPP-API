@@ -130,6 +130,28 @@ public class ParsingResult {
     }
 
     /**
+     * Gets the failed option for one particular option
+     *
+     * @param option option for which the failed option is obtained
+     * @return resolved option
+     */
+    public Option getFailedOption(Option option) {
+        //TODO: return desired option
+        return null;
+    }
+
+    /**
+     * Gets the missing option for one particular option
+     *
+     * @param option option for which the missing option is obtained
+     * @return resolved option
+     */
+    public Option getMissingOption(Option option) {
+        //TODO: return desired option
+        return null;
+    }
+
+    /**
      * Checks if there are any resolved options
      * @return true if there are any resolved options, false otherwise
      */
@@ -139,11 +161,35 @@ public class ParsingResult {
     }
 
     /**
-     * Chicks if there is the resolved option for one particular option
+     * Checks if there is the resolved option for one particular option
      * @param option option
      * @return true if there is the resolved option for particular option, otherwise false
      */
-    public boolean hasResolvedOption(Option option) {
+    public boolean isResolvedOption(Option option) {
+        //TODO: return if resolvedOptions contains option
+        return false;
+    }
+
+
+    /**
+     * Checks if there is the failed option for one particular option
+     *
+     * @param option option
+     * @return true if there is the failed option for particular option, otherwise false
+     */
+    public boolean isFailedOption(Option option) {
+        //TODO: return if resolvedOptions contains option
+        return false;
+    }
+
+
+    /**
+     * Checks if there is the missing option for one particular option
+     *
+     * @param option option
+     * @return true if there is the missing option for particular option, otherwise false
+     */
+    public boolean isMissingOption(Option option) {
         //TODO: return if resolvedOptions contains option
         return false;
     }
