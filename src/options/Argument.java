@@ -24,6 +24,7 @@ public class Argument<T> {
 
     /**
      * Gets set of argument constrains for this argument
+     *
      * @return set of argument constrains for this argument
      */
     public Set<ArgumentConstraint<T>> getConstraints() {
@@ -32,6 +33,7 @@ public class Argument<T> {
 
     /**
      * Gets parser for this argument
+     *
      * @return parser for this argument
      */
     public ArgumentParser<T> getParser() {
@@ -40,6 +42,7 @@ public class Argument<T> {
 
     /**
      * Gets value of the argument
+     *
      * @return value of the argument or null if the value is not set
      */
     public T getValue() {
@@ -57,6 +60,7 @@ public class Argument<T> {
 
     /**
      * Checks whether this argument has option or not
+     *
      * @return true if this argument has value, otherwise false
      */
     public boolean hasValue() {
@@ -107,6 +111,7 @@ public class Argument<T> {
 
         /**
          * Argument's builder constructor
+         *
          * @param parser argument's parser
          */
         public Builder(ArgumentParser<T> parser) {
@@ -116,6 +121,7 @@ public class Argument<T> {
 
         /**
          * Sets constraint for the argument
+         *
          * @param constraint constraint to be set
          * @return Builder object
          */
@@ -126,6 +132,7 @@ public class Argument<T> {
 
         /**
          * Creates argument object
+         *
          * @return created argument object
          */
         public Argument<T> build() {

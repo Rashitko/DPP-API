@@ -15,6 +15,7 @@ public interface ArgumentParser<E> {
 
     /**
      * Gets the error message for the situation when parsing is not successful
+     *
      * @return the error message for the situation when parsing is not successful
      */
     public String getParseErrorMessage();

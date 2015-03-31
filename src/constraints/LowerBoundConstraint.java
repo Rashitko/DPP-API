@@ -12,6 +12,7 @@ public class LowerBoundConstraint<T extends Comparable<T>> implements ArgumentCo
 
     /**
      * This constructor sets the lower bound
+     *
      * @param min lower bound
      */
     public LowerBoundConstraint(T min) {

@@ -14,6 +14,7 @@ public class RangeConstraint<T extends Comparable<T>> implements ArgumentConstra
 
     /**
      * This constructor sets the lower and upper bound
+     *
      * @param min lower bound
      * @param max upper bound
      */

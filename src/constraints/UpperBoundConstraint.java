@@ -12,6 +12,7 @@ public class UpperBoundConstraint<T extends Comparable<T>> implements ArgumentCo
 
     /**
      * This constructor sets the upper bound
+     *
      * @param max upper bound
      */
     public UpperBoundConstraint(T max) {

@@ -47,6 +47,7 @@ public class Option {
 
     /**
      * Gets the set of all short switches
+     *
      * @return the set of all short switches
      */
     public Set<String> getShortSwitches() {
@@ -66,6 +67,7 @@ public class Option {
 
     /**
      * Gets the set of all long switches
+     *
      * @return the set of all long switches
      */
     public Set<String> getLongSwitches() {
@@ -74,6 +76,7 @@ public class Option {
 
     /**
      * Checks whether is this option mandatory or not
+     *
      * @return true if this option is mandatory, otherwise false
      */
     public boolean isRequired() {
@@ -82,6 +85,7 @@ public class Option {
 
     /**
      * Checks whether this option takes argument
+     *
      * @return true if this option does take an argument, otherwise false
      */
     public boolean takesArgument() {
@@ -91,6 +95,7 @@ public class Option {
 
     /**
      * Gets the argument associated with this option
+     *
      * @return the argument associated with this option or null if this option does not take any argument
      */
     public Argument getArgument() {
@@ -99,6 +104,7 @@ public class Option {
 
     /**
      * Checks if this option has mandatory or optional argument
+     *
      * @return the enum containing the information whether this option has mandatory or optional argument,
      * returns null if this option does not take any parameter
      */
@@ -109,6 +115,7 @@ public class Option {
 
     /**
      * Gets the option description
+     *
      * @return the option description
      */
     public String getDescription() {
@@ -190,6 +197,7 @@ public class Option {
 
         /**
          * This constructor sets the list of short switches
+         *
          * @param shortSwitches the list of short switches
          */
         public Builder(Set<String> shortSwitches) {
@@ -200,8 +208,9 @@ public class Option {
 
         /**
          * This constructor sets the short or long switch.
+         *
          * @param optionSwitch switch
-         * @param switchType switch type, ie if the short or long switch should be set
+         * @param switchType   switch type, ie if the short or long switch should be set
          */
         public Builder(String optionSwitch, SwitchType switchType) {
             this.shortSwitches = new HashSet<String>();
@@ -220,8 +229,9 @@ public class Option {
 
         /**
          * This constructor sets the list of short or long switches.
+         *
          * @param optionSwitches the list of switches
-         * @param switchType switch type, ie if the list of short or long switches should be set
+         * @param switchType     switch type, ie if the list of short or long switches should be set
          */
         public Builder(Set<String> optionSwitches, SwitchType switchType) {
             this.shortSwitches = new HashSet<String>();
@@ -240,6 +250,7 @@ public class Option {
 
         /**
          * Adds short switch
+         *
          * @param shortSwitch short switch
          * @return Builder object
          */
@@ -250,6 +261,7 @@ public class Option {
 
         /**
          * Adds long switch
+         *
          * @param longSwitch long switch
          * @return Builder object
          */
@@ -260,6 +272,7 @@ public class Option {
 
         /**
          * Adds the list of short switches
+         *
          * @param shortSwitches the list of short switches
          * @return Builder object
          */
@@ -270,6 +283,7 @@ public class Option {
 
         /**
          * Adds the list of long switches
+         *
          * @param longSwitches the list of long switches
          * @return Builder object
          */
@@ -280,6 +294,7 @@ public class Option {
 
         /**
          * Sets this option to be mandatory or not
+         *
          * @param required true if the option is mandatory, otherwise false
          * @return Builder object
          */
@@ -290,6 +305,7 @@ public class Option {
 
         /**
          * Sets the mandatory argument to the option
+         *
          * @param argument argument
          * @return Builder object
          */
@@ -314,6 +330,7 @@ public class Option {
 
         /**
          * Sets the option description
+         *
          * @param description description
          * @return Builder object
          */
@@ -324,6 +341,7 @@ public class Option {
 
         /**
          * Creates the Option object
+         *
          * @return the Option object
          */
         public Option build() {

@@ -20,6 +20,7 @@ public class Parser {
 
     /**
      * This method does the parsing and creates the object containing the resulting information
+     *
      * @param arguments input argument to parse
      * @return ParsingResult object containing the resulting information
      */
