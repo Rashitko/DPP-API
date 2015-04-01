@@ -1,3 +1,3 @@
 Library
 
-java Dummy -v console -v
+java Dummy -v console -m 15 --max 15

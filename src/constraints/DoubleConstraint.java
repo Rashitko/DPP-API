@@ -1,7 +1,8 @@
 package constraints;
 
-import arguments.ArgumentConstraint;
-
+/**
+ * Basic interface for all double constraints
+ */
 public interface DoubleConstraint extends ArgumentConstraint<Double> {
 
     @Override

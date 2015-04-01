@@ -1,11 +1,18 @@
 package parsers;
 
-import arguments.ArgumentParser;
+/**
+ * Standard integer parser
+ */
+public class IntegerParser extends AbstractParser<Integer> {
 
-public class IntegerParser implements ArgumentParser<Integer> {
+    public IntegerParser() {
+        super("int");
+    }
 
     @Override
     public Integer parse(String argument) {
+        this.argument = argument;
         return Integer.parseInt(argument);
     }
+
 }
