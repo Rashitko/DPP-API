@@ -1,7 +1,5 @@
 package options;
 
-import parsers.ParseError;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,7 +15,6 @@ public class Option {
     private final ArgumentPresence argumentPresence;
     private final String description;
     private final String messageArgMissing;
-    private ParseError parseError;
 
     /**
      * This private constructor sets all the properties according to the Builder object on the input

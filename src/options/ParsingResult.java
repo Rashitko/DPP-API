@@ -1,5 +1,7 @@
 package options;
 
+import com.sun.istack.internal.Nullable;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -58,6 +60,16 @@ public class ParsingResult {
     }
 
     /**
+     * Checks if there are any resolved options
+     *
+     * @return true if there are any resolved options, false otherwise
+     */
+    public boolean hasAnyResolvedOptions() {
+        //TODO: true if resolvedOptions is not empty
+        return false;
+    }
+
+    /**
      * Checks if there are any extra options
      *
      * @return true if there are any extra options, false otherwise
@@ -82,6 +94,24 @@ public class ParsingResult {
      */
     public boolean hasFailedOptions() {
         return failedOptions.size() > 0;
+    }
+
+    /**
+     * Gets the set of successfully resolved options
+     *
+     * @return the set of successfully resolved options
+     */
+    public Set<Option> getResolvedOptions() {
+        return resolvedOptions;
+    }
+
+    /**
+     * Gets the set of regular arguments on the input
+     *
+     * @return the set of regular arguments on the input
+     */
+    public Set<String> getRegularArguments() {
+        return regularArguments;
     }
 
     /**
@@ -112,41 +142,13 @@ public class ParsingResult {
     }
 
     /**
-     * Gets the set of successfully resolved options
-     *
-     * @return the set of successfully resolved options
-     */
-    public Set<Option> getResolvedOptions() {
-        return resolvedOptions;
-    }
-
-    /**
-     * Gets the set of regular arguments on the input
-     *
-     * @return the set of regular arguments on the input
-     */
-    public Set<String> getRegularArguments() {
-        return regularArguments;
-    }
-
-    /**
      * Gets the resolved option for one particular option
      *
      * @param option option for which the resolved option is obtained
-     * @return resolved option
+     * @return resolved option, null if option is not found
      */
+    @Nullable
     public Option getResolvedOption(Option option) {
-        //TODO: return desired option
-        return null;
-    }
-
-    /**
-     * Gets the failed option for one particular option
-     *
-     * @param option option for which the failed option is obtained
-     * @return resolved option
-     */
-    public Option getFailedOption(Option option) {
         //TODO: return desired option
         return null;
     }
@@ -155,21 +157,63 @@ public class ParsingResult {
      * Gets the missing option for one particular option
      *
      * @param option option for which the missing option is obtained
-     * @return resolved option
+     * @return resolved option, null if option is not found
      */
+    @Nullable
     public Option getMissingOption(Option option) {
         //TODO: return desired option
         return null;
     }
 
     /**
-     * Checks if there are any resolved options
+     * Gets the failed option for one particular option
      *
-     * @return true if there are any resolved options, false otherwise
+     * @param option option for which the failed option is obtained
+     * @return failed option, null if option is not found
      */
-    public boolean hasAnyResolvedOptions() {
-        //TODO: true if resolvedOptions is not empty
-        return false;
+    @Nullable
+    public Option getFailedOption(Option option) {
+        //TODO: return desired option
+        return null;
+    }
+
+    /**
+     * Gets the resolved option which has provided switch
+     * set either as short or long switch
+     *
+     * @param switchString provided switch
+     * @return Option with switch, or null if no such Option is found
+     */
+    @Nullable
+    public Option getResolvedOption(String switchString) {
+        //TODO: return desired option which has corresponding switch
+        return null;
+    }
+
+    /**
+     * Gets the missing option which has provided switch
+     * set either as short or long switch
+     *
+     * @param switchString provided switch
+     * @return Option with switch, or null if no such Option is found
+     */
+    @Nullable
+    public Option getMissingOption(String switchString) {
+        //TODO: return desired option which has corresponding switch
+        return null;
+    }
+
+    /**
+     * Gets the failed option which has provided switch
+     * set either as short or long switch
+     *
+     * @param switchString provided switch
+     * @return Option with switch, or null if no such Option is found
+     */
+    @Nullable
+    public Option getFailedOption(String switchString) {
+        //TODO: return desired option which has corresponding switch
+        return null;
     }
 
     /**
@@ -185,24 +229,24 @@ public class ParsingResult {
 
 
     /**
-     * Checks if there is the failed option for one particular option
-     *
-     * @param option option
-     * @return true if there is the failed option for particular option, otherwise false
-     */
-    public boolean isFailedOption(Option option) {
-        //TODO: return if resolvedOptions contains option
-        return false;
-    }
-
-
-    /**
      * Checks if there is the missing option for one particular option
      *
      * @param option option
      * @return true if there is the missing option for particular option, otherwise false
      */
     public boolean isMissingOption(Option option) {
+        //TODO: return if resolvedOptions contains option
+        return false;
+    }
+
+
+    /**
+     * Checks if there is the failed option for one particular option
+     *
+     * @param option option
+     * @return true if there is the failed option for particular option, otherwise false
+     */
+    public boolean isFailedOption(Option option) {
         //TODO: return if resolvedOptions contains option
         return false;
     }
