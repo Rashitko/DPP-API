@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Odstraneny kod">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/AbstractParser.java" afterPath="$PROJECT_DIR$/src/parsers/AbstractParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Argument.java" afterPath="$PROJECT_DIR$/src/options/Argument.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/BooleanParser.java" afterPath="$PROJECT_DIR$/src/parsers/BooleanParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ByteParser.java" afterPath="$PROJECT_DIR$/src/parsers/ByteParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/DoubleParser.java" afterPath="$PROJECT_DIR$/src/parsers/DoubleParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/EmptyArgumentConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/EmptyArgumentConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/FloatParser.java" afterPath="$PROJECT_DIR$/src/parsers/FloatParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/IntegerParser.java" afterPath="$PROJECT_DIR$/src/parsers/IntegerParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/LongParser.java" afterPath="$PROJECT_DIR$/src/parsers/LongParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/LowerBoundConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/LowerBoundConstraint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Option.java" afterPath="$PROJECT_DIR$/src/options/Option.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Parser.java" afterPath="$PROJECT_DIR$/src/options/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/ParsingResult.java" afterPath="$PROJECT_DIR$/src/options/ParsingResult.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/RangeConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/RangeConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ShortParser.java" afterPath="$PROJECT_DIR$/src/parsers/ShortParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/StringLengthConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/StringLengthConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/StringMaxLengthConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/StringMaxLengthConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/StringMinLengthConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/StringMinLengthConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/StringParser.java" afterPath="$PROJECT_DIR$/src/parsers/StringParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/UpperBoundConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/UpperBoundConstraint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -113,8 +93,8 @@
       <file leaf-file-name="Option.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/options/Option.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21854305" vertical-offset="1398" max-vertical-offset="5886">
-              <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.66835874" vertical-offset="2377" max-vertical-offset="6246">
+              <caret line="154" column="13" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -610,7 +590,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427886343114</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Odstraneny kod">
+      <created>1427887358940</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1427887358940</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -650,7 +636,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32753164" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="731" y="180" width="341" height="632" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="731" y="180" width="341" height="632" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -701,7 +687,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/options/Option.java</url>
-          <line>85</line>
+          <line>87</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -1155,8 +1141,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/options/Option.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21854305" vertical-offset="1398" max-vertical-offset="5886">
-          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.66835874" vertical-offset="2377" max-vertical-offset="6246">
+          <caret line="154" column="13" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
