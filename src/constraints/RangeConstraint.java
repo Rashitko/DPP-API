@@ -19,20 +19,20 @@ public class RangeConstraint<T extends Comparable<T>> implements ArgumentConstra
      * @param max upper bound
      */
     public RangeConstraint(T min, T max) {
+        //TODO
         this.min = min;
         this.max = max;
     }
 
     @Override
     public boolean isFulfilled(T argument) {
-        final boolean isBiggerThanMin = argument.compareTo(min) >= 0;
-        final boolean isLessThanMax = max.compareTo(argument) >= 0;
-        return isBiggerThanMin && isLessThanMax;
+        //TODO
+        return false;
     }
 
     @Override
     public String getErrorMessage(T argument) {
-        //TODO:
+        //TODO
         return null;
     }
 

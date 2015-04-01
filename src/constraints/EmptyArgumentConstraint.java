@@ -7,12 +7,13 @@ public class EmptyArgumentConstraint implements ArgumentConstraint<String> {
 
     @Override
     public boolean isFulfilled(String argument) {
-        return argument == null || argument.equals("");
+        //TODO
+        return false;
     }
 
     @Override
     public String getErrorMessage(String argument) {
         //TODO:
-        return "Argument value\"" + argument + "\" is not empty, when it should be";
+        return null;
     }
 }

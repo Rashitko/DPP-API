@@ -11,7 +11,7 @@ public class DoubleParser extends AbstractParser<Double> {
 
     @Override
     public Double parse(String argument) {
-        this.argument = argument;
-        return Double.parseDouble(argument);
+        //TODO
+        return null;
     }
 }

@@ -14,17 +14,19 @@ public class StringMinLengthConstraint implements StringConstraint {
      * @param min minimal length
      */
     public StringMinLengthConstraint(int min) {
+        //TODO
         this.min = min;
     }
 
     @Override
     public boolean isFulfilled(String argument) {
-        return argument.length() >= min;
+        //TODO
+        return false;
     }
 
     @Override
     public String getErrorMessage(String argument) {
-        //TODO:
+        //TODO
         return null;
     }
 }

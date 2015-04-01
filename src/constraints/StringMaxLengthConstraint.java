@@ -14,12 +14,14 @@ public class StringMaxLengthConstraint implements StringConstraint {
      * @param max maximal length
      */
     public StringMaxLengthConstraint(int max) {
+        //TODO
         this.max = max;
     }
 
     @Override
     public boolean isFulfilled(String argument) {
-        return argument.length() <= max;
+        //TODO
+        return false;
     }
 
     @Override

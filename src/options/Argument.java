@@ -19,6 +19,7 @@ public class Argument<T> {
     private T value;
 
     private Argument(Builder<T> builder) {
+        //TODO
         constraints = builder.constraints;
         parser = builder.parser;
     }
@@ -29,7 +30,8 @@ public class Argument<T> {
      * @return set of argument constrains for this argument
      */
     public Set<ArgumentConstraint<T>> getConstraints() {
-        return constraints;
+        //TODO
+        return null;
     }
 
     /**
@@ -38,7 +40,8 @@ public class Argument<T> {
      * @return parser for this argument
      */
     public ArgumentParser<T> getParser() {
-        return parser;
+        //TODO
+        return null;
     }
 
     /**
@@ -48,7 +51,8 @@ public class Argument<T> {
      */
     @Nullable
     public T getValue() {
-        return value;
+        //TODO
+        return null;
     }
 
     /**
@@ -57,7 +61,7 @@ public class Argument<T> {
      * @param value value to be set
      */
     void setValue(T value) {
-        this.value = value;
+        //TODO
     }
 
     /**
@@ -66,8 +70,8 @@ public class Argument<T> {
      * @return true if this argument has value, otherwise false
      */
     public boolean hasValue() {
-        //TODO:
-        return true;
+        //TODO
+        return false;
     }
 
     /**
@@ -76,29 +80,18 @@ public class Argument<T> {
      * @return the set of error messages which occurred during parsing and possibly during constraints checking
      */
     public Set<String> getErrorMessages() {
-        HashSet<String> result = new HashSet<String>();
-        if (value == null) {
-            result.addAll(getParsingErrors());
-        } else {
-            result.addAll(getConstraintErrors());
-        }
-        return result;
+        //TODO
+        return null;
     }
 
     private Set<String> getParsingErrors() {
-        HashSet<String> result = new HashSet<String>();
-        result.add(parser.getParseErrorMessage());
-        return result;
+        //TODO
+        return null;
     }
 
     private Set<String> getConstraintErrors() {
-        HashSet<String> result = new HashSet<String>();
-        for (ArgumentConstraint<T> constraint : constraints) {
-            if (!constraint.isFulfilled(getValue())) {
-                result.add(constraint.getErrorMessage(getValue()));
-            }
-        }
-        return result;
+        //TODO
+        return null;
     }
 
     /**
@@ -117,6 +110,7 @@ public class Argument<T> {
          * @param parser argument's parser
          */
         public Builder(ArgumentParser<T> parser) {
+            //TODO
             this.parser = parser;
             constraints = new HashSet<ArgumentConstraint<T>>();
         }
@@ -128,8 +122,8 @@ public class Argument<T> {
          * @return Builder object
          */
         public Builder<T> addConstraint(ArgumentConstraint<T> constraint) {
-            this.constraints.add(constraint);
-            return this;
+            //TODO
+            return null;
         }
 
         /**
@@ -138,7 +132,8 @@ public class Argument<T> {
          * @return created argument object
          */
         public Argument<T> build() {
-            return new Argument<T>(this);
+            //TODO
+            return null;
         }
     }
 

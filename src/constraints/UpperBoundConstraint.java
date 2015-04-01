@@ -16,12 +16,14 @@ public class UpperBoundConstraint<T extends Comparable<T>> implements ArgumentCo
      * @param max upper bound
      */
     public UpperBoundConstraint(T max) {
+        //TODO
         this.max = max;
     }
 
     @Override
     public boolean isFulfilled(T argument) {
-        return max.compareTo(argument) >= 0;
+        //TODO
+        return false;
     }
 
     @Override

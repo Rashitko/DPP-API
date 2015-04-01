@@ -34,7 +34,7 @@ public class ParsingResult {
      * @param option option which has been entered on the input but it is not defined
      */
     void addExtraOption(Option option) {
-        extraOptions.add(option);
+
     }
 
     /**
@@ -43,7 +43,7 @@ public class ParsingResult {
      * @param option option which is mandatory and is missing on the input
      */
     void addMissingOption(Option option) {
-        missingOptions.add(option);
+
     }
 
     /**
@@ -56,7 +56,7 @@ public class ParsingResult {
      *               constraint or is of wrong type
      */
     void addFailedOption(Option option) {
-        failedOptions.add(option);
+        //TODO
     }
 
     /**
@@ -75,7 +75,8 @@ public class ParsingResult {
      * @return true if there are any extra options, false otherwise
      */
     public boolean hasExtraOptions() {
-        return extraOptions.size() > 0;
+        //TODO
+        return false;
     }
 
     /**
@@ -84,7 +85,8 @@ public class ParsingResult {
      * @return true if there are any missing options, false otherwise
      */
     public boolean hasMissingOptions() {
-        return missingOptions.size() > 0;
+        //TODO
+        return false;
     }
 
     /**
@@ -93,7 +95,8 @@ public class ParsingResult {
      * @return true if there are any failed options, false otherwise
      */
     public boolean hasFailedOptions() {
-        return failedOptions.size() > 0;
+        //TODO
+        return false;
     }
 
     /**
@@ -102,7 +105,8 @@ public class ParsingResult {
      * @return the set of successfully resolved options
      */
     public Set<Option> getResolvedOptions() {
-        return resolvedOptions;
+        //TODO
+        return null;
     }
 
     /**
@@ -111,7 +115,8 @@ public class ParsingResult {
      * @return the set of regular arguments on the input
      */
     public Set<String> getRegularArguments() {
-        return regularArguments;
+        //TODO
+        return null;
     }
 
     /**
@@ -120,7 +125,8 @@ public class ParsingResult {
      * @return the list of extra options
      */
     public List<Option> getExtraOptions() {
-        return extraOptions;
+        //TODO
+        return null;
     }
 
     /**
@@ -129,7 +135,8 @@ public class ParsingResult {
      * @return the set of missing options
      */
     public Set<Option> getMissingOptions() {
-        return missingOptions;
+        //TODO
+        return null;
     }
 
     /**
@@ -138,7 +145,8 @@ public class ParsingResult {
      * @return list of failed options
      */
     public Set<Option> getFailedOptions() {
-        return failedOptions;
+        //TODO
+        return null;
     }
 
     /**
@@ -227,7 +235,6 @@ public class ParsingResult {
         return false;
     }
 
-
     /**
      * Checks if there is the missing option for one particular option
      *
@@ -238,7 +245,6 @@ public class ParsingResult {
         //TODO: return if resolvedOptions contains option
         return false;
     }
-
 
     /**
      * Checks if there is the failed option for one particular option

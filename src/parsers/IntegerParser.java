@@ -11,8 +11,8 @@ public class IntegerParser extends AbstractParser<Integer> {
 
     @Override
     public Integer parse(String argument) {
-        this.argument = argument;
-        return Integer.parseInt(argument);
+        //TODO
+        return null;
     }
 
 }

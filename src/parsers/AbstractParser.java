@@ -15,11 +15,13 @@ public abstract class AbstractParser<T> implements ArgumentParser<T> {
      *                 cannot be successfully done
      */
     AbstractParser(String typeName) {
+        //TODO
         this.typeName = typeName;
     }
 
     @Override
     public String getParseErrorMessage() {
-        return argument + " cannot be parsed as " + typeName;
+        //TODO
+        return null;
     }
 }

@@ -11,7 +11,7 @@ public class BooleanParser extends AbstractParser<Boolean> {
 
     @Override
     public Boolean parse(String argument) {
-        this.argument = argument;
-        return Boolean.parseBoolean(argument);
+        //TODO
+        return false;
     }
 }

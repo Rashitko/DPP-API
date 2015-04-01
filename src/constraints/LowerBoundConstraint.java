@@ -16,17 +16,19 @@ public class LowerBoundConstraint<T extends Comparable<T>> implements ArgumentCo
      * @param min lower bound
      */
     public LowerBoundConstraint(T min) {
-        this.min = min;
+        //TODO
+        this.min = null;
     }
 
     @Override
     public boolean isFulfilled(T argument) {
-        return argument.compareTo(min) >= 0;
+        //TODO
+        return false;
     }
 
     @Override
     public String getErrorMessage(T argument) {
-        //TODO:
+        //TODO
         return null;
     }
 

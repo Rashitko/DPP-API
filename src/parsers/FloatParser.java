@@ -11,7 +11,7 @@ public class FloatParser extends AbstractParser<Float> {
 
     @Override
     public Float parse(String argument) {
-        this.argument = argument;
-        return Float.parseFloat(argument);
+        //TODO
+        return null;
     }
 }

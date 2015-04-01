@@ -16,13 +16,15 @@ public class StringLengthConstraint implements StringConstraint {
      * @param max maximal length
      */
     public StringLengthConstraint(int min, int max) {
+        //TODO
         this.min = min;
         this.max = max;
     }
 
     @Override
     public boolean isFulfilled(String argument) {
-        return argument.length() >= min && argument.length() <= max;
+        //TODO
+        return false;
     }
 
     @Override

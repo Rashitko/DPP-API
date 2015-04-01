@@ -11,7 +11,7 @@ public class StringParser extends AbstractParser<String> {
 
     @Override
     public String parse(String argument) {
-        this.argument = argument;
-        return argument;
+        //TODO
+        return null;
     }
 }

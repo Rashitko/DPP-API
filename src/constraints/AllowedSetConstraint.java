@@ -11,11 +11,13 @@ public class AllowedSetConstraint<T> extends HashSet<T> implements ArgumentConst
 
     @Override
     public boolean isFulfilled(T argument) {
-        return contains(argument);
+        //TODO
+        return false;
     }
 
     @Override
     public String getErrorMessage(T argument) {
-        return argument + " is not allowed. Allowed arguments are:" + this;
+        //TODO
+        return null;
     }
 }

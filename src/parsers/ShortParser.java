@@ -11,7 +11,7 @@ public class ShortParser extends AbstractParser<Short> {
 
     @Override
     public Short parse(String argument) {
-        this.argument = argument;
-        return Short.parseShort(argument);
+        //TODO
+        return null;
     }
 }

@@ -24,6 +24,7 @@ public class Option {
      * @param builder builder from which the properties are set
      */
     private Option(Builder builder) {
+        //TODO
         this.shortSwitches = builder.shortSwitches;
         this.longSwitches = builder.longSwitches;
         this.required = builder.required;
@@ -50,7 +51,8 @@ public class Option {
      * @return the set of all short switches
      */
     public Set<String> getShortSwitches() {
-        return shortSwitches;
+        //TODO
+        return null;
     }
 
     /**
@@ -70,7 +72,8 @@ public class Option {
      * @return the set of all long switches
      */
     public Set<String> getLongSwitches() {
-        return longSwitches;
+        //TODO
+        return null;
     }
 
     /**
@@ -79,7 +82,8 @@ public class Option {
      * @return true if this option is mandatory, otherwise false
      */
     public boolean isRequired() {
-        return required;
+        //TODO
+        return false;
     }
 
     /**
@@ -99,7 +103,8 @@ public class Option {
      */
     @Nullable
     public Argument getArgument() {
-        return argument;
+        //TODO
+        return null;
     }
 
     /**
@@ -110,7 +115,7 @@ public class Option {
      */
     public ArgumentPresence getArgumentPresence() {
         //TODO:
-        return argumentPresence;
+        return null;
     }
 
     /**
@@ -119,7 +124,8 @@ public class Option {
      * @return the option description
      */
     public String getDescription() {
-        return description;
+        //TODO
+        return null;
     }
 
     /**
@@ -128,46 +134,20 @@ public class Option {
      * @return the set of error messages which occurred during parsing and possibly during constraints checking
      */
     public Set<String> getErrorMessages() {
-        HashSet<String> result = new HashSet<String>();
-        switch (argumentPresence) {
-            case MANDATORY:
-                if (!argument.hasValue()) {
-                    result.add(messageArgMissing);
-                } else {
-                    result.addAll(argument.getErrorMessages());
-                }
-                break;
-            case OPTIONAL:
-                if (argument.hasValue()) {
-                    result.addAll(argument.getErrorMessages());
-                }
-                break;
-        }
-        return result;
+        //TODO
+        return null;
     }
 
     @Override
     public boolean equals(Object o) {
 //        TODO: Redefine equals
-//        if (this == o) return true;
-//        if (!(o instanceof Option)) return false;
-//
-//        Option option = (Option) o;
-//
-//        if (!longSwitches.equals(option.longSwitches)) return false;
-//        if (!shortSwitches.equals(option.shortSwitches)) return false;
-//
-//        return true;
         return false;
     }
 
     @Override
     public int hashCode() {
 //        TODO: Redefine hashCode
-//        int result = shortSwitches.hashCode();
-//        result = 31 * result + longSwitches.hashCode();
-//        return result;
-        return super.hashCode();
+        return 0;
     }
 
 
@@ -190,6 +170,7 @@ public class Option {
          * @param shortSwitch short switch
          */
         public Builder(String shortSwitch) {
+//            TODO
             this.shortSwitches = new HashSet<String>();
             this.shortSwitches.add(shortSwitch);
             longSwitches = new HashSet<String>();
@@ -201,8 +182,8 @@ public class Option {
          * @param shortSwitches the list of short switches
          */
         public Builder(Set<String> shortSwitches) {
+            //TODO
             this.shortSwitches = new HashSet<String>();
-            this.shortSwitches.addAll(shortSwitches);
             longSwitches = new HashSet<String>();
         }
 
@@ -213,18 +194,10 @@ public class Option {
          * @param switchType   switch type, ie if the short or long switch should be set
          */
         public Builder(String optionSwitch, SwitchType switchType) {
+            //TODO
             this.shortSwitches = new HashSet<String>();
             longSwitches = new HashSet<String>();
-            switch (switchType) {
-                case SHORT_SWITCH:
-                    shortSwitches.add(optionSwitch);
-                    break;
-                case LONG_SWITCH:
-                    longSwitches.add(optionSwitch);
-                    break;
-                default:
-                    throw new IllegalArgumentException("Unknown switchType: " + switchType);
-            }
+
         }
 
         /**
@@ -234,18 +207,9 @@ public class Option {
          * @param switchType     switch type, ie if the list of short or long switches should be set
          */
         public Builder(Set<String> optionSwitches, SwitchType switchType) {
+            //TODO
             this.shortSwitches = new HashSet<String>();
             longSwitches = new HashSet<String>();
-            switch (switchType) {
-                case SHORT_SWITCH:
-                    shortSwitches.addAll(optionSwitches);
-                    break;
-                case LONG_SWITCH:
-                    longSwitches.addAll(optionSwitches);
-                    break;
-                default:
-                    throw new IllegalArgumentException("Unknown switchType: " + switchType);
-            }
         }
 
         /**
@@ -255,8 +219,8 @@ public class Option {
          * @return Builder object
          */
         public Builder addShortSwitch(String shortSwitch) {
-            this.shortSwitches.add(shortSwitch);
-            return this;
+            //TODO
+            return null;
         }
 
         /**
@@ -266,8 +230,8 @@ public class Option {
          * @return Builder object
          */
         public Builder addLongSwitch(String longSwitch) {
-            this.longSwitches.add(longSwitch);
-            return this;
+            //TODO
+            return null;
         }
 
         /**
@@ -277,8 +241,8 @@ public class Option {
          * @return Builder object
          */
         public Builder addShortSwitches(Set<String> shortSwitches) {
-            this.shortSwitches.addAll(shortSwitches);
-            return this;
+            //TODO
+            return null;
         }
 
         /**
@@ -288,8 +252,8 @@ public class Option {
          * @return Builder object
          */
         public Builder addLongSwitches(Set<String> longSwitches) {
-            this.longSwitches.addAll(longSwitches);
-            return this;
+            //TODO
+            return null;
         }
 
         /**
@@ -299,8 +263,8 @@ public class Option {
          * @return Builder object
          */
         public Builder setMandatory(boolean required) {
-            this.required = required;
-            return this;
+            //TODO
+            return null;
         }
 
         /**
@@ -310,10 +274,8 @@ public class Option {
          * @return Builder object
          */
         public Builder setMandatoryArgument(Argument argument, String messageArgMissing) {
-            this.argument = argument;
-            this.argumentPresence = ArgumentPresence.MANDATORY;
-            this.messageArgMissing = messageArgMissing;
-            return this;
+            //TODO
+            return null;
         }
 
         /**
@@ -323,9 +285,8 @@ public class Option {
          * @return Builder object
          */
         public Builder setOptionalArgument(Argument argument) {
-            this.argument = argument;
-            this.argumentPresence = ArgumentPresence.OPTIONAL;
-            return this;
+            //TODO
+            return null;
         }
 
         /**
@@ -335,8 +296,8 @@ public class Option {
          * @return Builder object
          */
         public Builder setDescription(String description) {
-            this.description = description;
-            return this;
+            //TODO
+            return null;
         }
 
         /**
@@ -345,7 +306,8 @@ public class Option {
          * @return the Option object
          */
         public Option build() {
-            return new Option(this);
+            //TODO
+            return null;
         }
 
         /**
