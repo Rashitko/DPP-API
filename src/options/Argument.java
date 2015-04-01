@@ -1,5 +1,6 @@
 package options;
 
+import com.sun.istack.internal.Nullable;
 import constraints.ArgumentConstraint;
 import parsers.ArgumentParser;
 
@@ -45,6 +46,7 @@ public class Argument<T> {
      *
      * @return value of the argument or null if the value is not set
      */
+    @Nullable
     public T getValue() {
         return value;
     }

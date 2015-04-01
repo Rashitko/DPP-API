@@ -1,5 +1,7 @@
 package options;
 
+import com.sun.istack.internal.Nullable;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -95,6 +97,7 @@ public class Option {
      *
      * @return the argument associated with this option or null if this option does not take any argument
      */
+    @Nullable
     public Argument getArgument() {
         return argument;
     }
