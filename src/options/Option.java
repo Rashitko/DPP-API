@@ -40,8 +40,7 @@ public class Option {
      * @return true if the option contains given short switch, otherwise false
      */
     public boolean hasShortSwitch(String shortSwitch) {
-        //TODO: Check if shortSwitches contains option
-        return false;
+        return shortSwitches.contains(shortSwitch);
     }
 
     /**
@@ -60,8 +59,7 @@ public class Option {
      * @return true if the option contains given long switch, otherwise false
      */
     public boolean hasLongSwitch(String longSwitch) {
-        //TODO: Check if longSwitches contains option
-        return false;
+        return longSwitches.contains(longSwitch);
     }
 
     /**
@@ -74,7 +72,7 @@ public class Option {
     }
 
     /**
-     * Checks whether is this option mandatory or not
+     * Checks whether this option is mandatory or not
      *
      * @return true if this option is mandatory, otherwise false
      */
@@ -88,8 +86,10 @@ public class Option {
      * @return true if this option does take an argument, otherwise false
      */
     public boolean takesArgument() {
-        //TODO:
-        return argument != null;
+        if (argumentPresence != null) {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -109,7 +109,6 @@ public class Option {
      * returns null if this option does not take any parameter
      */
     public ArgumentPresence getArgumentPresence() {
-        //TODO:
         return argumentPresence;
     }
 
