@@ -1,7 +1,7 @@
 package arguments;
 
 
-import com.sun.istack.internal.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * This class represents an argument of an option

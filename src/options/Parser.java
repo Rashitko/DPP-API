@@ -1,10 +1,10 @@
 package options;
 
 import arguments.Argument;
-import com.sun.istack.internal.Nullable;
 import parsers.ParsingException;
 import parsers.StringArgumentParser;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
