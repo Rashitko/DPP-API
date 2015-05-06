@@ -346,6 +346,9 @@ public class Option {
          * @return the Option object
          */
         public Option build() {
+            if (description == null) {
+                description = "Description is not available for this option";
+            }
             return new Option(this);
         }
 

@@ -4,7 +4,9 @@ import com.sun.istack.internal.Nullable;
 import constraints.ArgumentConstraint;
 import parsers.ArgumentParser;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -14,7 +16,7 @@ import java.util.Set;
  */
 public class Argument<T> {
 
-    private final Set<ArgumentConstraint<T>> constraints;
+    private final List<ArgumentConstraint<T>> constraints;
     private final ArgumentParser<T> parser;
     private T value;
 
@@ -28,7 +30,7 @@ public class Argument<T> {
      *
      * @return set of argument constrains for this argument
      */
-    public Set<ArgumentConstraint<T>> getConstraints() {
+    public List<ArgumentConstraint<T>> getConstraints() {
         return constraints;
     }
 
@@ -91,8 +93,8 @@ public class Argument<T> {
         return result;
     }
 
-    private Set<String> getConstraintErrors() {
-        HashSet<String> result = new HashSet<String>();
+    private List<String> getConstraintErrors() {
+        List<String> result = new ArrayList<String>();
         for (ArgumentConstraint<T> constraint : constraints) {
             if (!constraint.isFulfilled(getValue())) {
                 result.add(constraint.getErrorMessage(getValue()));
@@ -108,7 +110,7 @@ public class Argument<T> {
      */
     public static class Builder<T> {
 
-        private final Set<ArgumentConstraint<T>> constraints;
+        private final List<ArgumentConstraint<T>> constraints;
         private final ArgumentParser<T> parser;
 
         /**
@@ -118,7 +120,7 @@ public class Argument<T> {
          */
         public Builder(ArgumentParser<T> parser) {
             this.parser = parser;
-            constraints = new HashSet<ArgumentConstraint<T>>();
+            constraints = new ArrayList<ArgumentConstraint<T>>();
         }
 
         /**
