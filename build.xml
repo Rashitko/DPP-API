@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="dpp" default="all" basedir=".">
+
+    <property name="src.dir" value="${basedir}/src"/>
+    <property name="build.dir" value="${basedir}/build"/>
+    <property name="dist.dir" value="${basedir}/dist"/>
+    <property name="doc.dir" value="${basedir}/doc"/>
+    <property name="libName" value="DPPParser"/>
+    <property name="libVersion" value="1.0"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <target name="init">
+        <mkdir dir="${src.dir}"/>
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <target name="compile" depends="clean, init">
+        <javac srcdir="${src.dir}"
+               destdir="${build.dir}">
+        </javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar jarfile="${dist.dir}/${libName}-${libVersion}.jar"
+             basedir="${build.dir}"/>
+    </target>
+
+    <target name="javadoc">
+        <javadoc sourcepath="${src.dir}" destdir="${doc.dir}"/>
+    </target>
+
+    <target name="compile-tests">
+
+    </target>
+
+    <target name="run-tests" depends="compile-tests">
+
+    </target>
+
+    <target name="all" depends="jar, run-tests">
+
+    </target>
+</project>
