@@ -1,6 +1,8 @@
 package arguments;
 
 
+import com.sun.istack.internal.Nullable;
+
 import java.util.Optional;
 
 /**
@@ -15,6 +17,14 @@ public class Argument<T> {
     private T value;
 
     /**
+     * @param parser Parser which will be used for parsing this argument
+     */
+    public Argument(Parser<T> parser) {
+        this.constraint = null;
+        this.parser = parser;
+    }
+
+    /**
      * @param constraint Constraint which will be applied on this argument
      * @param parser     Parser which will be used for parsing this argument
      */
@@ -26,7 +36,7 @@ public class Argument<T> {
     /**
      * Get the constraint for this argument
      *
-     * @return the constraint for this argument
+     * @return the constraint for this argument, null if no constraint is set
      */
     public Constraint<T> getConstraint() {
         return constraint;
@@ -44,13 +54,10 @@ public class Argument<T> {
     /**
      * Get the value of the argument
      *
-     * @return value of the argument
+     * @return value of the argument, null of the argument is not set
      */
-    public Optional<T> getValue() {
-        if (value == null) {
-            return Optional.empty();
-        }
-        return Optional.of(value);
+    public T getValue() {
+        return value;
     }
 
     /**
@@ -65,32 +72,36 @@ public class Argument<T> {
     /**
      * Get the error message which occurred during the parsing phase or during the constraints checking phase
      *
-     * @return the error message which occurred during the parsing phase or during the constraints checking phase
+     * @return the error message which occurred during the parsing phase or during the constraints checking phase,
+     * returns null when no error occurred
      */
-    public Optional<String> getErrorMessage() {
-        if (getParsingError().isPresent()) {
+    @Nullable
+    public String getErrorMessage() {
+        if (getParsingError() != null) {
             return getParsingError();
         }
-        if (getConstraintError().isPresent()) {
+        if (getConstraintError() != null) {
             return getConstraintError();
         }
-        return Optional.empty();
+        return null
     }
 
-    private Optional<String> getParsingError() {
-        if (!getValue().isPresent()) {
-            return Optional.of(parser.getParseErrorMessage());
+    @Nullable
+    private String getParsingError() {
+        if (value == null) {
+            return parser.getParseErrorMessage();
         }
-        return Optional.empty();
+        return null;
 
     }
 
-    private Optional<String> getConstraintError() {
-        if (getValue().isPresent()) {
-            if (!constraint.isFulfilled(getValue().get())) {
-                return Optional.of(constraint.getErrorMessage(getValue().get()));
-            }
+   @Nullable
+   private String getConstraintError() {
+       if (value != null) {
+           if (!constraint.isFulfilled(value)) {
+               return Optional.of(constraint.getErrorMessage(value));
+           }
         }
-        return Optional.empty();
-    }
+       return null;
+   }
 }
