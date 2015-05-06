@@ -1,45 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="dpp" default="all" basedir=".">
+
+
     <property name="src.dir" value="${basedir}/src"/>
     <property name="build.dir" value="${basedir}/build"/>
+
+    <property name="classes.dir" location="${build.dir}/classes"/>
+    <property name="test.classes.dir" location="${build.dir}/test-classes"/>
+    <property name="example.classes.dir" location="${build.dir}/example-classes"/>
+
+    <property name="test.reports.dir" location="${build.dir}/test-reports"/>
     <property name="dist.dir" value="${basedir}/dist"/>
     <property name="doc.dir" value="${basedir}/doc"/>
-    <property name="lib.dir" value="${basedir}/lib"/>
+    <property name="lib.dir" value="${basedir}/libs"/>
+
+
     <property name="libName" value="DPPParser"/>
     <property name="libVersion" value="1.0"/>
 
+
     <target name="clean">
-        <property name="myclasspath" refid="custom.classpath"/>
-        <echo message="Classpath = ${myclasspath}"/>
-        <echo>${java.home}</echo>
         <delete dir="${build.dir}"/>
         <delete dir="${dist.dir}"/>
+        <delete dir="${classes.dir}"/>
+        <delete dir="${test.classes.dir}"/>
+        <delete dir="${example.classes.dir}"/>
     </target>
 
     <target name="init">
-        <mkdir dir="${src.dir}"/>
         <mkdir dir="${build.dir}"/>
         <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <mkdir dir="${example.classes.dir}"/>
     </target>
 
-    <!-- Define the CLASSPATH -->
+    <!-- Define the project classpath -->
     <path id="custom.classpath">
-        <pathelement location="${java.home}/lib/rt.jar"/>
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
     </path>
 
-    <target name="compile" depends="clean, init">
+    <target name="compile" depends="clean, init" description="Compiling the library">
         <javac includeantruntime="false" srcdir="${src.dir}"
-               destdir="${build.dir}" classpathref="custom.classpath">
-            <classpath>
-                <deps>
-                    <dependency name="asm:asm:3.0"/>
-                </deps>
-            </classpath>
+               destdir="${classes.dir}">
+            <classpath refid="custom.classpath"/>
         </javac>
 
     </target>
 
-    <target name="jar" depends="compile">
+    <target name="compile-example">
+
+    </target>
+
+    <target name="run-example">
+
+    </target>
+
+
+    <target name="jar" depends="compile" description="Packing the library into single JAR file">
         <jar jarfile="${dist.dir}/${libName}-${libVersion}.jar"
              basedir="${build.dir}"/>
     </target>
