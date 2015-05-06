@@ -17,7 +17,7 @@ public class ExampleProgram {
 //        this switch is not mandatory, so it is not necessary to set it to run program
         Option verbose = new Option.Builder("v")
                 .addLongSwitch("verbose")
-                .setMandatory(false)
+                .isMandatory(false)
                 .build();
 
 //        Creates builder for an integer argument, which is used in next option
@@ -31,7 +31,7 @@ public class ExampleProgram {
 //        this switch is not mandatory, so it is not necessary to set it to run program
         Option size = new Option.Builder("s")
                 .addLongSwitch("size")
-                .setMandatory(false)
+                .isMandatory(false)
                 .setMandatoryArgument(iArg, "Argument size has not been set")
                 .build();
 

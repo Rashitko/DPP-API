@@ -3,7 +3,6 @@ package options;
 
 import arguments.Argument;
 import com.sun.istack.internal.Nullable;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,6 +18,7 @@ public class Option {
     private final ArgumentPresence argumentPresence;
     private final String description;
     private final String messageArgMissing;
+    private ParseError parseError;
 
     /**
      * This private constructor sets all the properties according to the Builder object on the input
@@ -145,6 +145,27 @@ public class Option {
                 break;
         }
         return result;
+    }
+
+    /**
+     * +     * Gets type of parse error
+     * +     *
+     * +     * @return parse error, or null if no error occurred
+     * +
+     */
+    @Nullable
+    public ParseError getParseError() {
+        //TODO
+        return null;
+    }
+
+    /**
+     * Sets parse error
+     *
+     * @param parseError
+     */
+    void setParseError(ParseError parseError) {
+        //TODO
     }
 
     @Override
