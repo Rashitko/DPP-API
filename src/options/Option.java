@@ -1,6 +1,7 @@
 package options;
 
 
+import arguments.Argument;
 import com.sun.istack.internal.Nullable;
 
 import java.util.HashSet;
@@ -102,7 +103,6 @@ public class Option {
     }
 
     /**
-     *
      * @return true if has an {@link Argument}
      */
     public boolean hasArgument() {
@@ -140,12 +140,12 @@ public class Option {
                 if (!argument.hasValue()) {
                     result.add(messageArgMissing);
                 } else {
-                    result.addAll(argument.getErrorMessages());
+                    result.add(argument.getErrorMessage());
                 }
                 break;
             case OPTIONAL:
                 if (argument.hasValue()) {
-                    result.addAll(argument.getErrorMessages());
+                    result.add(argument.getErrorMessage());
                 }
                 break;
         }
@@ -160,6 +160,10 @@ public class Option {
     @Nullable
     public ParseResult getParseResult() {
         return parseResult;
+    }
+
+    void setParseResult(ParseResult parseResult) {
+        this.parseResult = parseResult;
     }
 
     @Override
@@ -184,10 +188,6 @@ public class Option {
 //        result = 31 * result + longSwitches.hashCode();
 //        return result;
         return super.hashCode();
-    }
-
-    void setParseResult(ParseResult parseResult) {
-        this.parseResult = parseResult;
     }
 
     public boolean isFailed() {

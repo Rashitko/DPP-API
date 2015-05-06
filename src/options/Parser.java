@@ -1,10 +1,14 @@
 package options;
 
+import arguments.Argument;
 import com.sun.istack.internal.Nullable;
 import parsers.ParsingException;
 import parsers.StringParser;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 
 /**
  * This class main purpose is to parse the input and create ParsingResult object
@@ -90,7 +94,7 @@ public class Parser {
     private void processExtraOption(String switchString, Option.Builder.SwitchType switchType, String value) {
         Option.Builder builder = new Option.Builder(switchString, switchType);
         if (value != null) {
-            builder.setOptionalArgument(new Argument.Builder<String>(new StringParser()).build());
+            builder.setOptionalArgument(new Argument<String>(new StringParser()));
         }
         Option option = builder.build();
         if (option.hasArgument()) {

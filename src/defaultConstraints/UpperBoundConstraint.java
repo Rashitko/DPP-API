@@ -1,4 +1,6 @@
-package constraints;
+package defaultConstraints;
+
+import arguments.Constraint;
 
 /**
  * This class represent a constraint which is fulfilled when the argument value is lower or equal than
@@ -6,7 +8,7 @@ package constraints;
  *
  * @param <T> type for which the upper bound is defined
  */
-public class UpperBoundConstraint<T extends Comparable<T>> implements ArgumentConstraint<T> {
+public class UpperBoundConstraint<T extends Comparable<T>> implements Constraint<T> {
 
     private final T max;
 

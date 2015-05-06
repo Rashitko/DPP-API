@@ -1,7 +1,5 @@
-import options.Argument;
 import options.Option;
 import options.Parser;
-import parsers.IntegerParser;
 
 import java.util.HashSet;
 
@@ -10,6 +8,7 @@ import java.util.HashSet;
  */
 public class ExampleProgram {
     public static void main(String[] args) {
+
 //        Creates option representing -v or --verbose command line switch,
 //        this switch is not mandatory, so it is not necessary to set it to run program
         Option verbose = new Option.Builder("v")
@@ -18,16 +17,22 @@ public class ExampleProgram {
                 .build();
 
 //        Creates builder for an integer argument, which is used in next option
-        Argument<Integer> iArg = new Argument.Builder<Integer>(new IntegerParser())
-                .build();
 
+        //TODO
+//        Argument<Integer> iArg = new Argument.Builder<Integer>(new IntegerParser())
+//                .build();
+
+        //TODO
+//        new Argument.Builder<Integer>(new IntegerParser()).
+//                addConstraint(new Constraint.ConstraintBuilder<Integer>(1).followedBy(2).followedBy(3))
 //        Creates option representing -s or --size command line switch,
 //        this option takes an integer argument,
 //        this switch is not mandatory, so it is not necessary to set it to run program
         Option size = new Option.Builder("s")
                 .addLongSwitch("size")
                 .isMandatory(false)
-                .setMandatoryArgument(iArg, "Argument size has not been set")
+                        //TODO
+//                .setMandatoryArgument(iArg, "Argument size has not been set")
                 .build();
 
 //        Creates set of options, used in Parser

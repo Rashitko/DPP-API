@@ -1,4 +1,4 @@
-package constraints;
+package defaultConstraints;
 
 /**
  * This class represent a constraint which is fulfilled when the string's length is between the minimal

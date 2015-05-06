@@ -1,13 +1,13 @@
 package parsers;
 
+import arguments.Parser;
+
 /**
  * Standard long parser
  */
-public class LongParser extends AbstractParser<Long> {
+public class LongParser implements Parser<Long> {
 
-    public LongParser() {
-        super("long");
-    }
+    private String argument;
 
     @Override
     public Long parse(String argument) throws ParsingException {
@@ -17,5 +17,10 @@ public class LongParser extends AbstractParser<Long> {
         } catch (Exception ignore) {
             throw new ParsingException();
         }
+    }
+
+    @Override
+    public String getParseErrorMessage() {
+        return argument + " cannot be parsed as long";
     }
 }

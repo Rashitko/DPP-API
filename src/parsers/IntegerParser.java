@@ -1,13 +1,13 @@
 package parsers;
 
+import arguments.Parser;
+
 /**
  * Standard integer parser
  */
-public class IntegerParser extends AbstractParser<Integer> {
+public class IntegerParser implements Parser<Integer> {
 
-    public IntegerParser() {
-        super("int");
-    }
+    private String argument;
 
     @Override
     public Integer parse(String argument) throws ParsingException {
@@ -17,6 +17,11 @@ public class IntegerParser extends AbstractParser<Integer> {
         } catch (Exception ignore) {
             throw new ParsingException();
         }
+    }
+
+    @Override
+    public String getParseErrorMessage() {
+        return argument + " cannot be parsed as integer";
     }
 
 }
