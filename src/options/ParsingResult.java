@@ -3,29 +3,27 @@ package options;
 import com.sun.istack.internal.Nullable;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * This class contains all related information about options after parsing is done
  */
 public class ParsingResult {
-    private final Set<Option> resolvedOptions;
-    private final Set<String> regularArguments;
+    private final List<Option> resolvedOptions;
+    private final List<String> regularArguments;
     private final List<Option> extraOptions;
-    private final Set<Option> missingOptions;
-    private final Set<Option> failedOptions;
+    private final List<Option> missingOptions;
+    private final List<Option> failedOptions;
 
     /**
      * Constructor
      */
     ParsingResult() {
-        resolvedOptions = new HashSet<Option>();
-        regularArguments = new HashSet<String>();
+        resolvedOptions = new ArrayList<Option>();
+        regularArguments = new ArrayList<String>();
         extraOptions = new ArrayList<Option>();
-        missingOptions = new HashSet<Option>();
-        failedOptions = new HashSet<Option>();
+        missingOptions = new ArrayList<Option>();
+        failedOptions = new ArrayList<Option>();
     }
 
     /**
@@ -101,7 +99,7 @@ public class ParsingResult {
      *
      * @return the set of successfully resolved options
      */
-    public Set<Option> getResolvedOptions() {
+    public List<Option> getResolvedOptions() {
         return resolvedOptions;
     }
 
@@ -110,7 +108,7 @@ public class ParsingResult {
      *
      * @return the set of regular arguments on the input
      */
-    public Set<String> getRegularArguments() {
+    public List<String> getRegularArguments() {
         return regularArguments;
     }
 
@@ -128,7 +126,7 @@ public class ParsingResult {
      *
      * @return the set of missing options
      */
-    public Set<Option> getMissingOptions() {
+    public List<Option> getMissingOptions() {
         return missingOptions;
     }
 
@@ -137,7 +135,7 @@ public class ParsingResult {
      *
      * @return list of failed options
      */
-    public Set<Option> getFailedOptions() {
+    public List<Option> getFailedOptions() {
         return failedOptions;
     }
 
