@@ -5,9 +5,7 @@ import constraints.ArgumentConstraint;
 import parsers.ArgumentParser;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Class representing an argument of an option
@@ -87,7 +85,6 @@ public class Argument<T> {
     }
 
     /**
-     *
      * @return list of errors which occurred during parsing phase
      */
     private List<String> getParsingErrors() {
@@ -97,7 +94,6 @@ public class Argument<T> {
     }
 
     /**
-     *
      * @return list of errors which occurred during constraint checking phase
      */
     private List<String> getConstraintErrors() {

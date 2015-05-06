@@ -2,6 +2,7 @@ package options;
 
 
 import com.sun.istack.internal.Nullable;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,7 +18,7 @@ public class Option {
     private final ArgumentPresence argumentPresence;
     private final String description;
     private final String messageArgMissing;
-    private ParseError parseError;
+    private ParseResult parseResult;
 
     /**
      * This private constructor sets all the properties according to the Builder object on the input
@@ -101,6 +102,14 @@ public class Option {
     }
 
     /**
+     *
+     * @return true if has an {@link Argument}
+     */
+    public boolean hasArgument() {
+        return argument != null;
+    }
+
+    /**
      * Checks if this option has mandatory or optional argument
      *
      * @return the enum containing the information whether this option has mandatory or optional argument,
@@ -149,17 +158,8 @@ public class Option {
      * @return parse error, or null if no error occurred
      */
     @Nullable
-    public ParseError getParseError() {
-        return parseError;
-    }
-
-    /**
-     * Sets parse error
-     *
-     * @param parseError
-     */
-    void setParseError(ParseError parseError) {
-        this.parseError = parseError
+    public ParseResult getParseResult() {
+        return parseResult;
     }
 
     @Override
@@ -186,6 +186,24 @@ public class Option {
         return super.hashCode();
     }
 
+    public void setParseResult(ParseResult parseResult) {
+        this.parseResult = parseResult;
+    }
+
+
+    /**
+     * Enum for representing whether argument is mandatory or optional for particular option
+     */
+    public enum ArgumentPresence {
+        OPTIONAL, MANDATORY
+    }
+
+    /**
+     * TODO
+     */
+    public enum ParseResult {
+        SUCCESS, EXTRA, ARGUMENT_MISSED, OPTION_MISSED, CONSTRAINT_FAILED, PARSING_FAILED
+    }
 
     /**
      * Builder class which is used to create new options
@@ -375,12 +393,5 @@ public class Option {
             SHORT_SWITCH, LONG_SWITCH
         }
 
-    }
-
-    /**
-     * Enum for representing whether argument is mandatory or optional for particular option
-     */
-    public enum ArgumentPresence {
-        OPTIONAL, MANDATORY
     }
 }

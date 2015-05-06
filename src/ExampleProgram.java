@@ -1,7 +1,6 @@
 import options.Argument;
 import options.Option;
 import options.Parser;
-import options.ParsingResult;
 import parsers.IntegerParser;
 
 import java.util.HashSet;
@@ -40,21 +39,21 @@ public class ExampleProgram {
 //        parsing result, where options with their values and potentional error information
 //        are stored
         Parser parser = new Parser(optionSet);
-        ParsingResult result = parser.resolveOptions(args);
+        parser.resolveOptions(args);
 
         //test if option verbose is resolved
-        if (result.isResolvedOption(verbose)) {
-            System.out.println("Verbose option has been set on the input");
-        }
-
+//        if (result.isResolvedOption(verbose)) {
+//            System.out.println("Verbose option has been set on the input");
+//        }
+//
 //        test if option size is resolved, value of size is printed if so, otherwise 42 is printed
-        if (result.isResolvedOption(size)) {
-            System.out.println("Value of argument size is: " + result.getResolvedOption(size).getArgument().getValue());
-        } else if (result.isFailedOption(size)) {
-            if (!result.getFailedOption(size).getArgument().hasValue()) {
-                System.out.println("42");
-            }
-        }
+//        if (result.isResolvedOption(size)) {
+//            System.out.println("Value of argument size is: " + result.getResolvedOption(size).getArgument().getValue());
+//        } else if (result.isFailedOption(size)) {
+//            if (!result.getFailedOption(size).getArgument().hasValue()) {
+//                System.out.println("42");
+//            }
+//        }
 
     }
 
