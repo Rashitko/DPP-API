@@ -1,4 +1,4 @@
-package parsers;
+package options;
 
 /**
  * Enum for representing which error has occurred during the parsing
