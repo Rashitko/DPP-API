@@ -10,8 +10,12 @@ public class LongParser extends AbstractParser<Long> {
     }
 
     @Override
-    public Long parse(String argument) {
+    public Long parse(String argument) throws ParsingException {
         this.argument = argument;
-        return Long.parseLong(argument);
+        try {
+            return Long.parseLong(argument);
+        } catch (Exception ignore) {
+            throw new ParsingException();
+        }
     }
 }

@@ -11,8 +11,12 @@ public class ByteParser extends AbstractParser<Byte> {
     }
 
     @Override
-    public Byte parse(String argument) {
+    public Byte parse(String argument) throws ParsingException{
         this.argument = argument;
-        return Byte.parseByte(argument);
+        try {
+            return Byte.parseByte(argument);
+        } catch (Exception ignore) {
+            throw new ParsingException();
+        }
     }
 }

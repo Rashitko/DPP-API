@@ -10,8 +10,12 @@ public class ShortParser extends AbstractParser<Short> {
     }
 
     @Override
-    public Short parse(String argument) {
+    public Short parse(String argument) throws ParsingException {
         this.argument = argument;
-        return Short.parseShort(argument);
+        try {
+            return Short.parseShort(argument);
+        } catch (Exception ignore) {
+            throw new ParsingException();
+        }
     }
 }

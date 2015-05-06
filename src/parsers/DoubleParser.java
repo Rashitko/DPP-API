@@ -10,8 +10,12 @@ public class DoubleParser extends AbstractParser<Double> {
     }
 
     @Override
-    public Double parse(String argument) {
+    public Double parse(String argument) throws ParsingException {
         this.argument = argument;
-        return Double.parseDouble(argument);
+        try {
+            return Double.parseDouble(argument);
+        } catch (Exception ignore) {
+            throw new ParsingException();
+        }
     }
 }

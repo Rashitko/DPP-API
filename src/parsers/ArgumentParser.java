@@ -11,7 +11,7 @@ public interface ArgumentParser<E> {
      * @param argument argument to parse
      * @return parsed argument
      */
-    public E parse(String argument);
+    public E parse(String argument) throws ParsingException;
 
     /**
      * Gets the error message for the situation when parsing is not successful

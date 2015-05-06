@@ -10,7 +10,7 @@ public class StringParser extends AbstractParser<String> {
     }
 
     @Override
-    public String parse(String argument) {
+    public String parse(String argument) throws ParsingException {
         this.argument = argument;
         return argument;
     }

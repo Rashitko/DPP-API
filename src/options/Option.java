@@ -186,8 +186,20 @@ public class Option {
         return super.hashCode();
     }
 
-    public void setParseResult(ParseResult parseResult) {
+    void setParseResult(ParseResult parseResult) {
         this.parseResult = parseResult;
+    }
+
+    public boolean isFailed() {
+        return parseResult != ParseResult.SUCCESS && parseResult != ParseResult.EXTRA;
+    }
+
+    public boolean isExtra() {
+        return parseResult == ParseResult.EXTRA;
+    }
+
+    public boolean isMissed() {
+        return parseResult == ParseResult.OPTION_MISSED;
     }
 
 

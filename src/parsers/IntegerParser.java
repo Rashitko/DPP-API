@@ -10,9 +10,13 @@ public class IntegerParser extends AbstractParser<Integer> {
     }
 
     @Override
-    public Integer parse(String argument) {
+    public Integer parse(String argument) throws ParsingException {
         this.argument = argument;
-        return Integer.parseInt(argument);
+        try {
+            return Integer.parseInt(argument);
+        } catch (Exception ignore) {
+            throw new ParsingException();
+        }
     }
 
 }

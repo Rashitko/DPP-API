@@ -1,5 +1,7 @@
 package parsers;
 
+import java.text.ParseException;
+
 /**
  * Standard boolean parser
  */
@@ -10,8 +12,12 @@ public class BooleanParser extends AbstractParser<Boolean> {
     }
 
     @Override
-    public Boolean parse(String argument) {
+    public Boolean parse(String argument) throws ParsingException {
         this.argument = argument;
-        return Boolean.parseBoolean(argument);
+        try {
+            return Boolean.parseBoolean(argument);
+        } catch (Exception e) {
+            throw new ParsingException();
+        }
     }
 }

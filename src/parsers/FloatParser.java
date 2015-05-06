@@ -10,8 +10,12 @@ public class FloatParser extends AbstractParser<Float> {
     }
 
     @Override
-    public Float parse(String argument) {
+    public Float parse(String argument) throws ParsingException {
         this.argument = argument;
-        return Float.parseFloat(argument);
+        try {
+            return Float.parseFloat(argument);
+        } catch (Exception ignore) {
+            throw new ParsingException();
+        }
     }
 }
