@@ -1,7 +1,6 @@
-package options;
+package arguments;
 
 import com.sun.istack.internal.Nullable;
-import constraints.ArgumentConstraint;
 import parsers.ArgumentParser;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ import java.util.Set;
  */
 public class Argument<T> {
 
-    private final List<ArgumentConstraint<T>> constraints;
+    private final List<Constraint<T>> constraints;
     private final ArgumentParser<T> parser;
     private T value;
 
@@ -30,7 +29,7 @@ public class Argument<T> {
      *
      * @return set of argument constrains for this argument
      */
-    public List<ArgumentConstraint<T>> getConstraints() {
+    public List<Constraint<T>> getConstraints() {
         return constraints;
     }
 
@@ -95,7 +94,7 @@ public class Argument<T> {
 
     private List<String> getConstraintErrors() {
         List<String> result = new ArrayList<String>();
-        for (ArgumentConstraint<T> constraint : constraints) {
+        for (Constraint<T> constraint : constraints) {
             if (!constraint.isFulfilled(getValue())) {
                 result.add(constraint.getErrorMessage(getValue()));
             }
@@ -110,7 +109,7 @@ public class Argument<T> {
      */
     public static class Builder<T> {
 
-        private final List<ArgumentConstraint<T>> constraints;
+        private final List<Constraint<T>> constraints;
         private final ArgumentParser<T> parser;
 
         /**
@@ -120,7 +119,7 @@ public class Argument<T> {
          */
         public Builder(ArgumentParser<T> parser) {
             this.parser = parser;
-            constraints = new ArrayList<ArgumentConstraint<T>>();
+            constraints = new ArrayList<Constraint<T>>();
         }
 
         /**
@@ -129,7 +128,7 @@ public class Argument<T> {
          * @param constraint constraint to be set
          * @return Builder object
          */
-        public Builder<T> addConstraint(ArgumentConstraint<T> constraint) {
+        public Builder<T> addConstraint(Constraint<T> constraint) {
             this.constraints.add(constraint);
             return this;
         }

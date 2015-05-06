@@ -1,9 +1,11 @@
 package constraints;
 
+import arguments.Constraint;
+
 /**
  * This class represent constraint which is fulfilled when the argument value is empty
  */
-public class EmptyArgumentConstraint implements ArgumentConstraint<String> {
+public class EmptyArgumentConstraint implements Constraint<String> {
 
     @Override
     public boolean isFulfilled(String argument) {

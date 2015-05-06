@@ -1,13 +1,15 @@
 package constraints;
 
 
+import arguments.Constraint;
+
 /**
  * This class represent a constraint which is fulfilled when the argument value is between the lower and upper bound,
  * including both boundary values
  *
  * @param <T> type for which the lower bound and upper bound is defined
  */
-public class RangeConstraint<T extends Comparable<T>> implements ArgumentConstraint<T> {
+public class RangeConstraint<T extends Comparable<T>> implements Constraint<T> {
 
     private final T min;
     private final T max;

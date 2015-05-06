@@ -1,5 +1,7 @@
 package constraints;
 
+import arguments.Constraint;
+
 import java.util.HashSet;
 
 /**
@@ -7,7 +9,7 @@ import java.util.HashSet;
  *
  * @param <T> Type of the element in the list containing the allowed elements
  */
-public class AllowedSetConstraint<T> extends HashSet<T> implements ArgumentConstraint<T> {
+public class AllowedSetConstraint<T> extends HashSet<T> implements Constraint<T> {
 
     @Override
     public boolean isFulfilled(T argument) {
