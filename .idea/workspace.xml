@@ -1,39 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Nullable je nyni brano z javax.annotation.Nullable, predchozi byl nejaky interni java Nullable, ktery nema byt pouzivan zvenci">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ExampleProgram.java" afterPath="$PROJECT_DIR$/src/examples/ExampleProgram.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/examples/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arguments/Argument.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/Argument.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arguments/ArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/ArgumentParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arguments/ComposedConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/ComposedConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arguments/Constraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/Constraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/AllowedSetConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/ByteConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/ByteConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/DoubleConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/DoubleConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/FloatConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/FloatConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/IntegerConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/IntegerConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/LongConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LongConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/LowerBoundConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LowerBoundConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/RangeConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/RangeConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/ShortConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/ShortConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/StringConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/StringLengthConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringLengthConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/StringMaxLengthConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMaxLengthConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/StringMinLengthConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMinLengthConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/UpperBoundConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/options/Option.java" afterPath="$PROJECT_DIR$/src/DPPParser/options/Option.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/options/Parser.java" afterPath="$PROJECT_DIR$/src/DPPParser/options/Parser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/BooleanArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/BooleanArgumentParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/ByteArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/ByteArgumentParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/DoubleArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/DoubleArgumentParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/FloatArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/FloatArgumentParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/IntegerArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/IntegerArgumentParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/LongArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/LongArgumentParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/ParsingException.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/ParsingException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/ShortArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/ShortArgumentParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/StringArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/StringArgumentParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="V parseru by">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/options/Parser.java" afterPath="$PROJECT_DIR$/src/DPPParser/options/Parser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -60,12 +29,13 @@
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+              <caret line="82" column="32" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
               <folding>
-                <element signature="n#target#3;n#project#0;n#!!top" expanded="false" />
-                <element signature="n#javac#0;n#target#4;n#project#0;n#!!top" expanded="false" />
-                <element signature="n#target#5;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#target#1;n#project#0;n#!!top" expanded="false" />
                 <element signature="n#target#7;n#project#0;n#!!top" expanded="false" />
+                <marker date="1430951278141" expanded="false" signature="2406:2599" placeholder="..." />
+                <marker date="1430951278141" expanded="false" signature="2707:2926" placeholder="..." />
+                <marker date="1430951278141" expanded="true" signature="2758:2912" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -74,9 +44,12 @@
       <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57567567">
-              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-              <folding />
+            <state vertical-scroll-proportion="0.33243242">
+              <caret line="53" column="65" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="65" />
+              <folding>
+                <element signature="e#4576#4577#0" expanded="true" />
+                <element signature="e#4643#4644#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -668,7 +641,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430947382181</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="zmenena struktura kodu kvuli ant scriptu, ant je skoro dopsan">
+      <created>1430951282820</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1430951282820</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -754,7 +733,8 @@
     <MESSAGE value="Nejake preklepy, zmemen nazev metody nextIsOption na isNextArgOption" />
     <MESSAGE value="pridany build.xml pro ant" />
     <MESSAGE value="Nullable je nyni brano z javax.annotation.Nullable, predchozi byl nejaky interni java Nullable, ktery nema byt pouzivan zvenci" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nullable je nyni brano z javax.annotation.Nullable, predchozi byl nejaky interni java Nullable, ktery nema byt pouzivan zvenci" />
+    <MESSAGE value="zmenena struktura kodu kvuli ant scriptu, ant je skoro dopsan" />
+    <option name="LAST_COMMIT_MESSAGE" value="zmenena struktura kodu kvuli ant scriptu, ant je skoro dopsan" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -775,10 +755,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="10" />
           <folding>
-            <element signature="n#target#3;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#javac#0;n#target#4;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#target#5;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#target#1;n#project#0;n#!!top" expanded="false" />
             <element signature="n#target#7;n#project#0;n#!!top" expanded="false" />
+            <marker date="1430951278141" expanded="false" signature="2406:2599" placeholder="..." />
+            <marker date="1430951278141" expanded="false" signature="2707:2926" placeholder="..." />
+            <marker date="1430951278141" expanded="true" signature="2758:2912" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -832,21 +813,25 @@
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+          <caret line="82" column="32" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
           <folding>
-            <element signature="n#target#3;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#javac#0;n#target#4;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#target#5;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#target#1;n#project#0;n#!!top" expanded="false" />
             <element signature="n#target#7;n#project#0;n#!!top" expanded="false" />
+            <marker date="1430951278141" expanded="false" signature="2406:2599" placeholder="..." />
+            <marker date="1430951278141" expanded="false" signature="2707:2926" placeholder="..." />
+            <marker date="1430951278141" expanded="true" signature="2758:2912" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57567567">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-          <folding />
+        <state vertical-scroll-proportion="0.33243242">
+          <caret line="53" column="65" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="65" />
+          <folding>
+            <element signature="e#4576#4577#0" expanded="true" />
+            <element signature="e#4643#4644#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

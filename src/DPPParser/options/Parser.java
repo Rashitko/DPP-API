@@ -51,7 +51,7 @@ public class Parser {
                     option = findOptionByShortSwitch(getOptionName(arg));
                 }
                 String argValue = null;
-                if (!isNextArgOption(args)) {
+                if (!args.isEmpty() && !isArgOption(args.get(0))) {
                     argValue = args.remove(0);
                 }
                 processOption(option, arg, argValue);
@@ -118,12 +118,8 @@ public class Parser {
         optionsSet.add(option);
     }
 
-    private boolean isNextArgOption(ArrayList<String> args) {
-        if (args.size() > 0) {
-            String arg = args.get(0);
+    private boolean isArgOption(String arg) {
             return arg.startsWith("-") && !arg.equals("--");
-        }
-        return false;
     }
 
     /**
