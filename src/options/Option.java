@@ -1,18 +1,19 @@
 package options;
 
+
 import com.sun.istack.internal.Nullable;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- * This class represent the option
+ * This class represent an option
  */
 public class Option {
 
     private final Set<String> shortSwitches;
     private final Set<String> longSwitches;
-    private final boolean required;
+    private final boolean mandatory;
     private final Argument argument;
     private final ArgumentPresence argumentPresence;
     private final String description;
@@ -26,7 +27,7 @@ public class Option {
     private Option(Builder builder) {
         this.shortSwitches = builder.shortSwitches;
         this.longSwitches = builder.longSwitches;
-        this.required = builder.required;
+        this.mandatory = builder.mandatory;
         this.argument = builder.argument;
         this.argumentPresence = builder.argumentPresence;
         this.description = builder.description;
@@ -34,7 +35,7 @@ public class Option {
     }
 
     /**
-     * Checks whether this option has one particular short switch alternative
+     * Checks whether this option has one particular short switch
      *
      * @param shortSwitch short switch
      * @return true if the option contains given short switch, otherwise false
@@ -53,7 +54,7 @@ public class Option {
     }
 
     /**
-     * Checks whether this option has one particular long switch alternative
+     * Checks whether this option has one particular long switch
      *
      * @param longSwitch short switch
      * @return true if the option contains given long switch, otherwise false
@@ -72,18 +73,18 @@ public class Option {
     }
 
     /**
-     * Checks whether this option is mandatory or not
+     * Checks whether this option is mandatory or if it is not
      *
      * @return true if this option is mandatory, otherwise false
      */
-    public boolean isRequired() {
-        return required;
+    public boolean isMandatory() {
+        return mandatory;
     }
 
     /**
-     * Checks whether this option takes argument
+     * Checks whether this option takes an argument
      *
-     * @return true if this option does take an argument, otherwise false
+     * @return true if this option takes an argument, otherwise false
      */
     public boolean takesArgument() {
         if (argumentPresence != null) {
@@ -106,7 +107,7 @@ public class Option {
      * Checks if this option has mandatory or optional argument
      *
      * @return the enum containing the information whether this option has mandatory or optional argument,
-     * returns null if this option does not take any parameter
+     * returns null if this option does not take any argument
      */
     public ArgumentPresence getArgumentPresence() {
         return argumentPresence;
@@ -177,7 +178,7 @@ public class Option {
 
         private final Set<String> shortSwitches;
         private final Set<String> longSwitches;
-        private boolean required;
+        private boolean mandatory;
         private Argument argument;
         private ArgumentPresence argumentPresence = ArgumentPresence.OPTIONAL;
         private String description;
@@ -294,11 +295,11 @@ public class Option {
         /**
          * Sets this option to be mandatory or not
          *
-         * @param required true if the option is mandatory, otherwise false
+         * @param mandatory true if the option is mandatory, otherwise false
          * @return Builder object
          */
-        public Builder setMandatory(boolean required) {
-            this.required = required;
+        public Builder isMandatory(boolean mandatory) {
+            this.mandatory = mandatory;
             return this;
         }
 
@@ -337,6 +338,7 @@ public class Option {
             this.description = description;
             return this;
         }
+
 
         /**
          * Creates the Option object

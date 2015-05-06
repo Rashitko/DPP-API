@@ -8,9 +8,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Class representing option's argument
+ * Class representing an argument of an option
  *
- * @param <T> Type used in the argument
+ * @param <T> Type representing the argument
  */
 public class Argument<T> {
 
