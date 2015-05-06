@@ -82,15 +82,12 @@ public class Option {
     }
 
     /**
-     * Checks whether this option takes an argument
+     * Checks whether this option has an mandatory argument
      *
-     * @return true if this option takes an argument, otherwise false
+     * @return true if this option has an mandatory argument, false otherwise
      */
-    public boolean takesArgument() {
-        if (argumentPresence != null) {
-            return true;
-        }
-        return false;
+    public boolean hasMandadoryArgument() {
+        return argumentPresence == ArgumentPresence.MANDATORY;
     }
 
     /**
@@ -147,15 +144,13 @@ public class Option {
     }
 
     /**
-     * +     * Gets type of parse error
-     * +     *
-     * +     * @return parse error, or null if no error occurred
-     * +
+     * Gets type of parse error
+     *
+     * @return parse error, or null if no error occurred
      */
     @Nullable
     public ParseError getParseError() {
-        //TODO
-        return null;
+        return parseError;
     }
 
     /**
@@ -164,7 +159,7 @@ public class Option {
      * @param parseError
      */
     void setParseError(ParseError parseError) {
-        //TODO
+        this.parseError = parseError
     }
 
     @Override
@@ -380,5 +375,12 @@ public class Option {
             SHORT_SWITCH, LONG_SWITCH
         }
 
+    }
+
+    /**
+     * Enum for representing whether argument is mandatory or optional for particular option
+     */
+    public enum ArgumentPresence {
+        OPTIONAL, MANDATORY
     }
 }

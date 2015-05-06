@@ -63,13 +63,12 @@ public class Argument<T> {
     }
 
     /**
-     * Checks whether this argument has option or not
+     * Checks whether this argument has value or not
      *
      * @return true if this argument has value, otherwise false
      */
     public boolean hasValue() {
-        //TODO:
-        return true;
+        return value != null;
     }
 
     /**
@@ -77,8 +76,8 @@ public class Argument<T> {
      *
      * @return the set of error messages which occurred during parsing and possibly during constraints checking
      */
-    public Set<String> getErrorMessages() {
-        HashSet<String> result = new HashSet<String>();
+    public List<String> getErrorMessages() {
+        List<String> result = new ArrayList<String>();
         if (value == null) {
             result.addAll(getParsingErrors());
         } else {
@@ -87,12 +86,20 @@ public class Argument<T> {
         return result;
     }
 
-    private Set<String> getParsingErrors() {
-        HashSet<String> result = new HashSet<String>();
+    /**
+     *
+     * @return list of errors which occurred during parsing phase
+     */
+    private List<String> getParsingErrors() {
+        List<String> result = new ArrayList<String>();
         result.add(parser.getParseErrorMessage());
         return result;
     }
 
+    /**
+     *
+     * @return list of errors which occurred during constraint checking phase
+     */
     private List<String> getConstraintErrors() {
         List<String> result = new ArrayList<String>();
         for (ArgumentConstraint<T> constraint : constraints) {
