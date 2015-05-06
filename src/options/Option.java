@@ -2,8 +2,6 @@ package options;
 
 
 import com.sun.istack.internal.Nullable;
-import parsers.ParseError;
-
 import java.util.HashSet;
 import java.util.Set;
 
