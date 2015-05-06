@@ -88,7 +88,7 @@ public class Option {
      *
      * @return true if this option has an mandatory argument, false otherwise
      */
-    public boolean hasMandadoryArgument() {
+    public boolean hasMandatoryArgument() {
         return argumentPresence == ArgumentPresence.MANDATORY;
     }
 
@@ -129,27 +129,26 @@ public class Option {
     }
 
     /**
-     * Gets the set of error messages which occurred during parsing and possibly during constraints checking
+     * Get the error message which occurred during parsing and possibly during constraints checking
      *
-     * @return the set of error messages which occurred during parsing and possibly during constraints checking
+     * @return the error messages which occurred during parsing and possibly during constraints checking,
+     * return null if no error have occurred
      */
-    public Set<String> getErrorMessages() {
-        HashSet<String> result = new HashSet<String>();
+    public String getErrorMessage() {
         switch (argumentPresence) {
             case MANDATORY:
                 if (!argument.hasValue()) {
-                    result.add(messageArgMissing);
+                    return messageArgMissing;
                 } else {
-                    result.add(argument.getErrorMessage());
+                    return argument.getErrorMessage();
                 }
                 break;
             case OPTIONAL:
                 if (argument.hasValue()) {
-                    result.add(argument.getErrorMessage());
+                    return argument.getErrorMessage();
                 }
                 break;
         }
-        return result;
     }
 
     /**
