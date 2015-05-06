@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="dpp" default="all" basedir=".">
 
+    <!-- source directories -->
+    <property name="src.dir" value="${basedir}/src/DPPParser"/>
+    <property name="example.src.dir" value="${basedir}/src/examples"/>
+    <property name="tests.src.dir" value="${basedir}/src/tests"/>
 
-    <property name="src.dir" value="${basedir}/src"/>
+    <!-- build directories -->
     <property name="build.dir" value="${basedir}/build"/>
-
     <property name="classes.dir" location="${build.dir}/classes"/>
-    <property name="test.classes.dir" location="${build.dir}/test-classes"/>
+    <property name="tests.classes.dir" location="${build.dir}/test-classes"/>
     <property name="example.classes.dir" location="${build.dir}/example-classes"/>
 
     <property name="test.reports.dir" location="${build.dir}/test-reports"/>
@@ -14,26 +17,9 @@
     <property name="doc.dir" value="${basedir}/doc"/>
     <property name="lib.dir" value="${basedir}/libs"/>
 
-
+    <!-- library name and version -->
     <property name="libName" value="DPPParser"/>
     <property name="libVersion" value="1.0"/>
-
-
-    <target name="clean">
-        <delete dir="${build.dir}"/>
-        <delete dir="${dist.dir}"/>
-        <delete dir="${classes.dir}"/>
-        <delete dir="${test.classes.dir}"/>
-        <delete dir="${example.classes.dir}"/>
-    </target>
-
-    <target name="init">
-        <mkdir dir="${build.dir}"/>
-        <mkdir dir="${dist.dir}"/>
-        <mkdir dir="${classes.dir}"/>
-        <mkdir dir="${test.classes.dir}"/>
-        <mkdir dir="${example.classes.dir}"/>
-    </target>
 
     <!-- Define the project classpath -->
     <path id="custom.classpath">
@@ -42,35 +28,78 @@
         </fileset>
     </path>
 
-    <target name="compile" depends="clean, init" description="Compiling the library">
+    <target name="clean" description="Clean build">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <target name="init" description="Create directories">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${tests.classes.dir}"/>
+        <mkdir dir="${example.classes.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${doc.dir}"/>
+    </target>
+    <available file="${dist.dir}/${libName}-${libVersion}.jar" property="isLibAvailable"/>
+
+    <target name="compile" depends="init" description="Compile the library">
         <javac includeantruntime="false" srcdir="${src.dir}"
                destdir="${classes.dir}">
             <classpath refid="custom.classpath"/>
         </javac>
+    </target>
+
+    <target name="compile-example"
+            description="compile the example or write the error message if the JAR does not exist"
+            depends="init, compile-example-jar-exist, compile-example-no-jar">
+    </target>
+
+    <target name="compile-example-jar-exist" description="compile the examples"
+            if="isLibAvailable">
+
+        <javac includeantruntime="false" srcdir="${example.src.dir}"
+               destdir="${example.classes.dir}">
+            <classpath>
+                <pathelement path="${dist.dir}/${libName}-${libVersion}.jar"/>
+            </classpath>
+        </javac>
 
     </target>
 
-    <target name="compile-example">
-
+    <target name="compile-example-no-jar" description="copy file based on false condition"
+            unless="isLibAvailable">
+        <echo>The ${libName}-${libVersion}.jar is not in the ${dist.dir} directory, have you created the
+            library using the command ant jar ?
+        </echo>
     </target>
 
-    <target name="run-example">
-
+    <target name="run-example" depends="compile-example">
+        <java classname="examples.Main">
+            <classpath>
+                <pathelement path="${example.classes.dir}"/>
+                <pathelement path="${dist.dir}/${libName}-${libVersion}.jar"/>
+            </classpath>
+            <arg line="-short"/>
+        </java>
     </target>
 
+    <target name="compile-tests">
+        <javac includeantruntime="false" srcdir="${tests.src.dir}"
+               destdir="${tests.classes.dir}">
+        </javac>
+    </target>
 
     <target name="jar" depends="compile" description="Packing the library into single JAR file">
         <jar jarfile="${dist.dir}/${libName}-${libVersion}.jar"
-             basedir="${build.dir}"/>
+             basedir="${classes.dir}"/>
+
     </target>
 
     <target name="javadoc">
         <javadoc sourcepath="${src.dir}" destdir="${doc.dir}"/>
     </target>
 
-    <target name="compile-tests">
-
-    </target>
 
     <target name="run-tests" depends="compile-tests">
 

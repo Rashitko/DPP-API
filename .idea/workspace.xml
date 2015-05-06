@@ -2,6 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Nullable je nyni brano z javax.annotation.Nullable, predchozi byl nejaky interni java Nullable, ktery nema byt pouzivan zvenci">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ExampleProgram.java" afterPath="$PROJECT_DIR$/src/examples/ExampleProgram.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/examples/Main.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arguments/Argument.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/Argument.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arguments/ArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/ArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arguments/ComposedConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/ComposedConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arguments/Constraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/Constraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/AllowedSetConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/ByteConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/ByteConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/DoubleConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/DoubleConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/FloatConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/FloatConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/IntegerConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/IntegerConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/LongConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LongConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/LowerBoundConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LowerBoundConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/RangeConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/RangeConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/ShortConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/ShortConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/StringConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/StringLengthConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringLengthConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/StringMaxLengthConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMaxLengthConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/StringMinLengthConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMinLengthConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/defaultConstraints/UpperBoundConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/options/Option.java" afterPath="$PROJECT_DIR$/src/DPPParser/options/Option.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/options/Parser.java" afterPath="$PROJECT_DIR$/src/DPPParser/options/Parser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/BooleanArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/BooleanArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/ByteArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/ByteArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/DoubleArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/DoubleArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/FloatArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/FloatArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/IntegerArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/IntegerArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/LongArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/LongArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/ParsingException.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/ParsingException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/ShortArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/ShortArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/StringArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/StringArgumentParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -25,11 +56,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8325123">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+              <folding>
+                <element signature="n#target#3;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#javac#0;n#target#4;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#target#5;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#target#7;n#project#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.57567567">
+              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleProgram.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/ExampleProgram.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -58,9 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/constraints/DoubleConstraint.java" />
-        <option value="$PROJECT_DIR$/src/constraints/EmptyArgumentConstraint.java" />
-        <option value="$PROJECT_DIR$/src/constraints/IntegerConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/LongConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/UpperBoundConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/LowerBoundConstraint.java" />
@@ -108,7 +173,10 @@
         <option value="$PROJECT_DIR$/src/arguments/Argument.java" />
         <option value="$PROJECT_DIR$/src/options/Option.java" />
         <option value="$PROJECT_DIR$/src/options/Parser.java" />
+        <option value="$PROJECT_DIR$/src/examples/ExampleProgram.java" />
+        <option value="$PROJECT_DIR$/build/example-classes/examples/Main.class" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/DPPParser/options/Parser.java" />
       </list>
     </option>
   </component>
@@ -170,6 +238,78 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DPP-API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="du2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DPP-API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="du2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DPP-API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="du2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DPP-API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DPPParser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="du2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DPP-API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DPPParser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="options" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,7 +506,7 @@
     </configuration>
     <configuration default="false" name="Default" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="examples.Main" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="-short option --long-option --uberlongoption 1234" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -522,7 +662,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430940508614</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Nullable je nyni brano z javax.annotation.Nullable, predchozi byl nejaky interni java Nullable, ktery nema byt pouzivan zvenci">
+      <created>1430947382181</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1430947382181</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -551,28 +697,28 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2437408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3275862" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937598" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32761312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937598" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -607,7 +753,8 @@
     <MESSAGE value="equals a hashcode vyhozeny, par preklepu v komentarich opraveno" />
     <MESSAGE value="Nejake preklepy, zmemen nazev metody nextIsOption na isNextArgOption" />
     <MESSAGE value="pridany build.xml pro ant" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridany build.xml pro ant" />
+    <MESSAGE value="Nullable je nyni brano z javax.annotation.Nullable, predchozi byl nejaky interni java Nullable, ktery nema byt pouzivan zvenci" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nullable je nyni brano z javax.annotation.Nullable, predchozi byl nejaky interni java Nullable, ktery nema byt pouzivan zvenci" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -627,7 +774,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="n#target#3;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#javac#0;n#target#4;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#target#5;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#target#7;n#project#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -659,10 +811,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/ExampleProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8325123">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+          <folding>
+            <element signature="n#target#3;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#javac#0;n#target#4;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#target#5;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#target#7;n#project#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57567567">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
           <folding />
         </state>
       </provider>
