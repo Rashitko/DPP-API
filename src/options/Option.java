@@ -142,13 +142,12 @@ public class Option {
                 } else {
                     return argument.getErrorMessage();
                 }
-                break;
             case OPTIONAL:
                 if (argument.hasValue()) {
                     return argument.getErrorMessage();
                 }
-                break;
         }
+        return null;
     }
 
     /**
@@ -164,7 +163,7 @@ public class Option {
     void setParseResult(ParseResult parseResult) {
         this.parseResult = parseResult;
     }
-    
+
     public boolean isFailed() {
         return parseResult != ParseResult.SUCCESS && parseResult != ParseResult.EXTRA;
     }
