@@ -17,11 +17,10 @@ public interface Constraint<E> {
      */
     public boolean isFulfilled(E argument);
 
-
     /**
      * Get the error message when constraint is not fulfilled
      *
-     * @param argument gument on which is the constraint applied
+     * @param argument argument on which is the constraint applied
      * @return the error message when constraint is not fulfilled
      */
     public String getErrorMessage(E argument);
@@ -56,7 +55,7 @@ public interface Constraint<E> {
         /**
          * Build the composed constraint
          *
-         * @return current constraint builder
+         * @return constraint
          */
         public Constraint<T> build() {
             return new ComposedConstraint<T>(constraints);

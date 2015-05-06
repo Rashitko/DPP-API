@@ -1,4 +1,4 @@
-package constraints;
+package defaultConstraints;
 
 import arguments.Constraint;
 
@@ -8,5 +8,5 @@ import arguments.Constraint;
 public interface ByteConstraint extends Constraint<Byte> {
 
     @Override
-    public boolean isFulfilled(Byte argument);
+    boolean isFulfilled(Byte argument);
 }

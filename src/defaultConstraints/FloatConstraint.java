@@ -1,4 +1,4 @@
-package constraints;
+package defaultConstraints;
 
 import arguments.Constraint;
 
@@ -7,5 +7,5 @@ import arguments.Constraint;
  */
 public interface FloatConstraint extends Constraint<Float> {
     @Override
-    public boolean isFulfilled(Float argument);
+    boolean isFulfilled(Float argument);
 }

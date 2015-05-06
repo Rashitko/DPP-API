@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Set Constraint zmenen na list">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/arguments/ComposedConstraint.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/ArgumentConstraint.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/ArgumentConstraint.java" afterPath="$PROJECT_DIR$/src/arguments/Constraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/options/Argument.java" afterPath="$PROJECT_DIR$/src/arguments/Argument.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/ByteConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/ByteConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/DoubleConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/DoubleConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/EmptyArgumentConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/EmptyArgumentConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExampleProgram.java" afterPath="$PROJECT_DIR$/src/ExampleProgram.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/FloatConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/FloatConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/IntegerConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/IntegerConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/LongConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/LongConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/LowerBoundConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/LowerBoundConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Option.java" afterPath="$PROJECT_DIR$/src/options/Option.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/RangeConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/RangeConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/ShortConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/ShortConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/StringConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/StringConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constraints/UpperBoundConstraint.java" afterPath="$PROJECT_DIR$/src/constraints/UpperBoundConstraint.java" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Constrainty okomentovany a hotovy">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/EmptyArgumentConstraint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/parsers/AbstractParser.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/ByteConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/ByteConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/DoubleConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/DoubleConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/FloatConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/FloatConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/IntegerConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/IntegerConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/LongConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/LongConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/LowerBoundConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/LowerBoundConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/RangeConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/RangeConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/ShortConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/ShortConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/StringConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/StringConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/StringLengthConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/StringLengthConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/StringMaxLengthConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/StringMaxLengthConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/StringMinLengthConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/StringMinLengthConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/UpperBoundConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/UpperBoundConstraint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/ArgumentParser.java" afterPath="$PROJECT_DIR$/src/arguments/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/arguments/Argument.java" afterPath="$PROJECT_DIR$/src/arguments/Argument.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/BooleanParser.java" afterPath="$PROJECT_DIR$/src/parsers/BooleanParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ByteParser.java" afterPath="$PROJECT_DIR$/src/parsers/ByteParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/arguments/Constraint.java" afterPath="$PROJECT_DIR$/src/arguments/Constraint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/DoubleParser.java" afterPath="$PROJECT_DIR$/src/parsers/DoubleParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/FloatParser.java" afterPath="$PROJECT_DIR$/src/parsers/FloatParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/IntegerParser.java" afterPath="$PROJECT_DIR$/src/parsers/IntegerParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/LongParser.java" afterPath="$PROJECT_DIR$/src/parsers/LongParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ShortParser.java" afterPath="$PROJECT_DIR$/src/parsers/ShortParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/StringParser.java" afterPath="$PROJECT_DIR$/src/parsers/StringParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -42,14 +52,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Option.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/options/Option.java">
+      <file leaf-file-name="ShortParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parsers/ShortParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-93.5">
-              <caret line="350" column="77" selection-start-line="350" selection-start-column="77" selection-end-line="350" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Builder#3;class#Builder#0;class#Option#0" expanded="false" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#416#417#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,81 +68,100 @@
       <file leaf-file-name="Argument.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/arguments/Argument.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.487562">
-              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8233831">
+              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2339#2347#0" expanded="true" />
+                <element signature="method#getValue#0;class#Argument#0" expanded="false" />
+                <element signature="method#getErrorMessage#0;class#Argument#0" expanded="false" />
+                <element signature="method#getParsingError#0;class#Argument#0" expanded="false" />
+                <element signature="method#getConstraintError#0;class#Argument#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arguments/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parsers/StringParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+              <folding>
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="FloatConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constraints/FloatConstraint.java">
+        <entry file="file://$PROJECT_DIR$/src/defaultConstraints/FloatConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExampleProgram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExampleProgram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/arguments/Constraint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="63" />
-              <folding>
-                <element signature="e#1886#1887#0" expanded="true" />
-                <element signature="e#1955#1956#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComposedConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/arguments/ComposedConstraint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ByteConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constraints/ByteConstraint.java">
+        <entry file="file://$PROJECT_DIR$/src/defaultConstraints/ByteConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpperBoundConstraint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/defaultConstraints/UpperBoundConstraint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoubleConstraint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/defaultConstraints/DoubleConstraint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="AllowedSetConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java">
+        <entry file="file://$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="77" />
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LongParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parsers/LongParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+              <folding>
+                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,22 +189,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/src/options/OptionWithoutArgument.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/options/ArgumentMatcher.java" />
-        <option value="$PROJECT_DIR$/src/options/OptionWithArgument.java" />
-        <option value="$PROJECT_DIR$/src/options/ResolvedOption.java" />
-        <option value="$PROJECT_DIR$/src/arguments/ArgumentType.java" />
         <option value="$PROJECT_DIR$/src/arguments/ArgumentValue.java" />
-        <option value="$PROJECT_DIR$/src/arguments/Argument.java" />
         <option value="$PROJECT_DIR$/src/constraints/ShortConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/StringConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/DoubleConstraint.java" />
-        <option value="$PROJECT_DIR$/src/constraints/ByteConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/EmptyArgumentConstraint.java" />
-        <option value="$PROJECT_DIR$/src/constraints/FloatConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/IntegerConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/LongConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/UpperBoundConstraint.java" />
@@ -189,14 +208,6 @@
         <option value="$PROJECT_DIR$/src/parsers/ParseError.java" />
         <option value="$PROJECT_DIR$/src/options/ArgumentPresence.java" />
         <option value="$PROJECT_DIR$/Example_usage" />
-        <option value="$PROJECT_DIR$/src/parsers/IntegerParser.java" />
-        <option value="$PROJECT_DIR$/src/parsers/BooleanParser.java" />
-        <option value="$PROJECT_DIR$/src/parsers/ByteParser.java" />
-        <option value="$PROJECT_DIR$/src/parsers/DoubleParser.java" />
-        <option value="$PROJECT_DIR$/src/parsers/FloatParser.java" />
-        <option value="$PROJECT_DIR$/src/parsers/LongParser.java" />
-        <option value="$PROJECT_DIR$/src/parsers/ShortParser.java" />
-        <option value="$PROJECT_DIR$/src/parsers/StringParser.java" />
         <option value="$PROJECT_DIR$/src/options/ParsingResult.java" />
         <option value="$PROJECT_DIR$/src/options/OptionSpec.java" />
         <option value="$PROJECT_DIR$/src/options/Option.java" />
@@ -208,9 +219,27 @@
         <option value="$PROJECT_DIR$/src/options/Constraint.java" />
         <option value="$PROJECT_DIR$/src/arguments/ConstraintComposer.java" />
         <option value="$PROJECT_DIR$/src/arguments/SimpleConstraint.java" />
-        <option value="$PROJECT_DIR$/src/arguments/Constraint.java" />
         <option value="$PROJECT_DIR$/src/ExampleProgram.java" />
         <option value="$PROJECT_DIR$/src/arguments/ComposedConstraint.java" />
+        <option value="$PROJECT_DIR$/src/arguments/Constraint.java" />
+        <option value="$PROJECT_DIR$/src/arguments/Argument.java" />
+        <option value="$PROJECT_DIR$/src/parsers/ByteParser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/DoubleParser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/BooleanParser.java" />
+        <option value="$PROJECT_DIR$/src/arguments/Parser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/FloatParser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/IntegerParser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/LongParser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/ShortParser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/StringParser.java" />
+        <option value="$PROJECT_DIR$/src/constraints/ByteConstraint.java" />
+        <option value="$PROJECT_DIR$/src/constraints/FloatConstraint.java" />
+        <option value="$PROJECT_DIR$/src/BasicConstraints/FloatConstraint.java" />
+        <option value="$PROJECT_DIR$/src/BasicTypeConstraints/ByteConstraint.java" />
+        <option value="$PROJECT_DIR$/src/basicTypeConstraints/ByteConstraint.java" />
+        <option value="$PROJECT_DIR$/src/basicTypeConstraints/UpperBoundConstraint.java" />
+        <option value="$PROJECT_DIR$/src/defaultConstraints/UpperBoundConstraint.java" />
+        <option value="$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java" />
       </list>
     </option>
   </component>
@@ -233,6 +262,9 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -247,7 +279,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,49 +326,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="parsers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="du2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DPP-API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="du2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DPP-API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="arguments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -606,7 +602,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430908942760</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Constrainty okomentovany a hotovy">
+      <created>1430913360645</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1430913360645</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -635,28 +637,28 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32761312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24231333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32761312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -685,7 +687,8 @@
     <MESSAGE value="V ParsingResult Set nahrazen za List. Z pripomenek je fakt, ze muze zalezet na poradi." />
     <MESSAGE value="zlepsena anglictina" />
     <MESSAGE value="Set Constraint zmenen na list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set Constraint zmenen na list" />
+    <MESSAGE value="Constrainty okomentovany a hotovy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Constrainty okomentovany a hotovy" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -701,6 +704,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/ByteConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/options/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -732,14 +751,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/StringConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/StringConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="23" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/StringLengthConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/StringLengthConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
@@ -768,14 +787,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/StringConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/StringConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="23" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/StringLengthConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/StringLengthConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
@@ -796,84 +815,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/ShortConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/ShortConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/StringConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/StringConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/DoubleConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/EmptyArgumentConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/IntegerConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/IntegerConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/LongConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/LongConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/LowerBoundConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/LowerBoundConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="99" selection-start-line="3" selection-start-column="99" selection-end-line="3" selection-end-column="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/UpperBoundConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/RangeConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/RangeConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/StringMinLengthConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/StringMinLengthConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/StringLengthConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/StringLengthConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="68" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/StringMaxLengthConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/StringMaxLengthConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
@@ -901,93 +899,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/IntegerParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/AbstractParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ArgumentParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/BooleanParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ByteParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/DoubleParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/FloatParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/LongParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/options/ParseError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="68" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ShortParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/StringParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/options/ParsingResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="143" column="6" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1000,34 +915,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/FloatConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/ByteConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/options/Option.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-93.5">
-          <caret line="350" column="77" selection-start-line="350" selection-start-column="77" selection-end-line="350" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="371" column="77" selection-start-line="371" selection-start-column="77" selection-end-line="371" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Builder#3;class#Builder#0;class#Option#0" expanded="false" />
@@ -1038,7 +929,7 @@
     <entry file="file://$PROJECT_DIR$/src/ExampleProgram.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1048,33 +939,175 @@
     <entry file="file://$PROJECT_DIR$/src/arguments/Constraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="63" />
-          <folding>
-            <element signature="e#1886#1887#0" expanded="true" />
-            <element signature="e#1955#1956#0" expanded="true" />
-          </folding>
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/options/ParsingResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="143" column="6" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/arguments/ComposedConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/ByteParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/DoubleParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/BooleanParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/FloatParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding>
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/IntegerParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/LongParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/ShortParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+          <folding>
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/StringParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/DoubleConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/FloatConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/ByteConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/UpperBoundConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arguments/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/arguments/Argument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.487562">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8233831">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2339#2347#0" expanded="true" />
+            <element signature="method#getValue#0;class#Argument#0" expanded="false" />
+            <element signature="method#getErrorMessage#0;class#Argument#0" expanded="false" />
+            <element signature="method#getParsingError#0;class#Argument#0" expanded="false" />
+            <element signature="method#getConstraintError#0;class#Argument#0" expanded="false" />
           </folding>
         </state>
       </provider>

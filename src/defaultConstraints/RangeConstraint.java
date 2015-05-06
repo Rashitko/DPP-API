@@ -1,4 +1,4 @@
-package constraints;
+package defaultConstraints;
 
 
 import arguments.Constraint;
