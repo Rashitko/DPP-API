@@ -84,9 +84,9 @@ public class Option {
     }
 
     /**
-     * Checks whether this option has an mandatory argument
+     * Checks whether this option has a mandatory argument
      *
-     * @return true if this option has an mandatory argument, false otherwise
+     * @return true if this option has a mandatory argument, false otherwise
      */
     public boolean hasMandatoryArgument() {
         return argumentPresence == ArgumentPresence.MANDATORY;
@@ -129,10 +129,10 @@ public class Option {
     }
 
     /**
-     * Get the error message which occurred during parsing and possibly during constraints checking
+     * Gets the error message which occurred during parsing and possibly during constraints checking
      *
      * @return the error messages which occurred during parsing and possibly during constraints checking,
-     * return null if no error have occurred
+     * returns null if no error have occurred
      */
     public String getErrorMessage() {
         switch (argumentPresence) {
@@ -164,31 +164,7 @@ public class Option {
     void setParseResult(ParseResult parseResult) {
         this.parseResult = parseResult;
     }
-
-    @Override
-    public boolean equals(Object o) {
-//        TODO: Redefine equals
-//        if (this == o) return true;
-//        if (!(o instanceof Option)) return false;
-//
-//        Option option = (Option) o;
-//
-//        if (!longSwitches.equals(option.longSwitches)) return false;
-//        if (!shortSwitches.equals(option.shortSwitches)) return false;
-//
-//        return true;
-        return false;
-    }
-
-    @Override
-    public int hashCode() {
-//        TODO: Redefine hashCode
-//        int result = shortSwitches.hashCode();
-//        result = 31 * result + longSwitches.hashCode();
-//        return result;
-        return super.hashCode();
-    }
-
+    
     public boolean isFailed() {
         return parseResult != ParseResult.SUCCESS && parseResult != ParseResult.EXTRA;
     }
