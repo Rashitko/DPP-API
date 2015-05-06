@@ -11,24 +11,24 @@ import com.sun.istack.internal.Nullable;
 public class Argument<T> {
 
     private final Constraint<T> constraint;
-    private final Parser<T> parser;
+    private final ArgumentParser<T> argumentParser;
     private T value;
 
     /**
-     * @param parser Parser which will be used for parsing this argument
+     * @param argumentParser Parser which will be used for parsing this argument
      */
-    public Argument(Parser<T> parser) {
+    public Argument(ArgumentParser<T> argumentParser) {
         this.constraint = null;
-        this.parser = parser;
+        this.argumentParser = argumentParser;
     }
 
     /**
      * @param constraint Constraint which will be applied on this argument
-     * @param parser     Parser which will be used for parsing this argument
+     * @param argumentParser     Parser which will be used for parsing this argument
      */
-    public Argument(Constraint<T> constraint, Parser<T> parser) {
+    public Argument(Constraint<T> constraint, ArgumentParser<T> argumentParser) {
         this.constraint = constraint;
-        this.parser = parser;
+        this.argumentParser = argumentParser;
     }
 
     /**
@@ -45,8 +45,8 @@ public class Argument<T> {
      *
      * @return the parser for this argument
      */
-    public Parser<T> getParser() {
-        return parser;
+    public ArgumentParser<T> getArgumentParser() {
+        return argumentParser;
     }
 
     /**
@@ -87,7 +87,7 @@ public class Argument<T> {
     @Nullable
     private String getParsingError() {
         if (value == null) {
-            return parser.getParseErrorMessage();
+            return argumentParser.getParseErrorMessage();
         }
         return null;
 
@@ -105,5 +105,9 @@ public class Argument<T> {
 
     public boolean hasValue() {
         return value != null;
+    }
+
+    public boolean hasConstraint() {
+        return constraint != null;
     }
 }

@@ -1,12 +1,12 @@
 package parsers;
 
 
-import arguments.Parser;
+import arguments.ArgumentParser;
 
 /**
  * Standard string parser
  */
-public class StringParser implements Parser<String> {
+public class StringArgumentParser implements ArgumentParser<String> {
 
     private String argument;
 

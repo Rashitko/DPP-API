@@ -1,11 +1,11 @@
 package parsers;
 
-import arguments.Parser;
+import arguments.ArgumentParser;
 
 /**
  * Standard short parser
  */
-public class ShortParser implements Parser<Short> {
+public class ShortArgumentParser implements ArgumentParser<Short> {
 
     private String argument;
 

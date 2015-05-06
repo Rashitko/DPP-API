@@ -1,12 +1,12 @@
 package parsers;
 
 
-import arguments.Parser;
+import arguments.ArgumentParser;
 
 /**
  * Standard byte parser
  */
-public class ByteParser implements Parser<Byte> {
+public class ByteArgumentParser implements ArgumentParser<Byte> {
 
     private String argument;
 

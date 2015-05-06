@@ -1,11 +1,11 @@
 package parsers;
 
-import arguments.Parser;
+import arguments.ArgumentParser;
 
 /**
  * Standard long parser
  */
-public class LongParser implements Parser<Long> {
+public class LongArgumentParser implements ArgumentParser<Long> {
 
     private String argument;
 

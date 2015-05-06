@@ -5,7 +5,7 @@ import parsers.ParsingException;
 /**
  * @param <E> Type of argument the parser is applied on
  */
-public interface Parser<E> {
+public interface ArgumentParser<E> {
 
     /**
      * Parse string in the parameter as argument of type E

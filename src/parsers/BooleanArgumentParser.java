@@ -1,11 +1,11 @@
 package parsers;
 
-import arguments.Parser;
+import arguments.ArgumentParser;
 
 /**
  * Standard boolean parser
  */
-public class BooleanParser implements Parser<Boolean> {
+public class BooleanArgumentParser implements ArgumentParser<Boolean> {
 
     private String argument;
 

@@ -1,11 +1,11 @@
 package parsers;
 
-import arguments.Parser;
+import arguments.ArgumentParser;
 
 /**
  * Standard float parser
  */
-public class FloatParser implements Parser<Float> {
+public class FloatArgumentParser implements ArgumentParser<Float> {
 
     private String argument;
 

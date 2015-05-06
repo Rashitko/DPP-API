@@ -2,50 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="uaaaaa">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/arguments/Argument.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/defaultConstraints/ByteConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/arguments/ComposedConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/arguments/Constraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/defaultConstraints/DoubleConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/defaultConstraints/FloatConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/defaultConstraints/IntegerConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/arguments/Parser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/defaultConstraints/ShortConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/defaultConstraints/StringConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/ArgumentConstraint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/ByteConstraint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/DoubleConstraint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/EmptyArgumentConstraint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/FloatConstraint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/IntegerConstraint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/ShortConstraint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constraints/StringConstraint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/options/Argument.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/parsers/AbstractParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/parsers/ArgumentParser.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/LongConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/LongConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/LowerBoundConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/LowerBoundConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/RangeConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/RangeConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/StringLengthConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/StringLengthConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/StringMaxLengthConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/StringMaxLengthConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/StringMinLengthConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/StringMinLengthConstraint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/constraints/UpperBoundConstraint.java" afterPath="$PROJECT_DIR$/src/defaultConstraints/UpperBoundConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/BooleanParser.java" afterPath="$PROJECT_DIR$/src/parsers/BooleanParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ByteParser.java" afterPath="$PROJECT_DIR$/src/parsers/ByteParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/DoubleParser.java" afterPath="$PROJECT_DIR$/src/parsers/DoubleParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExampleProgram.java" afterPath="$PROJECT_DIR$/src/ExampleProgram.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/FloatParser.java" afterPath="$PROJECT_DIR$/src/parsers/FloatParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/IntegerParser.java" afterPath="$PROJECT_DIR$/src/parsers/IntegerParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/LongParser.java" afterPath="$PROJECT_DIR$/src/parsers/LongParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arguments/Parser.java" afterPath="$PROJECT_DIR$/src/arguments/ArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/BooleanParser.java" afterPath="$PROJECT_DIR$/src/parsers/BooleanArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/ByteParser.java" afterPath="$PROJECT_DIR$/src/parsers/ByteArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/DoubleParser.java" afterPath="$PROJECT_DIR$/src/parsers/DoubleArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/FloatParser.java" afterPath="$PROJECT_DIR$/src/parsers/FloatArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/IntegerParser.java" afterPath="$PROJECT_DIR$/src/parsers/IntegerArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/LongParser.java" afterPath="$PROJECT_DIR$/src/parsers/LongArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/ShortParser.java" afterPath="$PROJECT_DIR$/src/parsers/ShortArgumentParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parsers/StringParser.java" afterPath="$PROJECT_DIR$/src/parsers/StringArgumentParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/arguments/Argument.java" afterPath="$PROJECT_DIR$/src/arguments/Argument.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Option.java" afterPath="$PROJECT_DIR$/src/options/Option.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/options/Parser.java" afterPath="$PROJECT_DIR$/src/options/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ShortParser.java" afterPath="$PROJECT_DIR$/src/parsers/ShortParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/StringParser.java" afterPath="$PROJECT_DIR$/src/parsers/StringParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/du2.iml" afterPath="$PROJECT_DIR$/du2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,29 +42,31 @@
       <file leaf-file-name="Argument.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/arguments/Argument.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="1818">
-              <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1449" max-vertical-offset="1890">
+              <caret line="110" column="33" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
               <folding>
                 <element signature="method#getParsingError#0;class#Argument#0" expanded="false" />
-                <element signature="e#2544#2545#0" expanded="true" />
-                <element signature="e#2580#2581#0" expanded="true" />
+                <element signature="e#2672#2673#0" expanded="true" />
+                <element signature="e#2708#2709#0" expanded="true" />
+                <element signature="e#2746#2747#0" expanded="true" />
+                <element signature="e#2787#2788#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="846">
+            <state vertical-scroll-proportion="0.6734104" vertical-offset="433" max-vertical-offset="846">
               <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
-                <element signature="e#999#1000#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1194#1195#0" expanded="true" />
-                <element signature="e#1304#1312#0" expanded="true" />
+                <element signature="e#930#931#0" expanded="true" />
+                <element signature="e#1023#1024#0" expanded="true" />
+                <element signature="e#1124#1125#0" expanded="true" />
+                <element signature="e#1218#1219#0" expanded="true" />
+                <element signature="e#1336#1344#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,19 +75,19 @@
       <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/options/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1195" max-vertical-offset="3564">
-              <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="3798">
+              <caret line="82" column="32" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
               <folding>
-                <element signature="e#1230#1238#0" expanded="true" />
+                <element signature="e#1238#1246#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooleanParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parsers/BooleanParser.java">
+      <file leaf-file-name="BooleanArgumentParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parsers/BooleanArgumentParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="540">
+            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="540">
               <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
               <folding />
             </state>
@@ -126,33 +97,13 @@
       <file leaf-file-name="Option.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/options/Option.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2080" max-vertical-offset="6624">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2080" max-vertical-offset="6660">
               <caret line="147" column="39" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
               <folding>
+                <element signature="e#4644#4645#0" expanded="true" />
+                <element signature="e#4690#4691#0" expanded="true" />
                 <element signature="method#Builder#3;class#Builder#0;class#Option#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExampleProgram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExampleProgram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="1224">
-              <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/arguments/Parser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64181525" vertical-offset="0" max-vertical-offset="617">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -205,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/constraints/ShortConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/StringConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/AllowedSetConstraint.java" />
         <option value="$PROJECT_DIR$/src/constraints/DoubleConstraint.java" />
@@ -252,10 +202,11 @@
         <option value="$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java" />
         <option value="$PROJECT_DIR$/src/parsers/BooleanParser.java" />
         <option value="$PROJECT_DIR$/src/ExampleProgram.java" />
-        <option value="$PROJECT_DIR$/src/options/Parser.java" />
         <option value="$PROJECT_DIR$/src/options/Option.java" />
-        <option value="$PROJECT_DIR$/src/arguments/Argument.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/arguments/ArgumentParser.java" />
+        <option value="$PROJECT_DIR$/src/arguments/Argument.java" />
+        <option value="$PROJECT_DIR$/src/options/Parser.java" />
       </list>
     </option>
   </component>
@@ -327,6 +278,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="du2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="options" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="du2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arguments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -519,7 +506,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-short option --long-option --uberlongoption 123456" />
+      <option name="PROGRAM_PARAMETERS" value="-short option --long-option --uberlongoption 1234" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -533,7 +520,9 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <list size="1">
@@ -672,7 +661,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="743" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -681,7 +670,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993808" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3993808" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -692,7 +681,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24231333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32761312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -779,7 +768,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/LongParser.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/LongArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
@@ -808,7 +797,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1230#1238#0" expanded="true" />
+            <element signature="e#1238#1246#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -818,7 +807,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
-            <element signature="e#1230#1238#0" expanded="true" />
+            <element signature="e#1238#1246#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -835,7 +824,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding>
-            <element signature="e#1230#1238#0" expanded="true" />
+            <element signature="e#1238#1246#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -873,7 +862,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
-            <element signature="e#1230#1238#0" expanded="true" />
+            <element signature="e#1238#1246#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1001,35 +990,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ByteParser.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/ByteArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/DoubleParser.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/DoubleArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/FloatParser.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/FloatArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/IntegerParser.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/IntegerArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/LongParser.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/LongArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
@@ -1037,7 +1026,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ShortParser.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/ShortArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="522">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
@@ -1045,7 +1034,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/StringParser.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/StringArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
@@ -1093,33 +1082,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/BooleanParser.java">
+    <entry file="file://$PROJECT_DIR$/src/arguments/ArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="540">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.64181525" vertical-offset="0" max-vertical-offset="617">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ExampleProgram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="1224">
+        <state vertical-scroll-proportion="0.4536424" vertical-offset="284" max-vertical-offset="1224">
           <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arguments/Argument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="1818">
-          <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
-          <folding>
-            <element signature="method#getParsingError#0;class#Argument#0" expanded="false" />
-            <element signature="e#2544#2545#0" expanded="true" />
-            <element signature="e#2580#2581#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1128,41 +1103,57 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2080" max-vertical-offset="6624">
           <caret line="147" column="39" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
           <folding>
+            <element signature="e#4644#4645#0" expanded="true" />
+            <element signature="e#4690#4691#0" expanded="true" />
             <element signature="method#Builder#3;class#Builder#0;class#Option#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/arguments/Argument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1449" max-vertical-offset="1890">
+          <caret line="110" column="33" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
+          <folding>
+            <element signature="method#getParsingError#0;class#Argument#0" expanded="false" />
+            <element signature="e#2672#2673#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
+            <element signature="e#2746#2747#0" expanded="true" />
+            <element signature="e#2787#2788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/BooleanArgumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="540">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/options/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1195" max-vertical-offset="3564">
-          <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="3798">
+          <caret line="82" column="32" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
           <folding>
-            <element signature="e#1230#1238#0" expanded="true" />
+            <element signature="e#1238#1246#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="846">
+        <state vertical-scroll-proportion="0.6734104" vertical-offset="433" max-vertical-offset="846">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-            <element signature="e#1304#1312#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1336#1344#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arguments/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64181525" vertical-offset="0" max-vertical-offset="617">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>

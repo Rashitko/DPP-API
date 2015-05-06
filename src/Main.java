@@ -2,8 +2,8 @@ import arguments.Argument;
 import arguments.Constraint;
 import options.Option;
 import options.Parser;
-import parsers.IntegerParser;
-import parsers.StringParser;
+import parsers.IntegerArgumentParser;
+import parsers.StringArgumentParser;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +13,7 @@ public class Main {
     public static void main(final String[] args) {
         //-short option --long-option --uberlongoption 123456
         Option shortOption = new Option.Builder("short")
-                .setMandatoryArgument(new Argument<String>(new StringParser()), "")
+                .setMandatoryArgument(new Argument<String>(new StringArgumentParser()), "")
                 .build();
         Option longOption = new Option.Builder("long-option", Option.Builder.SwitchType.LONG_SWITCH).build();
         Option uberLong = new Option.Builder("uberlongoption", Option.Builder.SwitchType.LONG_SWITCH)
@@ -27,7 +27,7 @@ public class Main {
                     public String getErrorMessage(Integer argument) {
                         return "Should be between 100 000 and 200 000";
                     }
-                }, new IntegerParser()))
+                }, new IntegerArgumentParser()))
                 .build();
         Set<Option> options = new HashSet<Option>();
         options.add(longOption);

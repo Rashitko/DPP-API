@@ -3,7 +3,7 @@ package options;
 import arguments.Argument;
 import com.sun.istack.internal.Nullable;
 import parsers.ParsingException;
-import parsers.StringParser;
+import parsers.StringArgumentParser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -80,21 +80,34 @@ public class Parser {
         if (option.hasMandadoryArgument() && value == null) {
             optionParseResult = Option.ParseResult.ARGUMENT_MISSED;
         } else if (option.hasArgument() && value != null) {
-            try {
-                Object parsedArgValue = option.getArgument().getParser().parse(value);
-                //noinspection unchecked
-                option.getArgument().setValue(parsedArgValue);
-            } catch (ParsingException ignore) {
-                optionParseResult = Option.ParseResult.PARSING_FAILED;
-            }
+            optionParseResult = setOptionArgValue(option, value, optionParseResult);
         }
         option.setParseResult(optionParseResult);
+    }
+
+    private Option.ParseResult setOptionArgValue(Option option, String value, Option.ParseResult optionParseResult) {
+        try {
+            final Argument argument = option.getArgument();
+            Object parsedArgValue = argument.getArgumentParser().parse(value);
+            //noinspection unchecked
+            argument.setValue(parsedArgValue);
+            if (argument.hasConstraint()) {
+                //noinspection unchecked
+                final boolean constraintFulfilled = argument.getConstraint().isFulfilled(parsedArgValue);
+                if (!constraintFulfilled) {
+                    optionParseResult = Option.ParseResult.CONSTRAINT_FAILED;
+                }
+            }
+        } catch (ParsingException ignore) {
+            optionParseResult = Option.ParseResult.PARSING_FAILED;
+        }
+        return optionParseResult;
     }
 
     private void processExtraOption(String switchString, Option.Builder.SwitchType switchType, String value) {
         Option.Builder builder = new Option.Builder(switchString, switchType);
         if (value != null) {
-            builder.setOptionalArgument(new Argument<String>(new StringParser()));
+            builder.setOptionalArgument(new Argument<String>(new StringArgumentParser()));
         }
         Option option = builder.build();
         if (option.hasArgument()) {

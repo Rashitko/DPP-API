@@ -1,11 +1,11 @@
 package parsers;
 
-import arguments.Parser;
+import arguments.ArgumentParser;
 
 /**
  * Standard integer parser
  */
-public class IntegerParser implements Parser<Integer> {
+public class IntegerArgumentParser implements ArgumentParser<Integer> {
 
     private String argument;
 

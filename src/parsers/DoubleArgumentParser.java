@@ -1,11 +1,11 @@
 package parsers;
 
-import arguments.Parser;
+import arguments.ArgumentParser;
 
 /**
  * Standard double parser
  */
-public class DoubleParser implements Parser<Double> {
+public class DoubleArgumentParser implements ArgumentParser<Double> {
 
     private String argument;
 
