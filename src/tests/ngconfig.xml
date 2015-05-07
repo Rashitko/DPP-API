@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="DefaultSuite">
+    <test name="all">
+
+        <packages>
+            <package name="DPPParser"/>
+        </packages>
+    </test>
+
+</suite>
