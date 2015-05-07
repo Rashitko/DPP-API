@@ -2,9 +2,10 @@
 <project name="dpp" default="all" basedir=".">
 
     <!-- source directories -->
-    <property name="src.dir" value="${basedir}/src/DPPParser"/>
-    <property name="example.src.dir" value="${basedir}/src/examples"/>
-    <property name="tests.src.dir" value="${basedir}/src/tests"/>
+    <property name="src.dir" value="${basedir}/src"/>
+    <property name="parser.src.dir" value="${src.dir}/DPPParser"/>
+    <property name="example.src.dir" value="${src.dir}/examples"/>
+    <property name="tests.src.dir" value="${src.dir}/tests"/>
 
     <!-- build directories -->
     <property name="build.dir" value="${basedir}/build"/>
@@ -21,8 +22,16 @@
     <property name="libName" value="DPPParser"/>
     <property name="libVersion" value="1.0"/>
 
+    <available file="${dist.dir}/${libName}-${libVersion}.jar" property="isLibAvailable"/>
+
     <!-- Define the project classpath -->
-    <path id="custom.classpath">
+    <path id="compile.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="javadoc.classpath">
         <fileset dir="${lib.dir}">
             <include name="**/*.jar"/>
         </fileset>
@@ -31,6 +40,7 @@
     <target name="clean" description="Clean build">
         <delete dir="${build.dir}"/>
         <delete dir="${dist.dir}"/>
+        <delete dir="${doc.dir}"/>
     </target>
 
     <target name="init" description="Create directories">
@@ -41,13 +51,19 @@
         <mkdir dir="${dist.dir}"/>
         <mkdir dir="${doc.dir}"/>
     </target>
-    <available file="${dist.dir}/${libName}-${libVersion}.jar" property="isLibAvailable"/>
+
 
     <target name="compile" depends="init" description="Compile the library">
-        <javac includeantruntime="false" srcdir="${src.dir}"
+        <javac includeantruntime="false" srcdir="${parser.src.dir}"
                destdir="${classes.dir}">
-            <classpath refid="custom.classpath"/>
+            <classpath refid="compile.classpath"/>
         </javac>
+    </target>
+
+    <target name="jar" depends="compile" description="Packing the library into single JAR file">
+        <jar jarfile="${dist.dir}/${libName}-${libVersion}.jar"
+             basedir="${classes.dir}"/>
+
     </target>
 
     <target name="compile-example"
@@ -80,7 +96,7 @@
                 <pathelement path="${example.classes.dir}"/>
                 <pathelement path="${dist.dir}/${libName}-${libVersion}.jar"/>
             </classpath>
-            <arg line="-short"/>
+            <arg line="-short --uberlongoption 20"/>
         </java>
     </target>
 
@@ -90,14 +106,22 @@
         </javac>
     </target>
 
-    <target name="jar" depends="compile" description="Packing the library into single JAR file">
-        <jar jarfile="${dist.dir}/${libName}-${libVersion}.jar"
-             basedir="${classes.dir}"/>
+
+    <target name="build" depends="run-tests, jar, javadoc"
+            description="run the tests, create jar library and creates javadoc documentation">
 
     </target>
 
     <target name="javadoc">
-        <javadoc sourcepath="${src.dir}" destdir="${doc.dir}"/>
+        <javadoc destdir="${doc.dir}" windowtitle="DPPParser">
+            <fileset dir="${src.dir}" defaultexcludes="yes">
+                <include name="DPPParser/**"/>
+            </fileset>
+            <classpath refid="javadoc.classpath"/>
+            <bottom>
+                <![CDATA[<b>DPPParser, Michal Raska & Jakub Hava, 2015<b>]]>
+            </bottom>
+        </javadoc>
     </target>
 
 

@@ -15,7 +15,7 @@ public interface Constraint<E> {
      * @param argument argument on which is the constraint applied
      * @return true if the constraint is fulfilled, otherwise false
      */
-    public boolean isFulfilled(E argument);
+    boolean isFulfilled(E argument);
 
     /**
      * Get the error message when constraint is not fulfilled
@@ -23,7 +23,7 @@ public interface Constraint<E> {
      * @param argument argument on which is the constraint applied
      * @return the error message when constraint is not fulfilled
      */
-    public String getErrorMessage(E argument);
+    String getErrorMessage(E argument);
 
     /**
      * Constraint builder used to create composed constrains. Order of constrains evaluation is determined by the order
@@ -44,7 +44,7 @@ public interface Constraint<E> {
          * Add the constraint to the composed constraint. This constraint will be evaluated after all the previously added
          * constrains during the parsing phase
          *
-         * @param constraint
+         * @param constraint constraint which is added on the top of previously added constrains
          * @return current constraint builder
          */
         public ConstraintBuilder<T> followedBy(Constraint<T> constraint) {

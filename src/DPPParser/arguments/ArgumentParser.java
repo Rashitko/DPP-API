@@ -12,14 +12,15 @@ public interface ArgumentParser<E> {
      *
      * @param argument argument to parse
      * @return parsed argument
+     * @throws ParsingException parsing exception
      */
-    public E parse(String argument) throws ParsingException;
+    E parse(String argument) throws ParsingException;
 
     /**
      * Get the error message when parsing is not successful
      *
      * @return the error message when parsing is not successful
      */
-    public String getParseErrorMessage();
+    String getParseErrorMessage();
 
 }

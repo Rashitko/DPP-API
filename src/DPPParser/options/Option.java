@@ -327,6 +327,7 @@ public class Option {
          * Sets the mandatory argument to the option
          *
          * @param argument argument
+         * @param messageArgMissing Message which will be shown when argument is not entered
          * @return Builder object
          */
         public Builder setMandatoryArgument(Argument argument, String messageArgMissing) {
