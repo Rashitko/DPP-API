@@ -1,12 +1,16 @@
 package tests;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 public class ConstraintTest {
 
-    @org.testng.annotations.Test
+    @Test
     public void testIsFulfilled() throws Exception {
+        Assert.assertEquals("aaa", "bbb");
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void testGetErrorMessage() throws Exception {
 
     }

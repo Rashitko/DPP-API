@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<project name="dpp" default="all" basedir=".">
+<project name="dpp" default="build" basedir=".">
+
 
     <!-- source directories -->
     <property name="src.dir" value="${basedir}/src"/>
@@ -13,40 +14,54 @@
     <property name="tests.classes.dir" location="${build.dir}/test-classes"/>
     <property name="example.classes.dir" location="${build.dir}/example-classes"/>
 
-    <property name="test.reports.dir" location="${build.dir}/test-reports"/>
+    <property name="test.reports.dir" location="${basedir}/test-reports"/>
     <property name="dist.dir" value="${basedir}/dist"/>
-    <property name="doc.dir" value="${basedir}/doc"/>
+    <property name="doc.dir" value="${basedir}/javadoc"/>
     <property name="lib.dir" value="${basedir}/libs"/>
 
     <!-- library name and version -->
     <property name="libName" value="DPPParser"/>
     <property name="libVersion" value="1.0"/>
 
+    <!-- Define <testng> task -->
+
+    <taskdef name="testng" classname="org.testng.TestNGAntTask">
+        <classpath>
+            <pathelement location="${lib.dir}/testng-6.8.jar"/>
+        </classpath>
+    </taskdef>
+
     <available file="${dist.dir}/${libName}-${libVersion}.jar" property="isLibAvailable"/>
 
     <!-- Define the project classpath -->
-    <path id="compile.classpath">
+    <path id="project.classpath">
         <fileset dir="${lib.dir}">
             <include name="**/*.jar"/>
         </fileset>
     </path>
 
-    <path id="javadoc.classpath">
+    <!-- Define the tests classpath -->
+    <path id="tests.classpath">
         <fileset dir="${lib.dir}">
             <include name="**/*.jar"/>
         </fileset>
+        <pathelement path="${tests.classes.dir}"/>
+        <pathelement path="${tests.src.dir}"/>
     </path>
+
 
     <target name="clean" description="Clean build">
         <delete dir="${build.dir}"/>
         <delete dir="${dist.dir}"/>
         <delete dir="${doc.dir}"/>
+        <delete dir="${test.reports.dir}"/>
     </target>
 
     <target name="init" description="Create directories">
         <mkdir dir="${build.dir}"/>
         <mkdir dir="${classes.dir}"/>
         <mkdir dir="${tests.classes.dir}"/>
+        <mkdir dir="${test.reports.dir}"/>
         <mkdir dir="${example.classes.dir}"/>
         <mkdir dir="${dist.dir}"/>
         <mkdir dir="${doc.dir}"/>
@@ -56,7 +71,7 @@
     <target name="compile" depends="init" description="Compile the library">
         <javac includeantruntime="false" srcdir="${parser.src.dir}"
                destdir="${classes.dir}">
-            <classpath refid="compile.classpath"/>
+            <classpath refid="project.classpath"/>
         </javac>
     </target>
 
@@ -85,9 +100,9 @@
 
     <target name="compile-example-no-jar" description="copy file based on false condition"
             unless="isLibAvailable">
-        <echo>The ${libName}-${libVersion}.jar is not in the ${dist.dir} directory, have you created the
-            library using the command ant jar ?
-        </echo>
+        <fail>The ${libName}-${libVersion}.jar is not in the ${dist.dir} directory, have you created the library using
+            the command ant jar ?
+        </fail>
     </target>
 
     <target name="run-example" depends="compile-example">
@@ -100,15 +115,23 @@
         </java>
     </target>
 
-    <target name="compile-tests">
+    <target name="compile-tests" depends="init">
         <javac includeantruntime="false" srcdir="${tests.src.dir}"
                destdir="${tests.classes.dir}">
+            <classpath refid="project.classpath"/>
         </javac>
     </target>
 
+    <target name="run-tests" depends="compile-tests">
+        <testng outputdir="${test.reports.dir}" classpathref="tests.classpath">
+            <!-- Tell Ant where is testng.xml -->
+            <xmlfileset dir="${tests.src.dir}" includes="testng.xml"/>
+        </testng>
+        <echo>Test reports are in ${test.reports.dir} directory</echo>
+    </target>
 
     <target name="build" depends="run-tests, jar, javadoc"
-            description="run the tests, create jar library and creates javadoc documentation">
+            description="Run the tests, create the JAR library and create javadoc documentation">
 
     </target>
 
@@ -117,19 +140,15 @@
             <fileset dir="${src.dir}" defaultexcludes="yes">
                 <include name="DPPParser/**"/>
             </fileset>
-            <classpath refid="javadoc.classpath"/>
+            <classpath refid="project.classpath"/>
             <bottom>
                 <![CDATA[<b>DPPParser, Michal Raska & Jakub Hava, 2015<b>]]>
             </bottom>
         </javadoc>
+        <echo>Generated javadoc is in the${doc.dir} directory</echo>
     </target>
 
 
-    <target name="run-tests" depends="compile-tests">
 
-    </target>
 
-    <target name="all" depends="jar, run-tests">
-
-    </target>
 </project>
