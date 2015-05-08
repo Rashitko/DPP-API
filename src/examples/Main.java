@@ -3,6 +3,7 @@ package examples;
 import DPPParser.arguments.Argument;
 import DPPParser.arguments.Constraint;
 import DPPParser.options.Option;
+import DPPParser.options.OptionsList;
 import DPPParser.options.Parser;
 import DPPParser.parsers.IntegerArgumentParser;
 import DPPParser.parsers.StringArgumentParser;
@@ -18,7 +19,7 @@ public class Main {
                 .setMandatoryArgument(new Argument<String>(new StringArgumentParser()), "")
                 .build();
         Option longOption = new Option.Builder("long-option", Option.Builder.SwitchType.LONG_SWITCH).build();
-        Option uberLong = new Option.Builder("uberlongoption", Option.Builder.SwitchType.LONG_SWITCH)
+        Option uberLong = new Option.Builder("uberlong-option", Option.Builder.SwitchType.LONG_SWITCH)
                 .setOptionalArgument(new Argument<Integer>(new Constraint<Integer>() {
                     @Override
                     public boolean isFulfilled(Integer argument) {
@@ -31,7 +32,7 @@ public class Main {
                     }
                 }, new IntegerArgumentParser()))
                 .build();
-        Set<Option> options = new HashSet<Option>();
+        OptionsList options = new OptionsList();
         options.add(longOption);
         options.add(shortOption);
         options.add(uberLong);
