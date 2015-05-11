@@ -20,6 +20,10 @@
             <class name="tests.constraints.AllowedSetConstraintStringsTest"/>
             <class name="tests.constraints.LowerBoundConstraintTest"/>
             <class name="tests.constraints.UpperBoundConstraintTest"/>
+            <class name="tests.constraints.RangeConstraintTest"/>
+            <class name="tests.constraints.StringMaxLengthConstraintTest"/>
+            <class name="tests.constraints.StringMinLengthConstraintTest"/>
+            <class name="tests.constraints.StringLengthConstraintTest"/>
         </classes>
     </test>
 

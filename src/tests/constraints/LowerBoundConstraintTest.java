@@ -12,7 +12,6 @@ public class LowerBoundConstraintTest {
 
     @BeforeClass
     public void initialize() {
-
         lowerBoundConstraint = new LowerBoundConstraint<Integer>(lowerBound);
     }
 
@@ -36,7 +35,7 @@ public class LowerBoundConstraintTest {
     }
 
     @Test
-    public void testGetErrorMessage_St_Pass() throws Exception {
+    public void testGetErrorMessage_Pass() throws Exception {
         Assert.assertEquals(lowerBoundConstraint.getErrorMessage(2), "\"" + 2 + "\" is not higher than " + lowerBound);
     }
 }

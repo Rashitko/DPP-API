@@ -8,11 +8,11 @@ import org.testng.annotations.Test;
 
 public class UpperBoundConstraintTest {
     private UpperBoundConstraint<String> upperBoundConstraint;
-    private String lowerBound = "BoundaryString";
+    private String upperBound = "BoundaryString";
 
     @BeforeClass
     public void initialize() {
-        upperBoundConstraint = new UpperBoundConstraint<String>(lowerBound);
+        upperBoundConstraint = new UpperBoundConstraint<String>(upperBound);
     }
 
 
@@ -35,7 +35,7 @@ public class UpperBoundConstraintTest {
     }
 
     @Test
-    public void testGetErrorMessage_St_Pass() throws Exception {
-        Assert.assertEquals(upperBoundConstraint.getErrorMessage("Ganga"), "\"Ganga\" is not higher than " + lowerBound);
+    public void testGetErrorMessage_Pass() throws Exception {
+        Assert.assertEquals(upperBoundConstraint.getErrorMessage("Ganga"), "\"Ganga\" is not lower than " + upperBound);
     }
 }

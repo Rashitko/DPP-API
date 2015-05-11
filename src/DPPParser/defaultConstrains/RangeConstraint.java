@@ -34,7 +34,7 @@ public class RangeConstraint<T extends Comparable<T>> implements Constraint<T> {
 
     @Override
     public String getErrorMessage(T argument) {
-        return argument + " is not in the range of " + min + "-" + max;
+        return "\"" + argument + "\" is not in the range of " + min + "-" + max;
     }
 
 }
