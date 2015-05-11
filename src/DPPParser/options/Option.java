@@ -196,6 +196,8 @@ public class Option {
      */
     public static class Builder {
 
+        private static final String SWITCH_VALIDATION_REGEX = "^[a-zA-Z]+([\\w\\-_a-zA-Z_0-9]*[\\w_a-zA-Z_0-9]+|[\\w_a-zA-Z_0-9]*)$";
+
         private final Set<String> shortSwitches;
         private final Set<String> longSwitches;
         private boolean mandatory;
@@ -210,6 +212,9 @@ public class Option {
          * @param shortSwitch short switch
          */
         public Builder(String shortSwitch) {
+            if (!validateSwitch(shortSwitch)) {
+                throw new IllegalArgumentException(getIllegalSwitchExceptionMessage(shortSwitch));
+            }
             this.shortSwitches = new HashSet<String>();
             this.shortSwitches.add(shortSwitch);
             longSwitches = new HashSet<String>();
@@ -221,6 +226,11 @@ public class Option {
          * @param shortSwitches the list of short switches
          */
         public Builder(Set<String> shortSwitches) {
+            for (String switchString : shortSwitches) {
+                if (!validateSwitch(switchString)) {
+                    throw new IllegalArgumentException(getIllegalSwitchExceptionMessage(switchString));
+                }
+            }
             this.shortSwitches = new HashSet<String>();
             this.shortSwitches.addAll(shortSwitches);
             longSwitches = new HashSet<String>();
@@ -233,6 +243,9 @@ public class Option {
          * @param switchType   switch type, ie if the short or long switch should be set
          */
         public Builder(String optionSwitch, SwitchType switchType) {
+            if (!validateSwitch(optionSwitch)) {
+                throw new IllegalArgumentException(getIllegalSwitchExceptionMessage(optionSwitch));
+            }
             this.shortSwitches = new HashSet<String>();
             longSwitches = new HashSet<String>();
             switch (switchType) {
@@ -254,6 +267,11 @@ public class Option {
          * @param switchType     switch type, ie if the list of short or long switches should be set
          */
         public Builder(Set<String> optionSwitches, SwitchType switchType) {
+            for (String switchString : optionSwitches) {
+                if (!validateSwitch(switchString)) {
+                    throw new IllegalArgumentException(getIllegalSwitchExceptionMessage(switchString));
+                }
+            }
             this.shortSwitches = new HashSet<String>();
             longSwitches = new HashSet<String>();
             switch (switchType) {
@@ -268,6 +286,10 @@ public class Option {
             }
         }
 
+        private String getIllegalSwitchExceptionMessage(String shortSwitch) {
+            return "switch " + shortSwitch + " is illegal.";
+        }
+
         /**
          * Adds short switch
          *
@@ -275,6 +297,9 @@ public class Option {
          * @return Builder object
          */
         public Builder addShortSwitch(String shortSwitch) {
+            if (!validateSwitch(shortSwitch)) {
+                throw new IllegalArgumentException(getIllegalSwitchExceptionMessage(shortSwitch));
+            }
             this.shortSwitches.add(shortSwitch);
             return this;
         }
@@ -286,6 +311,9 @@ public class Option {
          * @return Builder object
          */
         public Builder addLongSwitch(String longSwitch) {
+            if (!validateSwitch(longSwitch)) {
+                throw new IllegalArgumentException(getIllegalSwitchExceptionMessage(longSwitch));
+            }
             this.longSwitches.add(longSwitch);
             return this;
         }
@@ -297,6 +325,11 @@ public class Option {
          * @return Builder object
          */
         public Builder addShortSwitches(Set<String> shortSwitches) {
+            for (String switchString : shortSwitches) {
+                if (!validateSwitch(switchString)) {
+                    throw new IllegalArgumentException(getIllegalSwitchExceptionMessage(switchString));
+                }
+            }
             this.shortSwitches.addAll(shortSwitches);
             return this;
         }
@@ -308,8 +341,17 @@ public class Option {
          * @return Builder object
          */
         public Builder addLongSwitches(Set<String> longSwitches) {
+            for (String switchString : longSwitches) {
+                if (!validateSwitch(switchString)) {
+                    throw new IllegalArgumentException(getIllegalSwitchExceptionMessage(switchString));
+                }
+            }
             this.longSwitches.addAll(longSwitches);
             return this;
+        }
+
+        private boolean validateSwitch(String switchString) {
+            return switchString.matches(SWITCH_VALIDATION_REGEX);
         }
 
         /**
@@ -326,11 +368,14 @@ public class Option {
         /**
          * Sets the mandatory argument to the option
          *
-         * @param argument argument
+         * @param argument          argument
          * @param messageArgMissing Message which will be shown when argument is not entered
          * @return Builder object
          */
         public Builder setMandatoryArgument(Argument argument, String messageArgMissing) {
+            if (argument == null) {
+                throw new IllegalArgumentException("argument cannot be null");
+            }
             this.argument = argument;
             this.argumentPresence = ArgumentPresence.MANDATORY;
             this.messageArgMissing = messageArgMissing;
@@ -344,6 +389,9 @@ public class Option {
          * @return Builder object
          */
         public Builder setOptionalArgument(Argument argument) {
+            if (argument == null) {
+                throw new IllegalArgumentException("argument cannot be null");
+            }
             this.argument = argument;
             this.argumentPresence = ArgumentPresence.OPTIONAL;
             return this;
