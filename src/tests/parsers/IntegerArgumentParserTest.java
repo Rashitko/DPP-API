@@ -1,4 +1,4 @@
-package tests;
+package tests.parsers;
 
 import DPPParser.parsers.IntegerArgumentParser;
 import DPPParser.parsers.ParsingException;
