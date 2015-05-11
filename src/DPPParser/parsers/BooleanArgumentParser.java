@@ -11,12 +11,7 @@ public class BooleanArgumentParser implements ArgumentParser<Boolean> {
 
     @Override
     public Boolean parse(String argument) throws ParsingException {
-        this.argument = argument;
-        try {
             return Boolean.parseBoolean(argument);
-        } catch (Exception e) {
-            throw new ParsingException();
-        }
     }
 
     @Override

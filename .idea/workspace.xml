@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Testy pro Byte, Long, Short a Integer parsers hotovy">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/ByteArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/ByteArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/IntegerArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/IntegerArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/LongArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/LongArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/ShortArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/ShortArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/du2.iml" afterPath="$PROJECT_DIR$/du2.iml" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="BooleanParser test vytvoren&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/parsers/BooleanArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/BooleanArgumentParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/parsers/StringArgumentParser.java" afterPath="$PROJECT_DIR$/src/DPPParser/parsers/StringArgumentParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/testng.xml" afterPath="$PROJECT_DIR$/src/tests/testng.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,7 +31,17 @@
         <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringArgumentParser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DPPParser/parsers/StringArgumentParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.38423645">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -45,21 +51,24 @@
         <entry file="file://$PROJECT_DIR$/src/DPPParser/parsers/BooleanArgumentParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
+              <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+              <folding>
+                <element signature="e#405#406#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooleanArgumentParserTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BooleanArgumentParserTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5566502">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#354#355#0" expanded="true" />
-                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#363#364#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,16 +94,6 @@
                 <element signature="e#344#345#0" expanded="true" />
                 <element signature="e#393#394#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParsingException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DPPParser/parsers/ParsingException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -175,8 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/options/Constraint.java" />
-        <option value="$PROJECT_DIR$/src/arguments/ConstraintComposer.java" />
         <option value="$PROJECT_DIR$/src/arguments/SimpleConstraint.java" />
         <option value="$PROJECT_DIR$/src/arguments/ComposedConstraint.java" />
         <option value="$PROJECT_DIR$/src/arguments/Constraint.java" />
@@ -220,12 +217,14 @@
         <option value="$PROJECT_DIR$/src/tests/ShortArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/LongArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/DPPParser/parsers/BooleanArgumentParserTest.java" />
-        <option value="$PROJECT_DIR$/src/tests/testng.xml" />
         <option value="$PROJECT_DIR$/src/tests/parsers/ShortArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/parsers/LongArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/parsers/IntegerArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/parsers/ByteArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/testng.xml" />
+        <option value="$PROJECT_DIR$/src/DPPParser/parsers/StringArgumentParser.java" />
+        <option value="$PROJECT_DIR$/src/DPPParser/parsers/BooleanArgumentParser.java" />
       </list>
     </option>
   </component>
@@ -869,7 +868,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431337293050</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="BooleanParser test vytvoren&#10;">
+      <created>1431339045044</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1431339045044</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -934,7 +939,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ParseError enum vytahnut z option tridy a vytvoren pro nej vlastni soubor uvnitr parses balicku" />
     <MESSAGE value="ArgumentPresence enum vytahnut z option tridy a vytvoren pro nej vlastni soubor" />
     <MESSAGE value="Cele okomentovane. Z enumu ArgumentPresence odebrana hodnota Fordbidden. Delalo by to pak bordel kdyby uzivatel volal v Builderu metodu setArgument a nastavil mu, ze je forbidden. Pokud je forbidden, tak ho tam nenastavuji. Myslim ze by to pak akorat odpovidalo spatne na metodu ptajici se zda ma dana optiona argument" />
     <MESSAGE value="Metoda setArgument nahrazena dvemi, setMandatoryArgument a setOptionalArgument. U setMandatoryArgument pridan parameter rikajici jaka ma byt vyhozena hlaska, pokud tam mandatory argument chybi. U optional to neni treba. To pred tim neslo, jelikoz tato funkcionalita byla uzavrena v jedne metode" />
@@ -959,7 +963,8 @@
     <MESSAGE value="upravena classpath pro testy v build.xml, napsany testy pro IntegerArgumentParser" />
     <MESSAGE value="Pridany testy pro kontrolu hranic pro IntegerArgumentParser" />
     <MESSAGE value="Testy pro ShortParser ( stejny pattern jako pro IntegerParser) pridany" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testy pro ShortParser ( stejny pattern jako pro IntegerParser) pridany" />
+    <MESSAGE value="BooleanParser test vytvoren&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="BooleanParser test vytvoren&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1305,14 +1310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/parsers/StringArgumentParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DPPParser/parsers/ShortArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1361,14 +1358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/parsers/ShortArgumentParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1405,14 +1394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/parsers/BooleanArgumentParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/parsers/ByteArgumentParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.661017">
@@ -1427,13 +1408,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5566502">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/parsers/BooleanArgumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+          <folding>
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/parsers/StringArgumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38423645">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

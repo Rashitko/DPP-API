@@ -11,7 +11,7 @@ public class StringArgumentParser implements ArgumentParser<String> {
     private String argument;
 
     @Override
-    public String parse(String argument) throws ParsingException {
+    public String parse(String argument) {
         this.argument = argument;
         return argument;
     }
