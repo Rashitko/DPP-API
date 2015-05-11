@@ -35,9 +35,8 @@ public interface Constraint<E> {
     class ConstraintBuilder<T> {
         List<Constraint<T>> constraints;
 
-        public ConstraintBuilder<T> ConstraintBuilder(Constraint<T> constraint) {
+        public ConstraintBuilder(Constraint<T> constraint) {
             constraints.add(constraint);
-            return this;
         }
 
         /**

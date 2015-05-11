@@ -1,6 +1,5 @@
 package DPPParser.arguments;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,7 +14,7 @@ class ComposedConstraint<T> implements Constraint<T> {
      * @param constraints List of constrains from which the composed constrain is created
      */
     public ComposedConstraint(List<Constraint<T>> constraints) {
-        this.constraints = new ArrayList<Constraint<T>>();
+        this.constraints = constraints;
     }
 
     @Override

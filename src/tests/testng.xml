@@ -14,7 +14,7 @@
         </classes>
     </test>
 
-    <test name="constraints">
+    <test name="constraints" verbose="10">
         <classes>
             <class name="tests.constraints.AllowedSetConstraintNumbersTest"/>
             <class name="tests.constraints.AllowedSetConstraintStringsTest"/>
@@ -24,6 +24,7 @@
             <class name="tests.constraints.StringMaxLengthConstraintTest"/>
             <class name="tests.constraints.StringMinLengthConstraintTest"/>
             <class name="tests.constraints.StringLengthConstraintTest"/>
+            <class name="tests.constraints.ComposedConstraintTest"/>
         </classes>
     </test>
 
