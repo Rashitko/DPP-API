@@ -24,7 +24,6 @@ public class StringMaxLengthConstraint implements StringConstraint {
 
     @Override
     public String getErrorMessage(String argument) {
-        //TODO:
-        return null;
+        return "\"" + argument + "\" length is not lower than" + max;
     }
 }

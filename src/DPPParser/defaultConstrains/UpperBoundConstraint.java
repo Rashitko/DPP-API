@@ -28,8 +28,7 @@ public class UpperBoundConstraint<T extends Comparable<T>> implements Constraint
 
     @Override
     public String getErrorMessage(T argument) {
-        //TODO:
-        return null;
+        return argument + " is not lower than " + max;
     }
 
 }
