@@ -3,7 +3,7 @@
 
     <test name="arguments">
         <classes>
-            <class name="tests.ConstraintTest"/>
+            <class name="tests.IntegerArgumentParserTest"/>
         </classes>
     </test>
 
