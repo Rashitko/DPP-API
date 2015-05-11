@@ -24,18 +24,20 @@ class ComposedConstraint<T> implements Constraint<T> {
                 return false;
             }
         }
-        return false;
+        return true;
     }
 
     @Override
     public String getErrorMessage(T argument) {
         StringBuilder strBuilder = new StringBuilder();
         for (Constraint<T> constraint : constraints) {
-            strBuilder
-                    .append(constraint.getClass().getName())
-                    .append(" : ")
-                    .append(constraint.getErrorMessage(argument))
-                    .append(System.getProperty("line.separator"));
+            if (!constraint.isFulfilled(argument)) {
+                strBuilder
+                        .append(constraint.getClass().getName())
+                        .append(" : ")
+                        .append(constraint.getErrorMessage(argument))
+                        .append(System.getProperty("line.separator"));
+            }
         }
         return strBuilder.toString();
     }

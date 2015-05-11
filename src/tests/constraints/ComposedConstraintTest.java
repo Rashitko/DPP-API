@@ -1,6 +1,7 @@
 package tests.constraints;
 
 import DPPParser.arguments.Constraint;
+import DPPParser.defaultConstrains.IntegerConstraint;
 import DPPParser.defaultConstrains.LowerBoundConstraint;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -10,45 +11,65 @@ import org.testng.annotations.Test;
 public class ComposedConstraintTest {
 
     private Constraint<Integer> composedConstraint;
-    private Integer lowerBound = 5;
-    private Integer upperBound = 20;
+    private Integer lowerEvenBound = 6;
 
     @BeforeClass
     public void initialize() {
-        Constraint.ConstraintBuilder<Integer> builder = new Constraint.ConstraintBuilder<Integer>(new LowerBoundConstraint<Integer>(lowerBound));
-        // composedConstraint = new Constraint.ConstraintBuilder<Integer>(new LowerBoundConstraint<Integer>(lowerBound))
-        //  .followedBy(new UpperBoundConstraint<Integer>(upperBound))
-        //    .build();
+        Constraint<Integer> evenNumbersConstraint = new IntegerConstraint() {
+            @Override
+            public boolean isFulfilled(Integer argument) {
+                if (argument % 2 == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            @Override
+            public String getErrorMessage(Integer argument) {
+                return "\"" + argument + "\" is not divisible by two";
+            }
+        };
+        composedConstraint = new Constraint.ConstraintBuilder<Integer>(new LowerBoundConstraint<Integer>(lowerEvenBound))
+                .followedBy(evenNumbersConstraint)
+                .build();
     }
 
     @Test
-    public void testIsFulfilled_MinBoundaryValue_Pass() throws Exception {
-        boolean result = composedConstraint.isFulfilled(lowerBound);
+    public void testIsFulfilled_MinBoundaryEvenValue_Pass() throws Exception {
+        boolean result = composedConstraint.isFulfilled(lowerEvenBound);
+        Assert.assertTrue(result);
+    }
+
+
+    @Test
+    public void testIsFulfilled_HigherEvenValue_Pass() throws Exception {
+        boolean result = composedConstraint.isFulfilled(26);
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_MaxBoundaryValue_Pass() throws Exception {
-        boolean result = composedConstraint.isFulfilled(upperBound);
-        Assert.assertTrue(result);
-    }
-
-    @Test
-    public void testIsFulfilled_HigherValue_Pass() throws Exception {
+    public void testIsFulfilled_HigherOddValue_Pass() throws Exception {
         boolean result = composedConstraint.isFulfilled(25);
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testIsFulfilled_LowerValue_Pass() throws Exception {
+    public void testIsFulfilled_LowerEvenValue_Pass() throws Exception {
         boolean result = composedConstraint.isFulfilled(2);
         Assert.assertFalse(result);
     }
 
     @Test
+    public void testIsFulfilled_LowerOddValue_Pass() throws Exception {
+        boolean result = composedConstraint.isFulfilled(1);
+        Assert.assertFalse(result);
+    }
+
+    @Test
     public void testGetErrorMessage_Pass() throws Exception {
-        Assert.assertEquals(composedConstraint.getErrorMessage(-10),
-                "LowerBoundConstraint : \"-10\" is not higher than " + lowerBound + "\n");
+        Assert.assertEquals(composedConstraint.getErrorMessage(4),
+                "DPPParser.defaultConstrains.LowerBoundConstraint : \"4\" is not higher than " + lowerEvenBound + "\n");
     }
 
 }

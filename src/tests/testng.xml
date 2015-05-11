@@ -14,7 +14,7 @@
         </classes>
     </test>
 
-    <test name="constraints" verbose="10">
+    <test name="constraints">
         <classes>
             <class name="tests.constraints.AllowedSetConstraintNumbersTest"/>
             <class name="tests.constraints.AllowedSetConstraintStringsTest"/>

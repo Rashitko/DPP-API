@@ -84,27 +84,15 @@
 
     <target name="compile-example"
             description="compile the example or write the error message if the JAR does not exist"
-            depends="init, compile-example-jar-exist, compile-example-no-jar">
-    </target>
-
-    <target name="compile-example-jar-exist" description="compile the examples"
-            if="isLibAvailable">
-
+            depends="init, jar">
         <javac includeantruntime="false" srcdir="${example.src.dir}"
                destdir="${example.classes.dir}">
             <classpath>
                 <pathelement path="${dist.dir}/${libName}-${libVersion}.jar"/>
             </classpath>
         </javac>
-
     </target>
 
-    <target name="compile-example-no-jar" description="copy file based on false condition"
-            unless="isLibAvailable">
-        <fail>The ${libName}-${libVersion}.jar is not in the ${dist.dir} directory, have you created the library using
-            the command ant jar ?
-        </fail>
-    </target>
 
     <target name="run-example" depends="compile-example">
         <java classname="examples.Main">
