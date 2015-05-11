@@ -1,2 +1,10 @@
 .idea/*
 out/*
+latex/du1.aux
+latex/du1.fdb_latexmk
+latex/du1.fls
+latex/du1.log
+latex/du1.out
+latex/du1.pdf
+latex/du1.toc
+latex/start-compiling
