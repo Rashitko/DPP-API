@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Vytvorena trida example program. Je ji jeste treba doplnit podle zadani na webu">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LongConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LongConstraint.java" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="pripsany chybove hlasky pro constrainty v defaultConstrains package">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintNumbersTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintStringsTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tests/constraints/UpperBoundConstraintTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/AllowedSetConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/AllowedSetConstraint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LowerBoundConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LowerBoundConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/RangeConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/RangeConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringLengthConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringLengthConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMaxLengthConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMaxLengthConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMinLengthConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMinLengthConstraint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/testng.xml" afterPath="$PROJECT_DIR$/src/tests/testng.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -35,17 +36,27 @@
         <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/AllowedSetConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ByteConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/ByteConstraint.java">
+      <file leaf-file-name="testng.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+              <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoubleArgumentParserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/parsers/DoubleArgumentParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="64" column="88" selection-start-line="64" selection-start-column="88" selection-end-line="64" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -55,10 +66,37 @@
         <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/LowerBoundConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
               <folding>
                 <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#791#792#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpperBoundConstraint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="e#731#732#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpperBoundConstraintTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tests/constraints/UpperBoundConstraintTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32512316">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,9 +106,9 @@
         <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMinLengthConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="67" />
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="70" />
               <folding>
-                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#722#723#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,67 +118,33 @@
         <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMaxLengthConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+              <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
               <folding>
                 <element signature="e#645#646#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
+                <element signature="e#721#722#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringConstraint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringLengthConstraint.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StringLengthConstraint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringLengthConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79802954">
-              <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="86" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpperBoundConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java">
+      <file leaf-file-name="LowerBoundConstraintTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+              <caret line="12" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="1" />
               <folding>
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RangeConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/RangeConstraint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
-              <folding>
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1067#1068#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LongConstraint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/LongConstraint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -150,8 +154,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TestNG Test Class" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
@@ -169,13 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/parsers/StringParser.java" />
-        <option value="$PROJECT_DIR$/src/constraints/ByteConstraint.java" />
-        <option value="$PROJECT_DIR$/src/constraints/FloatConstraint.java" />
-        <option value="$PROJECT_DIR$/src/BasicConstraints/FloatConstraint.java" />
-        <option value="$PROJECT_DIR$/src/BasicTypeConstraints/ByteConstraint.java" />
-        <option value="$PROJECT_DIR$/src/basicTypeConstraints/ByteConstraint.java" />
-        <option value="$PROJECT_DIR$/src/basicTypeConstraints/UpperBoundConstraint.java" />
         <option value="$PROJECT_DIR$/src/defaultConstraints/UpperBoundConstraint.java" />
         <option value="$PROJECT_DIR$/src/defaultConstraints/AllowedSetConstraint.java" />
         <option value="$PROJECT_DIR$/src/parsers/BooleanParser.java" />
@@ -211,15 +208,22 @@
         <option value="$PROJECT_DIR$/src/tests/parsers/StringArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/parsers/DoubleArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/parsers/FloatArgumentParserTest.java" />
-        <option value="$PROJECT_DIR$/src/tests/testng.xml" />
         <option value="$PROJECT_DIR$/src/examples/ExampleProgram.java" />
         <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LongConstraint.java" />
         <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/RangeConstraint.java" />
-        <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java" />
-        <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LowerBoundConstraint.java" />
         <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMinLengthConstraint.java" />
         <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMaxLengthConstraint.java" />
         <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringLengthConstraint.java" />
+        <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/AllowedSetConstraint.java" />
+        <option value="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintStringsTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintNumbersTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintIntegersTest.java" />
+        <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/LowerBoundConstraint.java" />
+        <option value="$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/testng.xml" />
+        <option value="$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java" />
+        <option value="$PROJECT_DIR$/src/tests/constraints/UpperBoundConstraintTest.java" />
       </list>
     </option>
   </component>
@@ -293,6 +297,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="du2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DPP-API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="constraints" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -444,6 +474,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="tests.constraints" />
       <recent name="tests.parsers" />
       <recent name="DPPParser.parsers" />
       <recent name="tests" />
@@ -893,7 +924,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431340474560</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="pripsany chybove hlasky pro constrainty v defaultConstrains package">
+      <created>1431341104231</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1431341104231</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -958,7 +995,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="V ParsingResult Set nahrazen za List. Z pripomenek je fakt, ze muze zalezet na poradi." />
     <MESSAGE value="zlepsena anglictina" />
     <MESSAGE value="Set Constraint zmenen na list" />
     <MESSAGE value="Constrainty okomentovany a hotovy" />
@@ -983,7 +1019,8 @@
     <MESSAGE value="Testy pro StringParser pridany" />
     <MESSAGE value="Float a Double parser otestovany. Parsery by meli byt vsechny pokryty testy." />
     <MESSAGE value="Vytvorena trida example program. Je ji jeste treba doplnit podle zadani na webu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vytvorena trida example program. Je ji jeste treba doplnit podle zadani na webu" />
+    <MESSAGE value="pripsany chybove hlasky pro constrainty v defaultConstrains package" />
+    <option name="LAST_COMMIT_MESSAGE" value="pripsany chybove hlasky pro constrainty v defaultConstrains package" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -999,52 +1036,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="49" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="65" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/du2.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1204,18 +1195,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/parsers/StringArgumentParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1243,18 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/parsers/DoubleArgumentParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0677967">
-          <caret line="64" column="88" selection-start-line="64" selection-start-column="88" selection-end-line="64" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#350#351#0" expanded="false" />
-            <element signature="e#401#402#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/parsers/IntegerArgumentParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1276,14 +1243,6 @@
             <element signature="e#347#348#0" expanded="false" />
             <element signature="e#397#398#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1351,29 +1310,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/ByteConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/AllowedSetConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/RangeConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+          <caret line="36" column="70" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
           <folding>
             <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1074#1075#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1386,17 +1329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-          <folding>
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/LongConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1405,23 +1337,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/LowerBoundConstraint.java">
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/ByteConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/ShortConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintStringsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintNumbersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/parsers/DoubleArgumentParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="88" selection-start-line="64" selection-start-column="88" selection-end-line="64" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/AllowedSetConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMinLengthConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="67" />
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="70" />
           <folding>
-            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1429,19 +1420,71 @@
     <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringMaxLengthConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
           <folding>
             <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/StringLengthConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79802954">
-          <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="86" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/LowerBoundConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/defaultConstrains/UpperBoundConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/constraints/UpperBoundConstraintTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32512316">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

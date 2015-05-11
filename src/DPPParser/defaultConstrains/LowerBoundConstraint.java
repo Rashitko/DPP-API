@@ -28,7 +28,7 @@ public class LowerBoundConstraint<T extends Comparable<T>> implements Constraint
 
     @Override
     public String getErrorMessage(T argument) {
-        return argument + " is not higher than " + min;
+        return "\"" + argument + "\" is not higher than " + min;
     }
 
 }

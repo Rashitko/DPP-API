@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="TestAll">
+<suite name="Parsers">
 
     <test name="parsers">
         <classes>
@@ -11,6 +11,15 @@
             <class name="tests.parsers.StringArgumentParserTest"/>
             <class name="tests.parsers.FloatArgumentParserTest"/>
             <class name="tests.parsers.DoubleArgumentParserTest"/>
+        </classes>
+    </test>
+
+    <test name="constraints">
+        <classes>
+            <class name="tests.constraints.AllowedSetConstraintNumbersTest"/>
+            <class name="tests.constraints.AllowedSetConstraintStringsTest"/>
+            <class name="tests.constraints.LowerBoundConstraintTest"/>
+            <class name="tests.constraints.UpperBoundConstraintTest"/>
         </classes>
     </test>
 

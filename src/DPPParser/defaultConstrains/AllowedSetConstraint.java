@@ -18,6 +18,6 @@ public class AllowedSetConstraint<T> extends HashSet<T> implements Constraint<T>
 
     @Override
     public String getErrorMessage(T argument) {
-        return argument + " is not allowed. Allowed arguments are:" + this;
+        return "\"" + argument + "\" is not allowed. Allowed arguments are:" + this;
     }
 }
