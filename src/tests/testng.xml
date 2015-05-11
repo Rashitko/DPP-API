@@ -28,4 +28,9 @@
         </classes>
     </test>
 
+    <test name="main">
+        <classes>
+            <class name="tests.ArgumentTest"/>
+        </classes>
+    </test>
 </suite>

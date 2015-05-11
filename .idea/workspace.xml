@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Rozpracovan ComposedConstraint test&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/arguments/ComposedConstraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/ComposedConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java" afterPath="$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/arguments/Constraint.java" afterPath="$PROJECT_DIR$/src/DPPParser/arguments/Constraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/ExampleProgram.java" afterPath="$PROJECT_DIR$/src/examples/ExampleProgram.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/Main.java" afterPath="$PROJECT_DIR$/src/examples/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Dodelan test ComposedConstraintu a zaroven opraveny souvisejici bugy">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tests/ArgumentTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/testng.xml" afterPath="$PROJECT_DIR$/src/tests/testng.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="testng.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="testng.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.578125">
+              <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -48,7 +43,6 @@
               <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1206#1221#0" expanded="true" />
                 <element signature="e#1285#1286#0" expanded="true" />
                 <element signature="e#1336#1337#0" expanded="true" />
                 <element signature="e#1982#1983#0" expanded="true" />
@@ -58,17 +52,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComposedConstraintTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ComposedConstraintTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.046875">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#518:957" expanded="false" />
-                <element signature="method#isFulfilled#0;class#518:957" expanded="false" />
-                <element signature="e#865#866#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
+                <element signature="class#521:968" expanded="false" />
+                <element signature="method#isFulfilled#0;class#521:968" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -94,21 +86,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+      <file leaf-file-name="ArgumentParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DPPParser/arguments/ArgumentParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExampleProgram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/examples/ExampleProgram.java">
+      <file leaf-file-name="Argument.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DPPParser/arguments/Argument.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArgumentTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/ArgumentTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,23 +139,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TestNG Test Class" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
@@ -171,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/arguments/Argument.java" />
         <option value="$PROJECT_DIR$/src/options/Option.java" />
         <option value="$PROJECT_DIR$/src/options/Parser.java" />
         <option value="$PROJECT_DIR$/build/example-classes/examples/Main.class" />
@@ -216,12 +207,13 @@
         <option value="$PROJECT_DIR$/src/tests/constraints/StringLengthConstraintTest.java" />
         <option value="$PROJECT_DIR$/src/examples/ExampleProgram.java" />
         <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/src/tests/testng.xml" />
         <option value="$PROJECT_DIR$/src/examples/Main.java" />
         <option value="$PROJECT_DIR$/src/DPPParser/arguments/ConstraintBuilder.java" />
         <option value="$PROJECT_DIR$/src/DPPParser/arguments/Constraint.java" />
         <option value="$PROJECT_DIR$/src/DPPParser/arguments/ComposedConstraint.java" />
         <option value="$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/ArgumentTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/testng.xml" />
       </list>
     </option>
   </component>
@@ -266,7 +258,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -424,6 +415,7 @@
       <pane id="PackagesPane">
         <subPane />
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Project Files" />
@@ -477,10 +469,10 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="tests" />
       <recent name="tests.constraints" />
       <recent name="tests.parsers" />
       <recent name="DPPParser.parsers" />
-      <recent name="tests" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ExampleProgram">
@@ -647,7 +639,7 @@
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="JAR_PATH" value="$PROJECT_DIR$/libs/testng-6.8.jar" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/libs/jsr305-1.3.9.jar" />
       <envs />
       <method />
     </configuration>
@@ -973,7 +965,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431346406161</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Dodelan test ComposedConstraintu a zaroven opraveny souvisejici bugy">
+      <created>1431348520241</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1431348520242</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1011,7 +1009,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25228658" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32682925" sideWeight="0.49695122" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1019,11 +1016,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937598" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3291536" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.49695122" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32682925" sideWeight="0.49695122" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1038,7 +1036,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uaaaaa" />
     <MESSAGE value="getErrorMessages upravena na getErrorMessage a navratovy typ zmenen jen na string, vzdy se vraci jen prvni chyba nebo null pokud k zadne nedoslo" />
     <MESSAGE value="equals a hashcode vyhozeny, par preklepu v komentarich opraveno" />
     <MESSAGE value="Nejake preklepy, zmemen nazev metody nextIsOption na isNextArgOption" />
@@ -1063,7 +1060,8 @@
     <MESSAGE value="LowerBound, UpperBound, AllowedSet constrainty maji napsane testy, nejake chyby ve vypisech opraveny" />
     <MESSAGE value="Pridany Testy vsech zakladnich constraintu" />
     <MESSAGE value="Rozpracovan ComposedConstraint test&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rozpracovan ComposedConstraint test&#10;" />
+    <MESSAGE value="Dodelan test ComposedConstraintu a zaroven opraveny souvisejici bugy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodelan test ComposedConstraintu a zaroven opraveny souvisejici bugy" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1153,13 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0847458">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/arguments/ArgumentParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1328,17 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="5" selection-start-line="19" selection-start-column="3" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/arguments/Argument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1354,7 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,7 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1382,18 +1360,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1404,7 +1374,6 @@
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1206#1221#0" expanded="true" />
             <element signature="e#1285#1286#0" expanded="true" />
             <element signature="e#1336#1337#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
@@ -1440,6 +1409,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#521:968" expanded="false" />
+            <element signature="method#isFulfilled#0;class#521:968" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DPPParser/arguments/ComposedConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1448,17 +1429,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java">
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/arguments/ArgumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.046875">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#518:957" expanded="false" />
-            <element signature="method#isFulfilled#0;class#518:957" expanded="false" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/arguments/Argument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/ArgumentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.578125">
+          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
