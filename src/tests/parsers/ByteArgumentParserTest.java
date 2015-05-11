@@ -61,13 +61,9 @@ public class ByteArgumentParserTest {
         Byte result = parser.parse("-5.5");
     }
 
-    @Test
-    public void testGetErrorMessage_Pass() {
-        try {
-            parser.parse("a");
-        } catch (ParsingException e) {
-            // ignore the exception on purpose
-        }
+    @Test(expectedExceptions = ParsingException.class)
+    public void testGetErrorMessage_Pass() throws Exception {
+        parser.parse("a");
         Assert.assertEquals(parser.getParseErrorMessage(), "a cannot be parsed as byte");
     }
 
