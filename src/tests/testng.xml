@@ -4,6 +4,7 @@
     <test name="arguments">
         <classes>
             <class name="tests.IntegerArgumentParserTest"/>
+            <class name="tests.ShortArgumentParserTest"/>
         </classes>
     </test>
 
