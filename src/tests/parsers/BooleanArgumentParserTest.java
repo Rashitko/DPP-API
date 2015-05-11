@@ -42,6 +42,6 @@ public class BooleanArgumentParserTest {
 
     public void testGetErrorMessage_Pass() throws Exception {
         parser.parse("value");
-        Assert.assertEquals(parser.getParseErrorMessage(), "value cannot be parsed as boolean");
+        Assert.assertEquals(parser.getParseErrorMessage(), "");
     }
 }

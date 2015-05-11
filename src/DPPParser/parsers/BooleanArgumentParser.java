@@ -16,6 +16,7 @@ public class BooleanArgumentParser implements ArgumentParser<Boolean> {
 
     @Override
     public String getParseErrorMessage() {
-        return argument + " cannot be parsed as boolean";
+        // returns empty string because this parser will always succeed
+        return "";
     }
 }

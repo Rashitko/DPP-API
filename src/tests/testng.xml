@@ -8,6 +8,7 @@
             <class name="tests.parsers.LongArgumentParserTest"/>
             <class name="tests.parsers.ByteArgumentParserTest"/>
             <class name="tests.parsers.BooleanArgumentParserTest"/>
+            <class name="tests.parsers.StringArgumentParserTest"/>
         </classes>
     </test>
 

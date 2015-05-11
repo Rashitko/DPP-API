@@ -18,6 +18,7 @@ public class StringArgumentParser implements ArgumentParser<String> {
 
     @Override
     public String getParseErrorMessage() {
-        return argument + " cannot be parsed as string";
+        // returns empty string because this parser will always succeed
+        return "";
     }
 }
