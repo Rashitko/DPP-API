@@ -1,10 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="TestAll">
 
-    <test name="arguments">
+    <test name="parsers">
         <classes>
-            <class name="tests.IntegerArgumentParserTest"/>
-            <class name="tests.ShortArgumentParserTest"/>
+            <class name="tests.parsers.IntegerArgumentParserTest"/>
+            <class name="tests.parsers.ShortArgumentParserTest"/>
+            <class name="tests.parsers.LongArgumentParserTest"/>
+            <class name="tests.parsers.ByteArgumentParserTest"/>
+            <class name="tests.parsers.BooleanArgumentParserTest"/>
+            <class name="tests.parsers.StringArgumentParserTest"/>
+            <class name="tests.parsers.FloatArgumentParserTest"/>
+            <class name="tests.parsers.DoubleArgumentParserTest"/>
         </classes>
     </test>
 
