@@ -47,6 +47,7 @@
         </fileset>
         <pathelement path="${tests.classes.dir}"/>
         <pathelement path="${tests.src.dir}"/>
+        <pathelement path="${classes.dir}"/>
     </path>
 
 
@@ -115,10 +116,10 @@
         </java>
     </target>
 
-    <target name="compile-tests" depends="init">
+    <target name="compile-tests" depends="init, compile">
         <javac includeantruntime="false" srcdir="${tests.src.dir}"
                destdir="${tests.classes.dir}">
-            <classpath refid="project.classpath"/>
+            <classpath refid="tests.classpath"/>
         </javac>
     </target>
 
