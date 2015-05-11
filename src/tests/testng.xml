@@ -9,6 +9,8 @@
             <class name="tests.parsers.ByteArgumentParserTest"/>
             <class name="tests.parsers.BooleanArgumentParserTest"/>
             <class name="tests.parsers.StringArgumentParserTest"/>
+            <class name="tests.parsers.FloatArgumentParserTest"/>
+            <class name="tests.parsers.DoubleArgumentParserTest"/>
         </classes>
     </test>
 
