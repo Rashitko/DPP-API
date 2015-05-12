@@ -151,9 +151,9 @@ public class Option {
     }
 
     /**
-     * Gets type of parse error
+     * Gets parse result
      *
-     * @return parse error, or null if no error occurred
+     * @return parse result
      */
     @Nullable
     public ParseResult getParseResult() {
@@ -164,14 +164,31 @@ public class Option {
         this.parseResult = parseResult;
     }
 
+    /**
+     * @return false if {@link Option#getParseResult()} returns
+     * {@link DPPParser.options.Option.ParseResult#SUCCESS} or {@link DPPParser.options.Option.ParseResult#EXTRA},
+     * true otherwise
+     */
     public boolean isFailed() {
         return parseResult != ParseResult.SUCCESS && parseResult != ParseResult.EXTRA;
     }
 
+    /**
+     *
+     * @return true if {@link Option#getParseResult()} returns
+     * {@link DPPParser.options.Option.ParseResult#EXTRA},
+     * false otherwise
+     */
     public boolean isExtra() {
         return parseResult == ParseResult.EXTRA;
     }
 
+    /**
+     *
+     * @return true if {@link Option#getParseResult()} returns
+     * {@link DPPParser.options.Option.ParseResult#OPTION_MISSED},
+     * false otherwise
+     */
     public boolean isMissed() {
         return parseResult == ParseResult.OPTION_MISSED;
     }
@@ -185,10 +202,40 @@ public class Option {
     }
 
     /**
-     * TODO
+     * Represents result of parsing process
      */
     public enum ParseResult {
-        SUCCESS, EXTRA, ARGUMENT_MISSED, OPTION_MISSED, CONSTRAINT_FAILED, PARSING_FAILED
+        /**
+         * Set when everything was without problems.
+         */
+        SUCCESS,
+
+        /**
+         * Set when option was not defined in {@link DPPParser.options.OptionsList},
+         * but was set in command line. Such option is treated as an {@link Option} with an optional
+         * {@link Argument}&lt;String&gt; without {@link DPPParser.arguments.Constraint}.
+         */
+        EXTRA,
+
+        /**
+         * Set when option has mandatory argument, but this argument was not set on command line.
+         */
+        ARGUMENT_MISSED,
+
+        /**
+         * Set when option is mandatory, but was not set on command line.
+         */
+        OPTION_MISSED,
+
+        /**
+         * Set when parsing succeeded, but the value doesn't fulfill the {@link DPPParser.arguments.Constraint}
+         */
+        CONSTRAINT_FAILED,
+
+        /**
+         * Set when parsing failed, for example because of an {@link java.lang.NumberFormatException}
+         */
+        PARSING_FAILED
     }
 
     /**
@@ -207,7 +254,13 @@ public class Option {
         private String messageArgMissing;
 
         /**
-         * This constructor sets the short switch
+         * This constructor sets the short switch. This short switch must be valid.
+         * Valid switches must fulfill following criteria:
+         * <ul>
+         *     <li>starts with non-empty sequence of letters</li>
+         *     <li>then sequence of letters, numbers and '-' can follow, but '-' must not be the last character</li>
+         * </ul> 
+         * Note that the switches are defined without leading '-' or '--' in case of the long switches
          *
          * @param shortSwitch short switch
          */
@@ -222,6 +275,12 @@ public class Option {
 
         /**
          * This constructor sets the list of short switches
+         * Valid switches must fulfill following criteria:
+         * <ul>
+         *     <li>starts with non-empty sequence of letters</li>
+         *     <li>then sequence of letters, numbers and '-' can follow, but '-' must not be the last character</li>
+         * </ul> 
+         * Note that the switches are defined without leading '-' or '--' in case of the long switches
          *
          * @param shortSwitches the list of short switches
          */
@@ -238,6 +297,12 @@ public class Option {
 
         /**
          * This constructor sets the short or long switch.
+         * Valid switches must fulfill following criteria:
+         * <ul>
+         *     <li>starts with non-empty sequence of letters</li>
+         *     <li>then sequence of letters, numbers and '-' can follow, but '-' must not be the last character</li>
+         * </ul> 
+         * Note that the switches are defined without leading '-' or '--' in case of the long switches
          *
          * @param optionSwitch switch
          * @param switchType   switch type, ie if the short or long switch should be set
@@ -262,6 +327,12 @@ public class Option {
 
         /**
          * This constructor sets the list of short or long switches.
+         * Valid switches must fulfill following criteria:
+         * <ul>
+         *     <li>starts with non-empty sequence of letters</li>
+         *     <li>then sequence of letters, numbers and '-' can follow, but '-' must not be the last character</li>
+         * </ul> 
+         * Note that the switches are defined without leading '-' or '--' in case of the long switches
          *
          * @param optionSwitches the list of switches
          * @param switchType     switch type, ie if the list of short or long switches should be set
@@ -292,6 +363,12 @@ public class Option {
 
         /**
          * Adds short switch
+         * Valid switches must fulfill following criteria:
+         * <ul>
+         *     <li>starts with non-empty sequence of letters</li>
+         *     <li>then sequence of letters, numbers and '-' can follow, but '-' must not be the last character</li>
+         * </ul> 
+         * Note that the switches are defined without leading '-' or '--' in case of the long switches
          *
          * @param shortSwitch short switch
          * @return Builder object
@@ -306,6 +383,12 @@ public class Option {
 
         /**
          * Adds long switch
+         * Valid switches must fulfill following criteria:
+         * <ul>
+         *     <li>starts with non-empty sequence of letters</li>
+         *     <li>then sequence of letters, numbers and '-' can follow, but '-' must not be the last character</li>
+         * </ul> 
+         * Note that the switches are defined without leading '-' or '--' in case of the long switches
          *
          * @param longSwitch long switch
          * @return Builder object
@@ -320,6 +403,12 @@ public class Option {
 
         /**
          * Adds the list of short switches
+         * Valid switches must fulfill following criteria:
+         * <ul>
+         *     <li>starts with non-empty sequence of letters</li>
+         *     <li>then sequence of letters, numbers and '-' can follow, but '-' must not be the last character</li>
+         * </ul> 
+         * Note that the switches are defined without leading '-' or '--' in case of the long switches
          *
          * @param shortSwitches the list of short switches
          * @return Builder object
@@ -336,6 +425,12 @@ public class Option {
 
         /**
          * Adds the list of long switches
+         * Valid switches must fulfill following criteria:
+         * <ul>
+         *     <li>starts with non-empty sequence of letters</li>
+         *     <li>then sequence of letters, numbers and '-' can follow, but '-' must not be the last character</li>
+         * </ul> 
+         * Note that the switches are defined without leading '-' or '--' in case of the long switches
          *
          * @param longSwitches the list of long switches
          * @return Builder object

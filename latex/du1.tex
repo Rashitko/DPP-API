@@ -4,6 +4,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[table]{xcolor}
 \usepackage{chngpage}
+\usepackage{fancyref}
+\usepackage{textcomp}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -37,6 +39,7 @@
 
 \section{Zdôvodnenie návrhu}
 V tejto časti by sme radi uviedli dôvody, prečo sme sa rozhodli API navrhnúť tak ako sme ho navrhli a prečo sme zvolili tie postupy, ktoré sme zvolili. Nebudeme presne uvádzať všetky možné prípady ktoré mohli nastať v prezentovaných situáciach, na to slúži javadoc.
+
 \subsection{Základná myšlienka}
 Táto kapitola má za úlohu predviesť ideu celej knižnice. Tá je nasledovná:
 \begin{itemize}
@@ -52,8 +55,46 @@ Teraz by sme radi predstavili triednu štruktúru v rámci API. Tá nám bola tr
 Inštancie triedy \texttt{Option} sú potom uložené do \texttt{OptionsList}-u. Táto trieda zabezpečuje, aby sa žiadne dve možnosti neprekrývali v ani jednom prepínači. Existuje teda jednoznačné mapovanie z prepínaču (dlhého aj krátkeho), na najviac jednu inštanciu triedy \texttt{Option}.\\
 \texttt{OptionsList} je následne odovzdaný triede \texttt{Parser}, ktorá vykoná samotné spracovanie dát na príkazovom riadku, nastaví potrebné údaje v triedach \texttt{Option} ktoré sú v \texttt{OptionsList}-e, a poskytne užívateľovi možnosti, ako sa dostať napríklad k regulárnym argumentom, ako vytiahnuť, všetky možnosti, ktoré zlyhali, opýtať sa či nejaké zlyhali...\\
 Takéto rozvrhnutie tried nám umožnilo dúfame užívateľsky príjemným spôsobom definovať, čo je na príkazovom riadku očakávané a v akom formáte, vrátane užívateľsky definovaných formátov. Napríklad ak by bolo treba v nejakom prepínači spracovávať objekt JSON, tak to vôbec nie je problém. Vytvorí sa potomok triedy \texttt{ArgumentParser}, ktorý špecifikuje ako sa má string previesť na JSON a tento \texttt{ArgumentParser} sa nastaví triede \texttt{Argument}. Takto definovaný \texttt{Argument} sa nastaví do \texttt{Option}. Dostávame teda podľa nás pomerne rýchlo a jednoducho implementáciu prepínača, ktorý ako hodnotu očakáva objekt JSON.
+
 \subsection{Ošetrovanie chýb}
-Táto kapitola predstaví výnimky ktoré môžu pri bežnom používaní aplikácie vzniknúť. Tie vznikajú najčastejšie pri spracovávaní príkazového riadku, ktonkrétne v metódach ktoré parsujú stringovú reprezentáciu na požadovaný typ. V prípade, že v tomto procese bude vyhodená akákoľvek výnimka, je táto výnimka odchytená a miesto toho je vyhodená výnimka \texttt{ParsingException}
+Táto kapitola predstaví výnimky ktoré môžu pri bežnom používaní aplikácie vzniknúť. Tie vznikajú najčastejšie pri spracovávaní príkazového riadku, konkrétne v metódach ktoré parsujú stringovú reprezentáciu na požadovaný typ. V prípade, že v tomto procese bude vyhodená akákoľvek výnimka, je táto výnimka odchytená a miesto toho je vyhodená výnimka \texttt{ParsingException}. Táto výnimka je zachytená v knižnici a užívateľ ju nemusí chytať. V API sa prejaví tým, že \texttt{option.isFailed()} vrati \texttt{true} a \texttt{option.getParseResult()} vráti \\\texttt{Option.ParseResult.PARSING\_FAILED}.
+Jediná chyba, okrem štandardných ako napríklad \texttt{NullPointerException} je chyba \texttt{IllegalArgumentException}, ktorá je vyhadzovaná v prípade, že užívateľ sa snaží vytvoriť inštanciu triedy \texttt{Option}, alebo pridať prepínač k už existujúcej, ktorý nie je validný. Tvar validneho prepínača je uvedený v kapitole \ref{Obmedzenia}. 
 \subsection{Obmedzenia}
+\label{Obmedzenia}
+Validné prepínače musia spĺňať nasledovné kritéria:
+\begin{itemize}
+	\item na začiatku musí obsahovať neprázdnu sekvenciu písmen
+	\item po tejto sekvencií môže nasledovať sekvencia písmen, čísel a znaku -, pričom znak - nesmie byť posledný
+\end{itemize}
+Treba mať na pamäti, že prepínače sa zadávajú bez úvedneho -, resp -{}- pri dlhých prepínačoch.\\
+Ďalším obmedzením je hodnota argumentov. Okrem číselných hodnôt, sú všetky argumenty začínajúce znakom - považované za \texttt{Option} a teda buď sú prítomné v \texttt{OptionsList}-e, alebo sú vytvorené, pričom volanie \texttt{option.getParseResult()} na takto vytvorenej option vráti \texttt{Option.ParseResult.EXTRA}.\\
+\textbf{TREBA SA EŠTE DOHODNÚŤ} V prípade, že na na príkazovom riadku je reťazec začínajúci znakom -, napríklad \texttt{-{}-{}-{}not-existing}, pričom tento reťazec nie je číselný, udeje sa nasledovné:
+\begin{itemize}
+	\item najprv sa podľa počtu znakov - na začiatku rozhodne, či sa jedná o dlhý (aspoň -{}- na začiatku) alebo krátky prepínač (na začiatku je len znak -)
+	\item v prípade, že na začiatku nie je ani jeden znak -, implicitne sa predpokladá, že jedná o dlhý prepínač
+	\item ak je na začiatku viac ako dva znaky -, tak sa tieto znaky odstránia a zvyšok sa považuje za samotný prepínač, takže napríklad z \texttt{-{}-{}-{}not-existing} vznikne dlhý prepínač \texttt{-not-existing}
+	\item následne sa vytvorí \texttt{Option} pričom volanie \texttt{option.getParseResult()} na takto vytvorenej option vráti \texttt{Option.ParseResult.EXTRA}
+\end{itemize}
+Treba mať na pamäti, že takto vzniknuté \texttt{Option} nemajú validný prepínač, užívateľ však nemá možnosť vytvoriť Option s nevalidným prepínačom a takéto \texttt{Option} môžu vzniknúť len týmto spôsobom.
+
+\subsection{Poznámky k správaniu sa knižnice v neštandardných podmienkach}
+Uvedieme zopár podľa nás najdôležitejší príkladov neštandardných vstupov z príkazového riadku a to ako ich naša knižnica spracuje.
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{\dimexpr 0.30\linewidth-2\tabcolsep}|p{\dimexpr 0.70\linewidth-2\tabcolsep}|}
+     \hline
+     \textbf{Vstup} & \textbf{Spracovanie} \\
+     \hline
+     -{}-long-option= 120 & Parsovanie hodnoty argumentu možnosti \texttt{long-option} zlyhá, a reťazec 120 bude vrátený v zozname, ktorý vráti volanie \texttt{parser.getUnmatchedArguments()} \\
+     \hline
+     -short 1 123 & Hodnota argumentu možnosti \texttt{short} bude 1, a reťazec 123 bude vrátený v zozname, ktorý vráti volanie \texttt{parser.getUnmatchedArguments()} \\
+     \hline
+     -{}-{}-not-existing & Predpokladáme, že možnosť s prepínačom \texttt{-{}-{}-{}not-existing} nebola zadefinovaná, takže sa vytvorí nová, pričom volanie \texttt{option.getParseResult()} vráti \texttt{Option.ParseResult.EXTRA}. V kapitole \ref{Obmedzenia} je detailnejšie uvedené, ako sa takáto možnosť spracuje, nakoľko zápis jej prepínača nie je platný. \\
+     \hline
+     -short -{}-value & Hodnota argumentu možnosti \texttt{short} nie je definovaná, reťazec -{}-value je považovaný za dlhý prepínač, a bud existuje \texttt{Option} ktorá má takýto dlhý prepínač, alebo bude takáto \texttt{Option} vytvorená. Toto sa udeje aj v prípade, že možnosť \texttt{short} akceptuje stringový argument (v prípade, že je povinný, tak samozrejme volanie \texttt{option.getParseResult()} vráti \texttt{Option.ParseResult.ARGUMENT\_MISSING}) \\
+     \hline
+\end{tabular}
+\end{table}
+
 
 \end{document}
