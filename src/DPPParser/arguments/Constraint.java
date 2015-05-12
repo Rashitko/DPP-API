@@ -1,5 +1,6 @@
 package DPPParser.arguments;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -33,11 +34,10 @@ public interface Constraint<E> {
      * @param <T> Type of argument the constraint is applied on
      */
     class ConstraintBuilder<T> {
-        List<Constraint<T>> constraints;
+        List<Constraint<T>> constraints = new ArrayList<Constraint<T>>();
 
-        public ConstraintBuilder<T> ConstraintBuilder(Constraint<T> constraint) {
+        public ConstraintBuilder(Constraint<T> constraint) {
             constraints.add(constraint);
-            return this;
         }
 
         /**

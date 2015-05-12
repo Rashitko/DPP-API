@@ -1,6 +1,5 @@
 package DPPParser.arguments;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,7 +14,7 @@ class ComposedConstraint<T> implements Constraint<T> {
      * @param constraints List of constrains from which the composed constrain is created
      */
     public ComposedConstraint(List<Constraint<T>> constraints) {
-        this.constraints = new ArrayList<Constraint<T>>();
+        this.constraints = constraints;
     }
 
     @Override
@@ -25,18 +24,20 @@ class ComposedConstraint<T> implements Constraint<T> {
                 return false;
             }
         }
-        return false;
+        return true;
     }
 
     @Override
     public String getErrorMessage(T argument) {
         StringBuilder strBuilder = new StringBuilder();
         for (Constraint<T> constraint : constraints) {
-            strBuilder
-                    .append(constraint.getClass().getName())
-                    .append(" : ")
-                    .append(constraint.getErrorMessage(argument))
-                    .append(System.getProperty("line.separator"));
+            if (!constraint.isFulfilled(argument)) {
+                strBuilder
+                        .append(constraint.getClass().getName())
+                        .append(" : ")
+                        .append(constraint.getErrorMessage(argument))
+                        .append(System.getProperty("line.separator"));
+            }
         }
         return strBuilder.toString();
     }

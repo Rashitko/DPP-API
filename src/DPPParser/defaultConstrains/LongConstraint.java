@@ -8,5 +8,5 @@ import DPPParser.arguments.Constraint;
 public interface LongConstraint extends Constraint<Long> {
 
     @Override
-    public boolean isFulfilled(Long argument);
+    boolean isFulfilled(Long argument);
 }
