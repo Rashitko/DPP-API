@@ -5,7 +5,6 @@ import DPPParser.parsers.ParsingException;
 import DPPParser.parsers.StringArgumentParser;
 
 import javax.annotation.Nullable;
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,29 +37,36 @@ public class Parser {
     public void resolveOptions(String[] arguments) {
         final ArrayList<String> args = new ArrayList<String>(Arrays.asList(arguments));
         while (!args.isEmpty()) {
-            String optionSwitch = args.remove(0);
-            if (isRegularArgsDelimiter(optionSwitch)) {
+            String cmdLineSwitch = args.remove(0);
+            if (isRegularArgsDelimiter(cmdLineSwitch)) {
                 break;
             }
-            if (optionSwitch.startsWith("-")) {
+            String argValue = null;
+            if (cmdLineSwitch.contains("=")) {
+                final int delimiterPosition = cmdLineSwitch.indexOf("=");
+                argValue = cmdLineSwitch.substring(delimiterPosition + 1);
+                cmdLineSwitch = cmdLineSwitch.substring(0, delimiterPosition);
+            }
+            if (cmdLineSwitch.startsWith("-")) {
                 Option option;
-                final String optionName = getOptionName(optionSwitch);
+                String optionName = getOptionName(cmdLineSwitch);
                 final Option.Builder.SwitchType switchType;
-                if (optionSwitch.startsWith("--")) {
+                if (cmdLineSwitch.startsWith("--")) {
                     option = optionsList.findOptionByLongSwitch(optionName);
                     switchType = Option.Builder.SwitchType.LONG_SWITCH;
                 } else {
                     option = optionsList.findOptionByShortSwitch(optionName);
                     switchType = Option.Builder.SwitchType.SHORT_SWITCH;
                 }
-                String argValue = null;
+
                 final boolean optionTakesArg = option == null || option.hasArgument();
-                if (optionTakesArg && !args.isEmpty() && !isOption(args.get(0))) {
+                if (argValue == null && optionTakesArg && !args.isEmpty() && !isOption(args.get(0))) {
                     argValue = args.remove(0);
                 }
+
                 processOption(option, optionName, switchType, argValue);
             } else {
-                unmatchedArguments.add(optionSwitch);
+                unmatchedArguments.add(cmdLineSwitch);
             }
         }
         regularArguments.addAll(args);
@@ -99,6 +105,7 @@ public class Parser {
      * @param value        string representation of {@link Option}'s argument value, can be null if no argument was provided
      */
     private void processOption(@Nullable Option option, String optionSwitch, Option.Builder.SwitchType switchType, @Nullable String value) {
+//        System.out.printf("option == null = %b\n", option == null);
         if (option == null) {
             createExtraOption(optionSwitch, switchType, value);
             return;
@@ -122,6 +129,7 @@ public class Parser {
      * @param optionParseResult {@link DPPParser.options.Option.ParseResult} which should be returned if parsing will be successful
      * @return optionParseResult or {@link Option.ParseResult#PARSING_FAILED} if parsing failed
      */
+    @SuppressWarnings("unchecked")
     private Option.ParseResult setOptionArgValue(Option option, String value, Option.ParseResult optionParseResult) {
         try {
             final Argument argument = option.getArgument();
@@ -129,10 +137,8 @@ public class Parser {
                 return optionParseResult;
             }
             Object parsedArgValue = argument.getArgumentParser().parse(value);
-            //noinspection unchecked
             argument.setValue(parsedArgValue);
             if (argument.hasConstraint()) {
-                //noinspection unchecked
                 final boolean constraintFulfilled = argument.getConstraint().isFulfilled(parsedArgValue);
                 if (!constraintFulfilled) {
                     optionParseResult = Option.ParseResult.CONSTRAINT_FAILED;
@@ -152,19 +158,15 @@ public class Parser {
      * @param switchType type of switch by which can be the {@link Option} found
      * @param value      value of {@link Option}'s argument, can be null if no argument was provided
      */
+    @SuppressWarnings("unchecked")
     private void createExtraOption(String optionName, Option.Builder.SwitchType switchType, String value) {
         Option.Builder builder = new Option.Builder(optionName, switchType, true);
         if (value != null) {
-            builder.setOptionalArgument(new Argument<String>(new StringArgumentParser()));
+            final Argument<String> optionArg = new Argument<String>(new StringArgumentParser());
+            builder.setOptionalArgument(optionArg);
         }
         Option option = builder.build();
-        if (option.hasArgument() && value != null) {
-            if (option.getArgument() != null) {
-                //noinspection unchecked
-                option.getArgument().setValue(value);
-            }
-            option.setParseResult(Option.ParseResult.EXTRA);
-        }
+        option.getArgument().setValue(value);
         optionsList.add(option);
     }
 
@@ -201,6 +203,7 @@ public class Parser {
 
     /**
      * Returns list of {@link Option}s for which {@link Option#isFailed()} returns true
+     *
      * @return list of failed options
      */
     public List<Option> getFailedOptions() {
@@ -218,6 +221,7 @@ public class Parser {
      * {@link Option}s which weren't defined in the {@link OptionsList}. Note that these {@link Option}s
      * might have illegal switch. Also all extra {@link Option}s have a {@link Argument}&lt;String&gt; set.
      * This {@link Argument} might not have value.
+     *
      * @return list of extra options
      */
     public List<Option> getExtraOptions() {
@@ -233,6 +237,7 @@ public class Parser {
     /**
      * Returns list of {@link Option}s, for which {@link Option#isMissed()} returns true, those are mandatory
      * {@link Option}s which weren't set on the command line
+     *
      * @return list of missed options
      */
     public List<Option> getMissedOptions() {
