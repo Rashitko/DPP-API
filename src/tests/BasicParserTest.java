@@ -42,16 +42,18 @@ public class BasicParserTest {
 
         //INSTANTIATE PARSER
         parser = new Parser(options);
-        String[] argArray = {"-v", "--version", "-s", "OLD", "--length=20", "--", "-my-file", "your-file"};
+        String[] argArray = {"-v", "--verbose", "-s", "OLD", "--length=20", "--", "-my-file", "your-file"};
         parser.resolveOptions(argArray);
     }
 
     @Test
     public void testGetFailedOptions() throws Exception {
+
         Assert.assertEquals(parser.getFailedOptions().size(), 1);
-        List<String> expected = new ArrayList<String>();
-        expected.add("s");
-        Assert.assertEquals(parser.getFailedOptions(), expected);
+        List<Option> expected = new ArrayList<Option>();
+        expected.add(size);
+        Assert.assertEquals(parser.getFailedOptions().get(0).getLongSwitches(), size.getLongSwitches());
+        Assert.assertEquals(parser.getFailedOptions().get(0).getShortSwitches(), size.getShortSwitches());
     }
 
     @Test
@@ -59,7 +61,7 @@ public class BasicParserTest {
         Assert.assertEquals(parser.getExtraOptions().size(), 1);
         List<String> expected = new ArrayList<String>();
         expected.add("length");
-        Assert.assertEquals(parser.getExtraOptions(), expected);
+        Assert.assertEquals(parser.getExtraOptions().get(0).getLongSwitches(), expected);
     }
 
     @Test
@@ -84,5 +86,17 @@ public class BasicParserTest {
         expected.add("-my-file");
         expected.add("your-file");
         Assert.assertEquals(parser.getRegularArguments(), expected);
+    }
+
+    @Test
+    public void optionFailedTest() {
+        boolean returned = size.isFailed();
+        Assert.assertTrue(returned);
+    }
+
+    @Test
+    public void optionSuccesTest() {
+        boolean returned = verbose.isSuccessful();
+        Assert.assertTrue(returned);
     }
 }
