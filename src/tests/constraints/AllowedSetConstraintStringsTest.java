@@ -8,30 +8,32 @@ import org.testng.annotations.Test;
 
 public class AllowedSetConstraintStringsTest {
 
+    private final String[] correctValues = {"one", "three"};
+    private final String forbiddenValue = "two";
     private AllowedSetConstraint<String> allowedSetConstraint;
 
     @BeforeClass
     public void initialize() {
         allowedSetConstraint = new AllowedSetConstraint<String>();
-        allowedSetConstraint.add("one");
-        allowedSetConstraint.add("three");
+        allowedSetConstraint.add(correctValues[0]);
+        allowedSetConstraint.add(correctValues[1]);
     }
 
     @Test
     public void testIsFulfilledStringCorrectCase() throws Exception {
-        boolean result = allowedSetConstraint.isFulfilled("three");
+        boolean result = allowedSetConstraint.isFulfilled(correctValues[1]);
         Assert.assertTrue(result);
     }
 
     @Test
     public void testIsFulfilledStringForbiddenCase() throws Exception {
-        boolean result = allowedSetConstraint.isFulfilled("two");
+        boolean result = allowedSetConstraint.isFulfilled(forbiddenValue);
         Assert.assertFalse(result);
     }
 
     @Test
     public void testGetErrorMessage() throws Exception {
-        Assert.assertEquals(allowedSetConstraint.getErrorMessage("two"),
-                "\"two\" is not allowed. Allowed arguments are:" + allowedSetConstraint);
+        Assert.assertEquals(allowedSetConstraint.getErrorMessage(forbiddenValue),
+                "\"" + forbiddenValue + "\" is not allowed. Allowed arguments are:" + allowedSetConstraint);
     }
 }

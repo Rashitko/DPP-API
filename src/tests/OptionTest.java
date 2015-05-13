@@ -14,16 +14,20 @@ import java.util.Set;
 
 public class OptionTest {
     public static final String SWITCH_VALIDATION_REGEX = "^[a-zA-Z]+([\\w\\-_a-zA-Z_0-9]*[\\w_a-zA-Z_0-9]+|[\\w_a-zA-Z_0-9]*)$";
-    Set<String> longSwitches;
-    String firstShortSwitch;
-    String secondShortSwitch;
-    String firstLongSwitch;
-    Set<String> shortSwitches;
-    Option simpleOption;
-    Option mandatoryOptionWithMandatoryArg;
-    Argument<Integer> argument;
-    Option optionWithOptionalArg;
-    String optionDescription;
+
+    private Set<String> longSwitches;
+    private Set<String> shortSwitches;
+
+    private String firstShortSwitch;
+    private String secondShortSwitch;
+    private String firstLongSwitch;
+
+    private Option simpleOption;
+    private Option mandatoryOptionWithMandatoryArg;
+    private Option optionWithOptionalArg;
+
+    private Argument<Integer> argument;
+    private String optionDescription;
 
     @BeforeClass
     public void initialize() {
