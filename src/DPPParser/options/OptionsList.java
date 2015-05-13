@@ -107,11 +107,6 @@ public class OptionsList implements Iterable<Option> {
         }
 
         @Override
-        public void remove() {
-            options.remove(index);
-        }
-
-        @Override
         public Option next() {
             final Option result = options.get(index);
             index++;
