@@ -8,6 +8,7 @@ import DPPParser.options.OptionsList;
 import DPPParser.options.Parser;
 import DPPParser.parsers.IntegerArgumentParser;
 import DPPParser.parsers.LongArgumentParser;
+import DPPParser.parsers.StringArgumentParser;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -49,8 +50,10 @@ public class ParserTest {
                 .build();
         options.add(longIntOptionWithMandatoryArg);
 
+        Argument<String> stringArgument = new Argument<String>(new StringArgumentParser());
         mandatoryStringOpt = new Option.Builder(MANDATORY_STRING_OPT_SWITCH)
                 .isMandatory(true)
+                .setMandatoryArgument(stringArgument, null)
                 .build();
         options.add(mandatoryStringOpt);
 
@@ -122,11 +125,11 @@ public class ParserTest {
         Assert.assertNull(longIntOptionWithMandatoryArg.getArgument().getValue());
     }
 
-//    @Test
-//    public void testMissingMandatoryOption() {
-//        String[] args = {"-" + SHORT_INT_OPT_WITH_CONSTR_SWITCH, "123", "-" + SHORT_INT_OPT_SWITCH, "1500"};
-//        parser.resolveOptions(args);
-//        Assert.assertEquals(mandatoryStringOpt.getParseResult(), Option.ParseResult.OPTION_MISSED);
-//    }
+    @Test
+    public void testMissingMandatoryOption() {
+        String[] args = {"-" + SHORT_INT_OPT_WITH_CONSTR_SWITCH, "123", "-" + SHORT_INT_OPT_SWITCH, "1500"};
+        parser.resolveOptions(args);
+        Assert.assertEquals(mandatoryStringOpt.getParseResult(), Option.ParseResult.OPTION_MISSED);
+    }
 
 }
