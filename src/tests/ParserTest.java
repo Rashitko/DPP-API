@@ -21,14 +21,13 @@ public class ParserTest {
     public static final String MANDATORY_STRING_OPT_SWITCH = "mso";
     private Option shortIntOption;
     private Parser parser;
-    private OptionsList options;
     private Option shortIntOptionWithConstr;
     private Option longIntOptionWithMandatoryArg;
     private Option mandatoryStringOpt;
 
     @BeforeMethod
     public void initialize() {
-        options = new OptionsList();
+        OptionsList options = new OptionsList();
         Argument intArgument = new Argument<Integer>(new IntegerArgumentParser());
 
         shortIntOption = new Option.Builder(SHORT_INT_OPT_SWITCH)
@@ -131,4 +130,10 @@ public class ParserTest {
         Assert.assertEquals(mandatoryStringOpt.getParseResult(), Option.ParseResult.OPTION_MISSED);
     }
 
+    @Test
+    public void testMandatoryOptionWithInvalidValue() {
+        String[] args = {"-" + SHORT_INT_OPT_WITH_CONSTR_SWITCH, "123", "-" + SHORT_INT_OPT_SWITCH, "1500", "--" + MANDATORY_STRING_OPT_SWITCH};
+        parser.resolveOptions(args);
+        Assert.assertEquals(mandatoryStringOpt.getParseResult(), Option.ParseResult.OPTION_MISSED);
+    }
 }
