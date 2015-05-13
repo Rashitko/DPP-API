@@ -122,4 +122,11 @@ public class Argument<T> {
     public boolean hasConstraint() {
         return constraint != null;
     }
+
+    /**
+     * Resets {@link Argument}. Used by Parser in case that {@link DPPParser.options.Option} is reused in multiple parsings.
+     */
+    public void reset() {
+        value = null;
+    }
 }

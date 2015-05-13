@@ -210,6 +210,16 @@ public class Option {
         return parseResult == ParseResult.OPTION_MISSED;
     }
 
+    /**
+     * Resets {@link Option}. Used by Parser in case that {@link Option} is reused in multiple parsings.
+     */
+    public void reset() {
+        if (argument != null) {
+            argument.reset();
+        }
+        parseResult = null;
+    }
+
 
     /**
      * Represents whether argument is mandatory or optional for particular option

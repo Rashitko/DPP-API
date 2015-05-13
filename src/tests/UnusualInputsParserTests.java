@@ -6,10 +6,12 @@ import DPPParser.options.OptionsList;
 import DPPParser.options.Parser;
 import DPPParser.parsers.IntegerArgumentParser;
 import DPPParser.parsers.StringArgumentParser;
+import org.junit.BeforeClass;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Test
 public class UnusualInputsParserTests {
 
     private Option shortOption;
@@ -45,7 +47,7 @@ public class UnusualInputsParserTests {
     }
 
     @Test
-    public void testNotExistingMalformedSwitch() {
+    public void testNotexistingMalformedSwitch() {
         String[] args = {"---not-existing"};
         parser.resolveOptions(args);
         Assert.assertEquals(parser.getExtraOptions().size(), 1, "there should be 1 extra option");
@@ -57,7 +59,7 @@ public class UnusualInputsParserTests {
     }
 
     @Test
-    public void testNotExistingMalformedSwitchAfterValidOption() {
+    public void testNotexistingMalformedSwitchAfterValidOption() {
         String[] args = {"-s", "---not-existing"};
         parser.resolveOptions(args);
         Assert.assertTrue(shortOptionWithStringArg.hasArgument(), "-s should have argument");
@@ -70,5 +72,24 @@ public class UnusualInputsParserTests {
         Assert.assertTrue(extraOption.getLongSwitches().contains("-not-existing"), "---not-existing should have long switch -not-existing");
     }
 
+    @Test
+    public void testMultipleParsingsWithOneOptionDefinition() {
+        Option option = new Option.Builder("s")
+                .setMandatoryArgument(new Argument<Integer>(new IntegerArgumentParser()), null)
+                .build();
+        OptionsList localOptions = new OptionsList();
+        localOptions.add(option);
+        Parser localParser = new Parser(localOptions);
+
+        String[] args = {"-s", "123"};
+        localParser.resolveOptions(args);
+        Assert.assertTrue(option.isSuccessful(), "option should be successful");
+        Assert.assertEquals(option.getArgument().getValue(), 123, "value should be 123");
+
+        String[] argsWithoutVal = {"-s"};
+        localParser.resolveOptions(argsWithoutVal);
+        Assert.assertTrue(option.isFailed(), "option should be failed");
+        Assert.assertNull(option.getArgument().getValue(), "option should not have argument");
+    }
 
 }

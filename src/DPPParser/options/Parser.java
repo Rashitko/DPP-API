@@ -35,6 +35,7 @@ public class Parser {
      * @param arguments input argument to parse
      */
     public void resolveOptions(String[] arguments) {
+        resetFields();
         final ArrayList<String> args = new ArrayList<String>(Arrays.asList(arguments));
         while (!args.isEmpty()) {
             String cmdLineSwitch = args.remove(0);
@@ -71,6 +72,14 @@ public class Parser {
         }
         regularArguments.addAll(args);
         checkMissedOptions();
+    }
+
+    private void resetFields() {
+        for (Option option : optionsList) {
+            option.reset();
+        }
+        unmatchedArguments.clear();
+        regularArguments.clear();
     }
 
     /**
