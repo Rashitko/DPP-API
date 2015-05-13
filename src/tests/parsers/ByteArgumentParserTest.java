@@ -17,14 +17,14 @@ public class ByteArgumentParserTest {
     }
 
     @Test
-    public void testParse_PositiveNumber_Pass() throws Exception {
+    public void testParsePositiveNumber() throws Exception {
         Byte result = parser.parse("15");
         Byte expected = 15;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_PositiveNumberBoundary_Pass() throws Exception {
+    public void testParsePositiveNumberBoundary() throws Exception {
         String byteMaxValue = Byte.MAX_VALUE + "";
         Byte result = parser.parse(byteMaxValue);
         Byte expected = Byte.MAX_VALUE;
@@ -32,14 +32,14 @@ public class ByteArgumentParserTest {
     }
 
     @Test
-    public void testParse_NegativeNumber_Pass() throws Exception {
+    public void testParseNegativeNumber() throws Exception {
         Byte result = parser.parse("-80");
         Byte expected = -80;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_NegativeNumberBoundary_Pass() throws Exception {
+    public void testParseNegativeNumberBoundary() throws Exception {
         String byteMinValue = Byte.MIN_VALUE + "";
         Byte result = parser.parse(byteMinValue);
         Byte expected = Byte.MIN_VALUE;
@@ -47,22 +47,22 @@ public class ByteArgumentParserTest {
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_Letter_ThrowException() throws Exception {
+    public void testParseLetter() throws Exception {
         Byte result = parser.parse("a");
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_OutOfRange_ThrowException() throws Exception {
+    public void testParseOutOfRange() throws Exception {
         Byte result = parser.parse("-129");
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_FloatNumber_ThrowException() throws Exception {
+    public void testParseFloatNumber() throws Exception {
         Byte result = parser.parse("-5.5");
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         parser.parse("a");
         Assert.assertEquals(parser.getParseErrorMessage(), "a cannot be parsed as byte");
     }

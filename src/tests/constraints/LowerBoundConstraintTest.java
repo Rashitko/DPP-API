@@ -17,25 +17,25 @@ public class LowerBoundConstraintTest {
 
 
     @Test
-    public void testIsFulfilled_BoundaryValue_Pass() throws Exception {
+    public void testIsFulfilledBoundaryValue() throws Exception {
         boolean result = lowerBoundConstraint.isFulfilled(5);
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_HigherValue_Pass() throws Exception {
+    public void testIsFulfilledHigherValue() throws Exception {
         boolean result = lowerBoundConstraint.isFulfilled(10);
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_LowerValue_Pass() throws Exception {
+    public void testIsFulfilledLowerValue() throws Exception {
         boolean result = lowerBoundConstraint.isFulfilled(-2);
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         Assert.assertEquals(lowerBoundConstraint.getErrorMessage(2), "\"" + 2 + "\" is not higher than " + lowerBound);
     }
 }

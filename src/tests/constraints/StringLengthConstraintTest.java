@@ -18,31 +18,31 @@ public class StringLengthConstraintTest {
 
 
     @Test
-    public void testIsFulfilled_MinBoundaryValue_Pass() throws Exception {
+    public void testIsFulfilledMinBoundaryValue() throws Exception {
         boolean result = constraint.isFulfilled("cat");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_MaxBoundaryValue_Pass() throws Exception {
+    public void testIsFulfilledMaxBoundaryValue() throws Exception {
         boolean result = constraint.isFulfilled("house");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_HigherValue_Pass() throws Exception {
+    public void testIsFulfilledHigherValue() throws Exception {
         boolean result = constraint.isFulfilled("mountain");
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testIsFulfilled_LowerValue_Pass() throws Exception {
+    public void testIsFulfilledLowerValue() throws Exception {
         boolean result = constraint.isFulfilled("at");
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         Assert.assertEquals(constraint.getErrorMessage("at"), "\"at\" length is not in the range of "
                 + minLength + "-" + maxLength);
     }

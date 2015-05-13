@@ -17,25 +17,25 @@ public class UpperBoundConstraintTest {
 
 
     @Test
-    public void testIsFulfilled_BoundaryValue_Pass() throws Exception {
+    public void testIsFulfilledBoundaryValue() throws Exception {
         boolean result = upperBoundConstraint.isFulfilled("BoundaryString");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_HigherValue_Pass() throws Exception {
+    public void testIsFulfilledHigherValue() throws Exception {
         boolean result = upperBoundConstraint.isFulfilled("Ganga");
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testIsFulfilled_LowerValue_Pass() throws Exception {
+    public void testIsFulfilledLowerValue() throws Exception {
         boolean result = upperBoundConstraint.isFulfilled("Alabama");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         Assert.assertEquals(upperBoundConstraint.getErrorMessage("Ganga"), "\"Ganga\" is not lower than " + upperBound);
     }
 }

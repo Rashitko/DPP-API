@@ -15,21 +15,21 @@ public class StringArgumentParserTest {
     }
 
     @Test
-    public void testParse_SimpleString_Pass() {
+    public void testParseSimpleString() {
         String result = parser.parse("Hello world");
         String expected = "Hello world";
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_ComplexString_Pass() {
+    public void testParseComplexString() {
         String result = parser.parse("\tHello \n \"world\"");
         String expected = "\tHello \n \"world\"";
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         parser.parse("value");
         Assert.assertEquals(parser.getParseErrorMessage(), "");
     }

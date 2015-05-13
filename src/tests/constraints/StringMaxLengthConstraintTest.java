@@ -16,25 +16,25 @@ public class StringMaxLengthConstraintTest {
     }
 
     @Test
-    public void testIsFulfilled_BoundaryLength_Pass() throws Exception {
+    public void testIsFulfilledBoundaryLength() throws Exception {
         boolean result = constraint.isFulfilled("house");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_HigherValue_Pass() throws Exception {
+    public void testIsFulfilledHigherValue() throws Exception {
         boolean result = constraint.isFulfilled("mountain");
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testIsFulfilled_LowerValue_Pass() throws Exception {
+    public void testIsFulfilledLowerValue() throws Exception {
         boolean result = constraint.isFulfilled("cat");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         Assert.assertEquals(constraint.getErrorMessage("mountain"), "\"mountain\" length is not lower than" + maxLength);
     }
 }

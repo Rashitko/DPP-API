@@ -17,14 +17,14 @@ public class LongArgumentParserTest {
     }
 
     @Test
-    public void testParse_PositiveNumber_Pass() throws Exception {
+    public void testParsePositiveNumber() throws Exception {
         Long result = parser.parse("15");
         Long expected = 15L;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_PositiveNumberBoundary_Pass() throws Exception {
+    public void testParsePositiveNumberBoundary() throws Exception {
         String longMaxValue = Long.MAX_VALUE + "";
         Long result = parser.parse(longMaxValue);
         Long expected = Long.MAX_VALUE;
@@ -32,14 +32,14 @@ public class LongArgumentParserTest {
     }
 
     @Test
-    public void testParse_NegativeNumber_Pass() throws Exception {
+    public void testParseNegativeNumber() throws Exception {
         Long result = parser.parse("-122");
         Long expected = -122L;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_NegativeNumberBoundary_Pass() throws Exception {
+    public void testParseNegativeNumberBoundary() throws Exception {
         String longMinValue = Long.MIN_VALUE + "";
         Long result = parser.parse(longMinValue);
         Long expected = Long.MIN_VALUE;
@@ -47,22 +47,22 @@ public class LongArgumentParserTest {
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_Letter_ThrowException() throws Exception {
+    public void testParseLetter() throws Exception {
         Long result = parser.parse("a");
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_OutOfRange_ThrowException() throws Exception {
+    public void testParseOutOfRange() throws Exception {
         Long result = parser.parse("10000000000000000000000000000000");
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_FloatNumber_ThrowException() throws Exception {
+    public void testParseFloatNumber() throws Exception {
         Long result = parser.parse("-5.5");
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         parser.parse("a");
         Assert.assertEquals(parser.getParseErrorMessage(), "a cannot be parsed as long");
     }
