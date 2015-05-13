@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 
 
 public class OptionsListTest {
-    Option first;
-    Option second;
+    private Option first;
+    private Option second;
     private OptionsList optionList;
 
     @BeforeClass

@@ -13,7 +13,7 @@ import java.util.Set;
 
 
 public class OptionTest {
-    final String SWITCH_VALIDATION_REGEX = "^[a-zA-Z]+([\\w\\-_a-zA-Z_0-9]*[\\w_a-zA-Z_0-9]+|[\\w_a-zA-Z_0-9]*)$";
+    public static final String SWITCH_VALIDATION_REGEX = "^[a-zA-Z]+([\\w\\-_a-zA-Z_0-9]*[\\w_a-zA-Z_0-9]+|[\\w_a-zA-Z_0-9]*)$";
     Set<String> longSwitches;
     String firstShortSwitch;
     String secondShortSwitch;

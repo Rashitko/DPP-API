@@ -16,12 +16,12 @@ import java.util.List;
 
 public class BasicParserTest {
 
-    final int SIZE_LOWER_BOUND = 0;
-    Option verbose;
-    Argument<Integer> sizeArg;
-    Option size;
-    OptionsList options;
-    Parser parser;
+    private final int SIZE_LOWER_BOUND = 0;
+    private Option verbose;
+    private Argument<Integer> sizeArg;
+    private Option size;
+    private OptionsList options;
+    private Parser parser;
 
     @BeforeClass
     public void initialize() {

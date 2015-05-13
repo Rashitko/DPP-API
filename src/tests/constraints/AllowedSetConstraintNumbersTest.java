@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 public class AllowedSetConstraintNumbersTest {
 
     private AllowedSetConstraint<Integer> allowedSetConstraint;
-
     @BeforeClass
     public void initialize() {
         allowedSetConstraint = new AllowedSetConstraint<Integer>();
