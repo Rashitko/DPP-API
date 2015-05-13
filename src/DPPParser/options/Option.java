@@ -158,7 +158,7 @@ public class Option {
     /**
      * Gets parse result
      *
-     * @return parse result, or null if option is not mandatory and wasn't set
+     * @return parse result, or null if optional {@link Option} is not wasn't set
      * @see ParseResult
      */
     @Nullable
@@ -585,6 +585,9 @@ public class Option {
         public Option build() {
             if (description == null) {
                 description = "Description is not available for this option";
+            }
+            if (mandatory && argument == null) {
+                throw new IllegalStateException("mandatory options must have an argument");
             }
             return new Option(this);
         }

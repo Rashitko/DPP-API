@@ -49,9 +49,9 @@ public class Parser {
                 cmdLineSwitch = cmdLineSwitch.substring(0, delimiterPosition);
             }
             if (cmdLineSwitch.startsWith("-")) {
-                Option option;
-                String optionName = getOptionName(cmdLineSwitch);
+                final String optionName = getOptionName(cmdLineSwitch);
                 final Option.Builder.SwitchType switchType;
+                final Option option;
                 if (cmdLineSwitch.startsWith("--")) {
                     option = optionsList.findOptionByLongSwitch(optionName);
                     switchType = Option.Builder.SwitchType.LONG_SWITCH;
@@ -60,8 +60,10 @@ public class Parser {
                     switchType = Option.Builder.SwitchType.SHORT_SWITCH;
                 }
 
-                final boolean optionTakesArg = option == null || option.hasArgument();
-                if (argValue == null && optionTakesArg && !args.isEmpty() && !isOption(args.get(0))) {
+                final boolean argValIsSet = argValue != null;
+                final boolean optionHasArg = option == null || option.hasArgument();
+                final boolean hasNextValue = !args.isEmpty() && !isOption(args.get(0));
+                if (!argValIsSet && optionHasArg && hasNextValue) {
                     argValue = args.remove(0);
                 }
 
@@ -74,6 +76,9 @@ public class Parser {
         checkMissedOptions();
     }
 
+    /**
+     *
+     */
     private void resetFields() {
         for (Option option : optionsList) {
             option.reset();
