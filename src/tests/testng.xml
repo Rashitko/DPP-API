@@ -35,7 +35,7 @@
             <class name="tests.ParserTest"/>
             <class name="tests.OptionTest"/>
             <class name="tests.BasicParserTest"/>
-            <class name="tests.UnusualInputsParserTests" />
+            <class name="tests.UnusualInputsParserTests"/>
         </classes>
     </test>
 </suite>

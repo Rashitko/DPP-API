@@ -6,12 +6,10 @@ import DPPParser.options.OptionsList;
 import DPPParser.options.Parser;
 import DPPParser.parsers.IntegerArgumentParser;
 import DPPParser.parsers.StringArgumentParser;
-import org.junit.BeforeClass;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-@Test
 public class UnusualInputsParserTests {
 
     private Option shortOption;
@@ -47,7 +45,7 @@ public class UnusualInputsParserTests {
     }
 
     @Test
-    public void testNotexistingMalformedSwitch() {
+    public void testNotExistingMalformedSwitch() {
         String[] args = {"---not-existing"};
         parser.resolveOptions(args);
         Assert.assertEquals(parser.getExtraOptions().size(), 1, "there should be 1 extra option");
@@ -59,7 +57,7 @@ public class UnusualInputsParserTests {
     }
 
     @Test
-    public void testNotexistingMalformedSwitchAfterValidOption() {
+    public void testNotExistingMalformedSwitchAfterValidOption() {
         String[] args = {"-s", "---not-existing"};
         parser.resolveOptions(args);
         Assert.assertTrue(shortOptionWithStringArg.hasArgument(), "-s should have argument");
@@ -71,5 +69,6 @@ public class UnusualInputsParserTests {
         Assert.assertEquals(extraOption.getShortSwitches().size(), 0, "---not-existing should have 0 short switches");
         Assert.assertTrue(extraOption.getLongSwitches().contains("-not-existing"), "---not-existing should have long switch -not-existing");
     }
+
 
 }
