@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 
 public class StringMinLengthConstraintTest {
+    private final int minLength = 3;
     private StringMinLengthConstraint constraint;
-    private Integer minLength = 3;
 
     @BeforeClass
     public void initialize() {

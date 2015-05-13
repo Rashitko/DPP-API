@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="pridany testy pro validaci optiony">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintNumbersTest.java" afterPath="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintNumbersTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintStringsTest.java" afterPath="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintStringsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/ByteArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/ByteArgumentParserTest.java" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Upraveny nazvy vsech testu aby byly jednotne">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/ParserTest.java" afterPath="$PROJECT_DIR$/src/tests/ParserRegularUseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/ArgumentTest.java" afterPath="$PROJECT_DIR$/src/tests/ArgumentTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java" afterPath="$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/DoubleArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/DoubleArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/FloatArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/FloatArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/IntegerArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/IntegerArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/LongArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/LongArgumentParserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintTest.java" afterPath="$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/constraints/RangeConstraintTest.java" afterPath="$PROJECT_DIR$/src/tests/constraints/RangeConstraintTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/ShortArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/ShortArgumentParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/parsers/StringArgumentParserTest.java" afterPath="$PROJECT_DIR$/src/tests/parsers/StringArgumentParserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/constraints/StringLengthConstraintTest.java" afterPath="$PROJECT_DIR$/src/tests/constraints/StringLengthConstraintTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/constraints/StringMaxLengthConstraintTest.java" afterPath="$PROJECT_DIR$/src/tests/constraints/StringMaxLengthConstraintTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/constraints/StringMinLengthConstraintTest.java" afterPath="$PROJECT_DIR$/src/tests/constraints/StringMinLengthConstraintTest.java" />
@@ -45,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="1" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -55,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/tests/constraints/RangeConstraintTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -75,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/src/tests/constraints/StringLengthConstraintTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -85,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/tests/constraints/StringMaxLengthConstraintTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -95,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/tests/constraints/StringMinLengthConstraintTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -104,8 +96,8 @@
       <file leaf-file-name="UpperBoundConstraintTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tests/constraints/UpperBoundConstraintTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.93887943">
-              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.3255814">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -165,8 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/constraints/FloatConstraint.java" />
-        <option value="$PROJECT_DIR$/src/BasicConstraints/FloatConstraint.java" />
         <option value="$PROJECT_DIR$/src/BasicTypeConstraints/ByteConstraint.java" />
         <option value="$PROJECT_DIR$/src/basicTypeConstraints/ByteConstraint.java" />
         <option value="$PROJECT_DIR$/src/basicTypeConstraints/UpperBoundConstraint.java" />
@@ -209,6 +199,8 @@
         <option value="$PROJECT_DIR$/src/tests/parsers/StringArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintNumbersTest.java" />
         <option value="$PROJECT_DIR$/src/tests/constraints/AllowedSetConstraintStringsTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/ParserRegularUseTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/ArgumentTest.java" />
         <option value="$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java" />
         <option value="$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintTest.java" />
         <option value="$PROJECT_DIR$/src/tests/constraints/RangeConstraintTest.java" />
@@ -619,6 +611,18 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
     <configuration default="false" name="Default" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="examples.Main" />
@@ -879,7 +883,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431517692578</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Upraveny nazvy vsech testu aby byly jednotne">
+      <created>1431518325240</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1431518325240</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -915,7 +925,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937598" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32686085" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -944,7 +954,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Nejake dalsi upravy v optinech, pridano reseni chyb v optionech. Bude to ale treba jeste prodiskutovat na chvilku. My umoznujeme uzivateli volat metody neprikald getParsingErrors jeste predtim nez probehne samotne parsovani. Pokud ale budeme vzdy vracet treba null ze jeste nedoslo k sparsovani tak je to aso dobre oduvodnene" />
     <MESSAGE value="V ParsingResult Set nahrazen za List. Z pripomenek je fakt, ze muze zalezet na poradi." />
     <MESSAGE value="zlepsena anglictina" />
     <MESSAGE value="Set Constraint zmenen na list" />
@@ -969,7 +978,8 @@
     <MESSAGE value="Testy Option hotovy" />
     <MESSAGE value="Pripravena puda pro test Parseru" />
     <MESSAGE value="pridany testy pro validaci optiony" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridany testy pro validaci optiony" />
+    <MESSAGE value="Upraveny nazvy vsech testu aby byly jednotne" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upraveny nazvy vsech testu aby byly jednotne" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1208,16 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-          <folding>
-            <element signature="e#696#705#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/latex/du1.tex">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1255,22 +1255,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="e#696#705#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/ParserRegularUseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/OptionTest.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/ArgumentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-44.23729">
-          <caret line="249" column="30" selection-start-line="249" selection-start-column="30" selection-end-line="249" selection-end-column="30" />
-          <folding>
-            <element signature="e#2502#2510#0" expanded="true" />
-            <element signature="e#3213#3221#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,10 +1289,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ArgumentTest.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/OptionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="249" column="30" selection-start-line="249" selection-start-column="30" selection-end-line="249" selection-end-column="30" />
+          <folding>
+            <element signature="e#2502#2510#0" expanded="true" />
+            <element signature="e#3213#3221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1310,14 +1328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/parsers/BooleanArgumentParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1373,7 +1383,7 @@
     <entry file="file://$PROJECT_DIR$/src/tests/constraints/ComposedConstraintTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="1" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1381,7 +1391,7 @@
     <entry file="file://$PROJECT_DIR$/src/tests/constraints/LowerBoundConstraintTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1389,7 +1399,7 @@
     <entry file="file://$PROJECT_DIR$/src/tests/constraints/RangeConstraintTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1397,7 +1407,7 @@
     <entry file="file://$PROJECT_DIR$/src/tests/constraints/StringLengthConstraintTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1405,7 +1415,7 @@
     <entry file="file://$PROJECT_DIR$/src/tests/constraints/StringMaxLengthConstraintTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1413,15 +1423,15 @@
     <entry file="file://$PROJECT_DIR$/src/tests/constraints/StringMinLengthConstraintTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/constraints/UpperBoundConstraintTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93887943">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.3255814">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding />
         </state>
       </provider>

@@ -11,9 +11,9 @@ import org.testng.annotations.Test;
 
 public class ArgumentTest {
 
+    private final int lowerBound = 5;
     private Argument<Integer> argument;
     private Constraint<Integer> constraint;
-    private int lowerBound = 5;
     private IntegerArgumentParser parser;
 
     @BeforeClass

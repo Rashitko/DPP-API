@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 
 public class ComposedConstraintTest {
 
+    private final int lowerEvenBound = 6;
     private Constraint<Integer> composedConstraint;
-    private Integer lowerEvenBound = 6;
 
     @BeforeClass
     public void initialize() {

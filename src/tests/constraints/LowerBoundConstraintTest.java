@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 
 public class LowerBoundConstraintTest {
+    private final int lowerBound = 5;
     private LowerBoundConstraint<Integer> lowerBoundConstraint;
-    private Integer lowerBound = 5;
 
     @BeforeClass
     public void initialize() {

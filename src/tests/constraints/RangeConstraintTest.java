@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 
 
 public class RangeConstraintTest {
+    private final int lowerBound = -50;
+    private final int upperBound = 600;
     private RangeConstraint<Integer> rangeConstraint;
-    private Integer lowerBound = -50;
-    private Integer upperBound = 600;
 
     @BeforeClass
     public void initialize() {

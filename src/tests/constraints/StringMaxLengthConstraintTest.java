@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 
 public class StringMaxLengthConstraintTest {
+    private final int maxLength = 5;
     private StringMaxLengthConstraint constraint;
-    private Integer maxLength = 5;
 
     @BeforeClass
     public void initialize() {

@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 
 public class UpperBoundConstraintTest {
+    private final String upperBound = "BoundaryString";
     private UpperBoundConstraint<String> upperBoundConstraint;
-    private String upperBound = "BoundaryString";
 
     @BeforeClass
     public void initialize() {
