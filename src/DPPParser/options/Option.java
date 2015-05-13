@@ -189,7 +189,7 @@ public class Option {
      * true otherwise
      */
     public boolean isFailed() {
-        return parseResult != ParseResult.SUCCESS && parseResult != ParseResult.EXTRA;
+        return parseResult != null && parseResult != ParseResult.SUCCESS && parseResult != ParseResult.EXTRA;
     }
 
     /**

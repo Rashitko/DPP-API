@@ -105,7 +105,6 @@ public class Parser {
      * @param value        string representation of {@link Option}'s argument value, can be null if no argument was provided
      */
     private void processOption(@Nullable Option option, String optionSwitch, Option.Builder.SwitchType switchType, @Nullable String value) {
-//        System.out.printf("option == null = %b\n", option == null);
         if (option == null) {
             createExtraOption(optionSwitch, switchType, value);
             return;
@@ -166,7 +165,10 @@ public class Parser {
             builder.setOptionalArgument(optionArg);
         }
         Option option = builder.build();
-        option.getArgument().setValue(value);
+        option.setParseResult(Option.ParseResult.EXTRA);
+        if (option.hasArgument()) {
+            option.getArgument().setValue(value);
+        }
         optionsList.add(option);
     }
 

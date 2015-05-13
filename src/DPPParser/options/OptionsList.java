@@ -22,7 +22,7 @@ public class OptionsList implements Iterable<Option> {
      *
      * @return number of options in the option list
      */
-    public int getSize() {
+    public int size() {
         return options.size();
     }
 

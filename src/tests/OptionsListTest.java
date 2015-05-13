@@ -24,21 +24,21 @@ public class OptionsListTest {
 
         boolean result = optionList.add(first);
         Assert.assertTrue(result);
-        Assert.assertEquals(optionList.getSize(), 1);
+        Assert.assertEquals(optionList.size(), 1);
     }
 
     @Test(dependsOnMethods = {"testAddFirst"})
     public void testAddTheSameOption() {
         boolean result = optionList.add(first);
         Assert.assertFalse(result);
-        Assert.assertEquals(optionList.getSize(), 1);
+        Assert.assertEquals(optionList.size(), 1);
     }
 
     @Test(dependsOnMethods = {"testAddTheSameOption"})
     public void testAddSecondOption() {
         boolean result = optionList.add(second);
         Assert.assertTrue(result);
-        Assert.assertEquals(optionList.getSize(), 2);
+        Assert.assertEquals(optionList.size(), 2);
     }
 
     @Test(dependsOnMethods = {"testAddSecondOption"})
