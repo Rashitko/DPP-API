@@ -15,7 +15,16 @@ public class OptionsList implements Iterable<Option> {
     }
 
     /**
-     * Adds {@link Option} if no options in list can be found
+     * Gets the number of options in the option list
+     *
+     * @return number of options in the option list
+     */
+    public int getSize() {
+        return options.size();
+    }
+
+    /**
+     * Adds {@link Option} to the OptinsList if no option in list can be found
      * by any of the long or short switched of provided {@link Option}.
      * If an {@link Option} can be found, then false is returned and list is unchanged.
      *
@@ -87,6 +96,11 @@ public class OptionsList implements Iterable<Option> {
         @Override
         public boolean hasNext() {
             return index < options.size();
+        }
+
+        @Override
+        public void remove() {
+            options.remove(index);
         }
 
         @Override

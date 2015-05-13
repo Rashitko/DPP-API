@@ -31,6 +31,7 @@
     <test name="main">
         <classes>
             <class name="tests.ArgumentTest"/>
+            <class name="tests.OptionsListTest"/>
         </classes>
     </test>
 </suite>
