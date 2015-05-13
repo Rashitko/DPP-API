@@ -17,21 +17,21 @@ public class DoubleArgumentParserTest {
     }
 
     @Test
-    public void testParse_Integer_Pass() throws Exception {
+    public void testParseInteger() throws Exception {
         Double result = parser.parse("1");
         Double expected = 1d;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_PositiveDoubleNumber_Pass() throws Exception {
+    public void testParsePositiveDoubleNumber() throws Exception {
         Double result = parser.parse("1.567");
         Double expected = 1.567d;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_PositiveNumberBoundary_Pass() throws Exception {
+    public void testParsePositiveNumberBoundary() throws Exception {
         String doubleMaxValue = Double.MAX_VALUE + "";
         Double result = parser.parse(doubleMaxValue);
         Double expected = Double.MAX_VALUE;
@@ -39,14 +39,14 @@ public class DoubleArgumentParserTest {
     }
 
     @Test
-    public void testParse_NegativeDoubleNumber_Pass() throws Exception {
+    public void testParseNegativeDoubleNumber() throws Exception {
         Double result = parser.parse("-122");
         Double expected = -122d;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_NegativeNumberBoundary_Pass() throws Exception {
+    public void testParseNegativeNumberBoundary() throws Exception {
         String doubleMinValue = Double.MIN_VALUE + "";
         Double result = parser.parse(doubleMinValue);
         Double expected = Double.MIN_VALUE;
@@ -54,13 +54,13 @@ public class DoubleArgumentParserTest {
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_Letter_ThrowException() throws Exception {
+    public void testParseLetter() throws Exception {
         Double result = parser.parse("a");
     }
 
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         parser.parse("a");
         Assert.assertEquals(parser.getParseErrorMessage(), "a cannot be parsed as double");
     }

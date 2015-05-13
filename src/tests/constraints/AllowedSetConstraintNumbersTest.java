@@ -18,19 +18,19 @@ public class AllowedSetConstraintNumbersTest {
     }
 
     @Test
-    public void testIsFulfilled_StringCorrectCase_Pass() throws Exception {
+    public void testIsFulfilledStringCorrectCase() throws Exception {
         boolean result = allowedSetConstraint.isFulfilled(3);
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_StringForbiddenCase_Pass() throws Exception {
+    public void testIsFulfilledStringForbiddenCase() throws Exception {
         boolean result = allowedSetConstraint.isFulfilled(2);
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testGetErrorMessage_Number_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         Assert.assertEquals(allowedSetConstraint.getErrorMessage(2),
                 "\"2\" is not allowed. Allowed arguments are:" + allowedSetConstraint);
     }

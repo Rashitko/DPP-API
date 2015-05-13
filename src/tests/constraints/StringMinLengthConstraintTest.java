@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 
 public class StringMinLengthConstraintTest {
+    private final int minLength = 3;
     private StringMinLengthConstraint constraint;
-    private Integer minLength = 3;
 
     @BeforeClass
     public void initialize() {
@@ -16,25 +16,25 @@ public class StringMinLengthConstraintTest {
     }
 
     @Test
-    public void testIsFulfilled_BoundaryLength_Pass() throws Exception {
+    public void testIsFulfilledBoundaryLength() throws Exception {
         boolean result = constraint.isFulfilled("foo");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_HigherValue_Pass() throws Exception {
+    public void testIsFulfilledHigherValue() throws Exception {
         boolean result = constraint.isFulfilled("hello");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_LowerValue_Pass() throws Exception {
+    public void testIsFulfilledLowerValue() throws Exception {
         boolean result = constraint.isFulfilled("at");
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         Assert.assertEquals(constraint.getErrorMessage("at"), "\"at\" length is not higher than" + minLength);
     }
 }

@@ -17,14 +17,14 @@ public class IntegerArgumentParserTest {
     }
 
     @Test
-    public void testParse_PositiveNumber_Pass() throws Exception {
+    public void testParsePositiveNumber() throws Exception {
         Integer result = parser.parse("1");
         Integer expected = 1;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_PositiveNumberBoundary_Pass() throws Exception {
+    public void testParsePositiveNumberBoundary() throws Exception {
         String integerMaxValue = Integer.MAX_VALUE + "";
         Integer result = parser.parse(integerMaxValue);
         Integer expected = Integer.MAX_VALUE;
@@ -32,14 +32,14 @@ public class IntegerArgumentParserTest {
     }
 
     @Test
-    public void testParse_NegativeNumber_Pass() throws Exception {
+    public void testParseNegativeNumber() throws Exception {
         Integer result = parser.parse("-122");
         Integer expected = -122;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_NegativeNumberBoundary_Pass() throws Exception {
+    public void testParseNegativeNumberBoundary() throws Exception {
         String integerMinValue = Integer.MIN_VALUE + "";
         Integer result = parser.parse(integerMinValue);
         Integer expected = Integer.MIN_VALUE;
@@ -47,22 +47,22 @@ public class IntegerArgumentParserTest {
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_Letter_ThrowException() throws Exception {
+    public void testParseLetter() throws Exception {
         Integer result = parser.parse("a");
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_OutOfRange_ThrowException() throws Exception {
+    public void testParseOutOfRange() throws Exception {
         Integer result = parser.parse("999999999999999999999");
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_FloatNumber_ThrowException() throws Exception {
+    public void testParseFloatNumber() throws Exception {
         Integer result = parser.parse("5.5");
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         parser.parse("a");
         Assert.assertEquals(parser.getParseErrorMessage(), "a cannot be parsed as integer");
     }

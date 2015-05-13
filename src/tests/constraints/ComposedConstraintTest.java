@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 
 public class ComposedConstraintTest {
 
+    private final int lowerEvenBound = 6;
     private Constraint<Integer> composedConstraint;
-    private Integer lowerEvenBound = 6;
 
     @BeforeClass
     public void initialize() {
@@ -36,38 +36,38 @@ public class ComposedConstraintTest {
     }
 
     @Test
-    public void testIsFulfilled_MinBoundaryEvenValue_Pass() throws Exception {
+    public void testIsFulfilledMinBoundaryEvenValue() throws Exception {
         boolean result = composedConstraint.isFulfilled(lowerEvenBound);
         Assert.assertTrue(result);
     }
 
 
     @Test
-    public void testIsFulfilled_HigherEvenValue_Pass() throws Exception {
+    public void testIsFulfilledHigherEvenValue() throws Exception {
         boolean result = composedConstraint.isFulfilled(26);
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testIsFulfilled_HigherOddValue_Pass() throws Exception {
+    public void testIsFulfilledHigherOddValue() throws Exception {
         boolean result = composedConstraint.isFulfilled(25);
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testIsFulfilled_LowerEvenValue_Pass() throws Exception {
+    public void testIsFulfilledLowerEvenValue() throws Exception {
         boolean result = composedConstraint.isFulfilled(2);
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testIsFulfilled_LowerOddValue_Pass() throws Exception {
+    public void testIsFulfilledLowerOddValue() throws Exception {
         boolean result = composedConstraint.isFulfilled(1);
         Assert.assertFalse(result);
     }
 
     @Test
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         Assert.assertEquals(composedConstraint.getErrorMessage(4),
                 "DPPParser.defaultConstrains.LowerBoundConstraint : \"4\" is not higher than " + lowerEvenBound + "\n");
     }

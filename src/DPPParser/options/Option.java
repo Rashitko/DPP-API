@@ -138,17 +138,19 @@ public class Option {
      */
     @Nullable
     public String getErrorMessage() {
-        switch (argumentPresence) {
-            case MANDATORY:
-                if (!argument.hasValue()) {
-                    return messageArgMissing;
-                } else {
-                    return argument.getErrorMessage();
-                }
-            case OPTIONAL:
-                if (argument.hasValue()) {
-                    return argument.getErrorMessage();
-                }
+        if (argumentPresence != null) {
+            switch (argumentPresence) {
+                case MANDATORY:
+                    if (!argument.hasValue()) {
+                        return messageArgMissing;
+                    } else {
+                        return argument.getErrorMessage();
+                    }
+                case OPTIONAL:
+                    if (argument.hasValue()) {
+                        return argument.getErrorMessage();
+                    }
+            }
         }
         return null;
     }
@@ -272,7 +274,7 @@ public class Option {
         private final Set<String> longSwitches;
         private boolean mandatory;
         private Argument argument;
-        private ArgumentPresence argumentPresence = ArgumentPresence.OPTIONAL;
+        private ArgumentPresence argumentPresence = null;
         private String description;
         private String messageArgMissing;
 

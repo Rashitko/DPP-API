@@ -32,7 +32,12 @@
         <classes>
             <class name="tests.ArgumentTest"/>
             <class name="tests.OptionsListTest"/>
+<<<<<<< HEAD
             <class name="tests.ParserTest"/>
+=======
+            <class name="tests.OptionTest"/>
+            <class name="tests.BasicParserTest"/>
+>>>>>>> 9bf3580174a0f96ff3d1db4dae92110f4d5b1d13
         </classes>
     </test>
 </suite>

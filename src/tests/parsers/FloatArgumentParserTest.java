@@ -17,21 +17,21 @@ public class FloatArgumentParserTest {
     }
 
     @Test
-    public void testParse_Integer_Pass() throws Exception {
+    public void testParseInteger() throws Exception {
         Float result = parser.parse("1");
         Float expected = 1f;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_PositiveFloatNumber_Pass() throws Exception {
+    public void testParsePositiveFloatNumber() throws Exception {
         Float result = parser.parse("1.567");
         Float expected = 1.567f;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_PositiveNumberBoundary_Pass() throws Exception {
+    public void testParsePositiveNumberBoundary() throws Exception {
         String floatMaxValue = Float.MAX_VALUE + "";
         Float result = parser.parse(floatMaxValue);
         Float expected = Float.MAX_VALUE;
@@ -39,14 +39,14 @@ public class FloatArgumentParserTest {
     }
 
     @Test
-    public void testParse_NegativeFloatNumber_Pass() throws Exception {
+    public void testParseNegativeFloatNumber() throws Exception {
         Float result = parser.parse("-122");
         Float expected = -122f;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void testParse_NegativeNumberBoundary_Pass() throws Exception {
+    public void testParseNegativeNumberBoundary() throws Exception {
         String floatMinValue = Float.MIN_VALUE + "";
         Float result = parser.parse(floatMinValue);
         Float expected = Float.MIN_VALUE;
@@ -54,13 +54,13 @@ public class FloatArgumentParserTest {
     }
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testParse_Letter_ThrowException() throws Exception {
+    public void testParseLetter() throws Exception {
         Float result = parser.parse("a");
     }
 
 
     @Test(expectedExceptions = ParsingException.class)
-    public void testGetErrorMessage_Pass() throws Exception {
+    public void testGetErrorMessage() throws Exception {
         parser.parse("a");
         Assert.assertEquals(parser.getParseErrorMessage(), "a cannot be parsed as float");
     }

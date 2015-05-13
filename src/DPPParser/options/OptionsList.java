@@ -11,7 +11,6 @@ import java.util.Set;
  * from switch (either long or short) to at most one instance of {@link Option} exists in this list.
  */
 public class OptionsList implements Iterable<Option> {
-
     private final List<Option> options;
 
     public OptionsList() {
