@@ -13,6 +13,7 @@ import java.util.Set;
 
 
 public class OptionTest {
+    final String SWITCH_VALIDATION_REGEX = "^[a-zA-Z]+([\\w\\-_a-zA-Z_0-9]*[\\w_a-zA-Z_0-9]+|[\\w_a-zA-Z_0-9]*)$";
     Set<String> longSwitches;
     String firstShortSwitch;
     String secondShortSwitch;
@@ -195,4 +196,63 @@ public class OptionTest {
     }
 
 
+    @Test
+    public void testSwitchValidationShort() throws Exception {
+        Assert.assertTrue("n".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationLong() throws Exception {
+        Assert.assertTrue("longSwitch".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationWithNum() throws Exception {
+        Assert.assertTrue("long11".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationWithDashes() throws Exception {
+        Assert.assertTrue("lon--g11".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationStartWithTwoDashes() throws Exception {
+        Assert.assertFalse("--lon--g11".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationStartWithOneDash() throws Exception {
+        Assert.assertFalse("-lon--g11".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationStartWithNum() throws Exception {
+        Assert.assertFalse("11".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationEndWithOneDash() throws Exception {
+        Assert.assertFalse("a1-".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationEndWithTwoDashes() throws Exception {
+        Assert.assertFalse("a1--".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationEndWithEqualSign() throws Exception {
+        Assert.assertFalse("a1-=".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationStartWithEqualSign() throws Exception {
+        Assert.assertFalse("=a1-".matches(SWITCH_VALIDATION_REGEX));
+    }
+
+    @Test
+    public void testSwitchValidationEqualSignInside() throws Exception {
+        Assert.assertFalse("a=1".matches(SWITCH_VALIDATION_REGEX));
+    }
 }

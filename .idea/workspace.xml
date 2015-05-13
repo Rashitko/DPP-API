@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Testy Option hotovy">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tests/ParserTest.java" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Pripravena puda pro test Parseru">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/OptionTest.java" afterPath="$PROJECT_DIR$/src/tests/OptionTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -35,14 +35,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OptionTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OptionTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tests/OptionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.91525424">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state vertical-scroll-proportion="4.924528">
+              <caret line="250" column="30" selection-start-line="250" selection-start-column="30" selection-end-line="250" selection-end-column="30" />
               <folding>
-                <element signature="e#2387#2395#0" expanded="true" />
-                <element signature="e#3098#3106#0" expanded="true" />
+                <element signature="e#2502#2510#0" expanded="true" />
+                <element signature="e#3213#3221#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParserTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ParserTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/ParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45840406">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,8 +95,8 @@
       <file leaf-file-name="Option.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Option.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="491" column="33" selection-start-line="491" selection-start-column="33" selection-end-line="491" selection-end-column="33" />
+            <state vertical-scroll-proportion="-6.2">
+              <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="133" />
               <folding>
                 <element signature="e#1399#1400#0" expanded="true" />
                 <element signature="e#1457#1458#0" expanded="true" />
@@ -104,6 +104,8 @@
                 <element signature="e#3663#3664#0" expanded="true" />
                 <element signature="e#4816#4817#0" expanded="true" />
                 <element signature="e#4850#4851#0" expanded="true" />
+                <element signature="e#18293#18294#0" expanded="true" />
+                <element signature="e#18369#18370#0" expanded="true" />
                 <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
                 <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
               </folding>
@@ -216,9 +218,9 @@
         <option value="$PROJECT_DIR$/src/tests/parsers/ByteArgumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/testng.xml" />
         <option value="$PROJECT_DIR$/src/DPPParser/options/Option.java" />
-        <option value="$PROJECT_DIR$/src/tests/OptionTest.java" />
         <option value="$PROJECT_DIR$/src/tests/parsers/ParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/ParserTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/OptionTest.java" />
       </list>
     </option>
   </component>
@@ -848,7 +850,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431516144411</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Pripravena puda pro test Parseru">
+      <created>1431516600317</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1431516600317</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -881,6 +889,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937598" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -890,13 +899,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937598" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -913,7 +921,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cele okomentovane. Z enumu ArgumentPresence odebrana hodnota Fordbidden. Delalo by to pak bordel kdyby uzivatel volal v Builderu metodu setArgument a nastavil mu, ze je forbidden. Pokud je forbidden, tak ho tam nenastavuji. Myslim ze by to pak akorat odpovidalo spatne na metodu ptajici se zda ma dana optiona argument" />
     <MESSAGE value="Metoda setArgument nahrazena dvemi, setMandatoryArgument a setOptionalArgument. U setMandatoryArgument pridan parameter rikajici jaka ma byt vyhozena hlaska, pokud tam mandatory argument chybi. U optional to neni treba. To pred tim neslo, jelikoz tato funkcionalita byla uzavrena v jedne metode" />
     <MESSAGE value="Nejake dalsi upravy v optinech, pridano reseni chyb v optionech. Bude to ale treba jeste prodiskutovat na chvilku. My umoznujeme uzivateli volat metody neprikald getParsingErrors jeste predtim nez probehne samotne parsovani. Pokud ale budeme vzdy vracet treba null ze jeste nedoslo k sparsovani tak je to aso dobre oduvodnene" />
     <MESSAGE value="V ParsingResult Set nahrazen za List. Z pripomenek je fakt, ze muze zalezet na poradi." />
@@ -938,7 +945,8 @@
     <MESSAGE value="Testy pro ShortParser ( stejny pattern jako pro IntegerParser) pridany" />
     <MESSAGE value="Testy pro Byte, Long, Short a Integer parsers hotovy" />
     <MESSAGE value="Testy Option hotovy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testy Option hotovy" />
+    <MESSAGE value="Pripravena puda pro test Parseru" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pripravena puda pro test Parseru" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -986,6 +994,8 @@
             <element signature="e#3663#3664#0" expanded="true" />
             <element signature="e#4816#4817#0" expanded="true" />
             <element signature="e#4850#4851#0" expanded="true" />
+            <element signature="e#18293#18294#0" expanded="true" />
+            <element signature="e#18369#18370#0" expanded="true" />
             <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
             <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
           </folding>
@@ -1065,6 +1075,8 @@
             <element signature="e#3663#3664#0" expanded="true" />
             <element signature="e#4816#4817#0" expanded="true" />
             <element signature="e#4850#4851#0" expanded="true" />
+            <element signature="e#18293#18294#0" expanded="true" />
+            <element signature="e#18369#18370#0" expanded="true" />
             <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
             <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
           </folding>
@@ -1144,6 +1156,8 @@
             <element signature="e#3663#3664#0" expanded="true" />
             <element signature="e#4816#4817#0" expanded="true" />
             <element signature="e#4850#4851#0" expanded="true" />
+            <element signature="e#18293#18294#0" expanded="true" />
+            <element signature="e#18369#18370#0" expanded="true" />
             <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
             <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
           </folding>
@@ -1361,23 +1375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Option.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="491" column="33" selection-start-line="491" selection-start-column="33" selection-end-line="491" selection-end-column="33" />
-          <folding>
-            <element signature="e#1399#1400#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#3629#3630#0" expanded="true" />
-            <element signature="e#3663#3664#0" expanded="true" />
-            <element signature="e#4816#4817#0" expanded="true" />
-            <element signature="e#4850#4851#0" expanded="true" />
-            <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
-            <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1406,22 +1403,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/OptionTest.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/ParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.91525424">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Option.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.2">
+          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="133" />
           <folding>
-            <element signature="e#2387#2395#0" expanded="true" />
-            <element signature="e#3098#3106#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#3629#3630#0" expanded="true" />
+            <element signature="e#3663#3664#0" expanded="true" />
+            <element signature="e#4816#4817#0" expanded="true" />
+            <element signature="e#4850#4851#0" expanded="true" />
+            <element signature="e#18293#18294#0" expanded="true" />
+            <element signature="e#18369#18370#0" expanded="true" />
+            <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
+            <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/OptionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45840406">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="4.924528">
+          <caret line="250" column="30" selection-start-line="250" selection-start-column="30" selection-end-line="250" selection-end-column="30" />
+          <folding>
+            <element signature="e#2502#2510#0" expanded="true" />
+            <element signature="e#3213#3221#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
