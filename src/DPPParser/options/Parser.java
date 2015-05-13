@@ -166,7 +166,9 @@ public class Parser {
             builder.setOptionalArgument(optionArg);
         }
         Option option = builder.build();
-        option.getArgument().setValue(value);
+        if (option.hasArgument()) {
+            option.getArgument().setValue(value);
+        }
         optionsList.add(option);
     }
 
