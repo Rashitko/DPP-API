@@ -11,18 +11,20 @@ import DPPParser.parsers.StringArgumentParser;
 public class Main {
 
     public static void main(final String[] args) {
-        System.out.printf("123 %b", isOption("123"));
-        System.out.printf("-123 %b", isOption("-123"));
-        System.out.printf("--123 %b", isOption("--123"));
-        System.out.printf("123.0 %b", isOption("123.0"));
-        System.out.printf("-123,0 %b", isOption("-123,0"));
-        System.out.printf("--123.0 %b", isOption("--123.0"));
+        System.out.printf("123 %b \n", isOption("123"));
+        System.out.printf("-123 %b \n", isOption("-123"));
+        System.out.printf("--123 %b \n", isOption("--123"));
+        System.out.printf("123.0 %b \n", isOption("123.0"));
+        System.out.printf("-123,0 %b \n", isOption("-123,0"));
+        System.out.printf("--123.0 %b \n", isOption("--123.0"));
+        System.out.printf("-123.0 %b \n", isOption("--123.0"));
     }
 
     private static boolean isOption(String arg) {
         try {
             //noinspection ResultOfMethodCallIgnored
             Double.parseDouble(arg);
+            return false;
         } catch (NumberFormatException ignore) {
         }
         return arg.startsWith("-") && !arg.equals("--");

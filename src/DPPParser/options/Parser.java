@@ -175,6 +175,7 @@ public class Parser {
         try {
             //noinspection ResultOfMethodCallIgnored
             Double.parseDouble(arg);
+            return false;
         } catch (NumberFormatException ignore) {
         }
         return arg.startsWith("-") && !isRegularArgsDelimiter(arg);
