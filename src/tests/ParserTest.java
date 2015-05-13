@@ -13,7 +13,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-@Test
 public class ParserTest {
 
     public static final String SHORT_INT_OPT_SWITCH = "short";
