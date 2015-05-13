@@ -18,9 +18,11 @@ public class OptionTest {
     String secondShortSwitch;
     String firstLongSwitch;
     Set<String> shortSwitches;
-    Option option;
-    Option mandatoryOption;
-    Argument<Integer> mandatoryOptionArg;
+    Option simpleOption;
+    Option mandatoryOptionWithMandatoryArg;
+    Argument<Integer> argument;
+    Option optionWithOptionalArg;
+    String optionDescription;
 
     @BeforeClass
     public void initialize() {
@@ -35,37 +37,41 @@ public class OptionTest {
         shortSwitches = new HashSet<String>();
         shortSwitches.add("x");
 
-        option = new Option.Builder(firstShortSwitch)
+        simpleOption = new Option.Builder(firstShortSwitch)
                 .addLongSwitches(longSwitches)
                 .addShortSwitch(secondShortSwitch)
                 .addLongSwitch(firstLongSwitch)
                 .addShortSwitches(shortSwitches)
                 .build();
 
-        mandatoryOptionArg = new Argument(new UpperBoundConstraint(2), new IntegerArgumentParser());
-        mandatoryOption = new Option.Builder(firstShortSwitch)
+        argument = new Argument(new UpperBoundConstraint(2), new IntegerArgumentParser());
+        mandatoryOptionWithMandatoryArg = new Option.Builder(firstShortSwitch)
                 .isMandatory(true)
-                .setMandatoryArgument(mandatoryOptionArg, "Argument missing")
+                .setMandatoryArgument(argument, "Argument missing")
                 .build();
 
-
+        optionDescription = "Option description";
+        optionWithOptionalArg = new Option.Builder(firstShortSwitch)
+                .setOptionalArgument(argument)
+                .setDescription(optionDescription)
+                .build();
     }
 
     @Test
     public void testHasShortSwitch() throws Exception {
-        boolean returned = option.hasShortSwitch("s");
+        boolean returned = simpleOption.hasShortSwitch("s");
         Assert.assertTrue(returned);
     }
 
     @Test
     public void testHasNotShortSwitch() throws Exception {
-        boolean returned = option.hasShortSwitch("a");
+        boolean returned = simpleOption.hasShortSwitch("a");
         Assert.assertFalse(returned);
     }
 
     @Test
     public void testGetShortSwitches() throws Exception {
-        Set<String> returned = option.getShortSwitches();
+        Set<String> returned = simpleOption.getShortSwitches();
         Set<String> expected = new HashSet<String>();
         expected.addAll(shortSwitches);
         expected.add(firstShortSwitch);
@@ -75,19 +81,19 @@ public class OptionTest {
 
     @Test
     public void testHasLongSwitch() throws Exception {
-        boolean returned = option.hasShortSwitch("first");
+        boolean returned = simpleOption.hasLongSwitch("first");
         Assert.assertTrue(returned);
     }
 
     @Test
     public void testHasNotLongSwitch() throws Exception {
-        boolean returned = option.hasShortSwitch("third");
+        boolean returned = simpleOption.hasLongSwitch("third");
         Assert.assertFalse(returned);
     }
 
     @Test
     public void testGetLongSwitches() throws Exception {
-        Set<String> returned = option.getLongSwitches();
+        Set<String> returned = simpleOption.getLongSwitches();
         Set<String> expected = new HashSet<String>();
         expected.addAll(longSwitches);
         expected.add(firstLongSwitch);
@@ -96,82 +102,97 @@ public class OptionTest {
 
     @Test
     public void testIsNotMandatory() throws Exception {
-        boolean returned = option.isMandatory();
+        boolean returned = simpleOption.isMandatory();
         Assert.assertFalse(returned);
     }
 
     @Test
     public void testIsMandatory() throws Exception {
-        boolean returned = mandatoryOption.isMandatory();
+        boolean returned = mandatoryOptionWithMandatoryArg.isMandatory();
         Assert.assertTrue(returned);
     }
 
     @Test
     public void testHasNotMandatoryArgument() throws Exception {
-        boolean returned = option.hasMandatoryArgument();
+        boolean returned = simpleOption.hasMandatoryArgument();
         Assert.assertFalse(returned);
     }
 
     @Test
     public void testHasMandatoryArgument() throws Exception {
-        boolean returned = mandatoryOption.hasMandatoryArgument();
+        boolean returned = mandatoryOptionWithMandatoryArg.hasMandatoryArgument();
         Assert.assertTrue(returned);
     }
 
     @Test
     public void testGetArgumentWhenMandatoryArgument() throws Exception {
-        Argument<Integer> returned = mandatoryOption.getArgument();
-        Assert.assertEquals(returned, mandatoryOptionArg);
+        Argument<Integer> returned = mandatoryOptionWithMandatoryArg.getArgument();
+        Assert.assertEquals(returned, argument);
     }
 
     @Test
     public void testGetArgumentWhenNoArgument() throws Exception {
-        Argument<Integer> returned = option.getArgument();
+        Argument<Integer> returned = simpleOption.getArgument();
         Assert.assertNull(returned);
     }
 
     @Test
-    public void testHasArgument() throws Exception {
-
+    public void testHasArgumentWhenNoArgument() throws Exception {
+        boolean returned = simpleOption.hasArgument();
+        Assert.assertFalse(returned);
     }
 
     @Test
-    public void testGetArgumentPresence() throws Exception {
-
+    public void testHasArgumentWhenMandatoryArgument() throws Exception {
+        boolean returned = mandatoryOptionWithMandatoryArg.hasArgument();
+        Assert.assertTrue(returned);
     }
 
     @Test
-    public void testGetDescription() throws Exception {
+    public void testHasArgumentWhenOptionalArgument() throws Exception {
+        boolean returned = optionWithOptionalArg.hasArgument();
+        Assert.assertTrue(returned);
+    }
 
+    @Test
+    public void testGetArgumentPresenceNoArgument() throws Exception {
+        Option.ArgumentPresence presence = simpleOption.getArgumentPresence();
+        Assert.assertNull(presence);
+    }
+
+    @Test
+    public void testGetArgumentPresenceMandatoryArgument() throws Exception {
+        Option.ArgumentPresence presence = mandatoryOptionWithMandatoryArg.getArgumentPresence();
+        Assert.assertEquals(presence, Option.ArgumentPresence.MANDATORY);
+    }
+
+    @Test
+    public void testGetArgumentPresenceOptionalArgument() throws Exception {
+        Option.ArgumentPresence presence = optionWithOptionalArg.getArgumentPresence();
+        Assert.assertEquals(presence, Option.ArgumentPresence.OPTIONAL);
+    }
+
+    @Test
+    public void testGetDescriptionWhenNoDescription() throws Exception {
+        String description = simpleOption.getDescription();
+        Assert.assertEquals(description, "Description is not available for this option");
+    }
+
+    @Test
+    public void testGetDescriptionWhenDescriptionSet() throws Exception {
+        String description = optionWithOptionalArg.getDescription();
+        Assert.assertEquals(description, optionDescription);
     }
 
     @Test
     public void testGetErrorMessage() throws Exception {
-
+        Assert.assertNull(simpleOption.getErrorMessage());
     }
 
     @Test
     public void testGetParseResult() throws Exception {
-
+        Assert.assertNull(simpleOption.getParseResult());
     }
 
-    @Test
-    public void testSetParseResult() throws Exception {
 
-    }
-
-    @Test
-    public void testIsFailed() throws Exception {
-
-    }
-
-    @Test
-    public void testIsExtra() throws Exception {
-
-    }
-
-    @Test
-    public void testIsMissed() throws Exception {
-
-    }
 }
