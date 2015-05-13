@@ -72,4 +72,24 @@ public class UnusualInputsParserTests {
         Assert.assertTrue(extraOption.getLongSwitches().contains("-not-existing"), "---not-existing should have long switch -not-existing");
     }
 
+    @Test
+    public void testMultipleParsingsWithOneOptionDefinition() {
+        Option option = new Option.Builder("s")
+                .setMandatoryArgument(new Argument<Integer>(new IntegerArgumentParser()), null)
+                .build();
+        OptionsList localOptions = new OptionsList();
+        localOptions.add(option);
+        Parser localParser = new Parser(localOptions);
+
+        String[] args = {"-s", "123"};
+        localParser.resolveOptions(args);
+        Assert.assertTrue(option.isSuccessful(), "option should be successful");
+        Assert.assertEquals(option.getArgument().getValue(), 123, "value should be 123");
+
+        String[] argsWithoutVal = {"-s"};
+        localParser.resolveOptions(argsWithoutVal);
+        Assert.assertTrue(option.isFailed(), "option should be failed");
+        Assert.assertNull(option.getArgument().getValue(), "option should not have argument");
+    }
+
 }
