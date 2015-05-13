@@ -17,7 +17,6 @@ import java.util.List;
 public class BasicParserTest {
 
     final int SIZE_LOWER_BOUND = 0;
-    final int SIZE_DEFAULT = 42;
     Option verbose;
     Argument<Integer> sizeArg;
     Option size;
@@ -50,11 +49,17 @@ public class BasicParserTest {
     @Test
     public void testGetFailedOptions() throws Exception {
         Assert.assertEquals(parser.getFailedOptions().size(), 1);
+        List<String> expected = new ArrayList<String>();
+        expected.add("s");
+        Assert.assertEquals(parser.getFailedOptions(), expected);
     }
 
     @Test
     public void testGetExtraOptions() throws Exception {
         Assert.assertEquals(parser.getExtraOptions().size(), 1);
+        List<String> expected = new ArrayList<String>();
+        expected.add("length");
+        Assert.assertEquals(parser.getExtraOptions(), expected);
     }
 
     @Test
@@ -64,7 +69,7 @@ public class BasicParserTest {
 
     @Test
     public void testHasError() throws Exception {
-        Assert.assertFalse(parser.hasError());
+        Assert.assertTrue(parser.hasError());
     }
 
     @Test

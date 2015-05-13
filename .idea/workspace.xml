@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="rozpracovan test Parseru">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/BasicParserTest.java" afterPath="$PROJECT_DIR$/src/tests/BasicParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/options/OptionsList.java" afterPath="$PROJECT_DIR$/src/DPPParser/options/OptionsList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -118,9 +117,11 @@
         <entry file="file://$PROJECT_DIR$/src/tests/BasicParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.45840406">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+              <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
               <folding>
-                <element signature="e#2362#2370#0" expanded="true" />
+                <element signature="e#1593#1601#0" expanded="true" />
+                <element signature="e#1882#1890#0" expanded="true" />
+                <element signature="e#2588#2596#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -906,7 +907,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431520526271</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="rozpracovan test Parseru">
+      <created>1431520725283</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1431520725283</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1451,9 +1458,11 @@
     <entry file="file://$PROJECT_DIR$/src/tests/BasicParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45840406">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
           <folding>
-            <element signature="e#2362#2370#0" expanded="true" />
+            <element signature="e#1593#1601#0" expanded="true" />
+            <element signature="e#1882#1890#0" expanded="true" />
+            <element signature="e#2588#2596#0" expanded="true" />
           </folding>
         </state>
       </provider>
