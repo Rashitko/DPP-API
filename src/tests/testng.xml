@@ -33,6 +33,7 @@
             <class name="tests.ArgumentTest"/>
             <class name="tests.OptionsListTest"/>
             <class name="tests.OptionTest"/>
+            <class name="tests.BasicParserTest"/>
         </classes>
     </test>
 </suite>
