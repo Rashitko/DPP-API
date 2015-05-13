@@ -77,7 +77,7 @@ public class Parser {
     }
 
     /**
-     *
+     * Resets all options in options list and clears unmatched arguments and regular arguments
      */
     private void resetFields() {
         for (Option option : optionsList) {
