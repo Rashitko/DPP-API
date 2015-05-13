@@ -6,6 +6,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * List of {@link Option}. It is guaranteed that a mapping
+ * from switch (either long or short) to at most one instance of {@link Option} exists in this list.
+ */
 public class OptionsList implements Iterable<Option> {
 
     private final List<Option> options;
@@ -85,6 +89,10 @@ public class OptionsList implements Iterable<Option> {
         return new OptionsIterator();
     }
 
+    /**
+     * An {@link java.util.Iterator} which iterates over this {@link DPPParser.options.OptionsList}.
+     * Note that is not allowed to remove items with this iterator.
+     */
     private class OptionsIterator implements Iterator<Option> {
 
         private int index;
@@ -108,6 +116,11 @@ public class OptionsList implements Iterable<Option> {
             final Option result = options.get(index);
             index++;
             return result;
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException("Cannot remove, operation is not supported");
         }
     }
 

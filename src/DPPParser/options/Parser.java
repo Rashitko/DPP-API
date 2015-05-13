@@ -5,6 +5,7 @@ import DPPParser.parsers.ParsingException;
 import DPPParser.parsers.StringArgumentParser;
 
 import javax.annotation.Nullable;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +20,7 @@ public class Parser {
     private final List<String> regularArguments;
 
     /**
-     * This constructor sets the set of options which are to be used during parsing
+     * Sets the set of options which are to be used during parsing
      *
      * @param optionsList the set of options which are to be used during parsing
      */
@@ -30,22 +31,22 @@ public class Parser {
     }
 
     /**
-     * This method does the parsing and creates the object containing the resulting information
+     * Does the parsing and creates the object containing the resulting information
      *
      * @param arguments input argument to parse
      */
     public void resolveOptions(String[] arguments) {
         final ArrayList<String> args = new ArrayList<String>(Arrays.asList(arguments));
         while (!args.isEmpty()) {
-            String switchString = args.remove(0);
-            if (switchString.equals("--")) {
+            String optionSwitch = args.remove(0);
+            if (isRegularArgsDelimiter(optionSwitch)) {
                 break;
             }
-            if (switchString.startsWith("-")) {
+            if (optionSwitch.startsWith("-")) {
                 Option option;
-                final String optionName = getOptionName(switchString);
+                final String optionName = getOptionName(optionSwitch);
                 final Option.Builder.SwitchType switchType;
-                if (switchString.startsWith("--")) {
+                if (optionSwitch.startsWith("--")) {
                     option = optionsList.findOptionByLongSwitch(optionName);
                     switchType = Option.Builder.SwitchType.LONG_SWITCH;
                 } else {
@@ -53,16 +54,24 @@ public class Parser {
                     switchType = Option.Builder.SwitchType.SHORT_SWITCH;
                 }
                 String argValue = null;
-                if (!args.isEmpty() && !isArgOption(args.get(0))) {
+                if (!args.isEmpty() && !isOption(args.get(0))) {
                     argValue = args.remove(0);
                 }
                 processOption(option, optionName, switchType, argValue);
             } else {
-                unmatchedArguments.add(switchString);
+                unmatchedArguments.add(optionSwitch);
             }
         }
         regularArguments.addAll(args);
         checkMissedOptions();
+    }
+
+    /**
+     * @param optionSwitch
+     * @return true if optionSwitch equals "--"
+     */
+    private boolean isRegularArgsDelimiter(String optionSwitch) {
+        return optionSwitch.equals("--");
     }
 
     /**
@@ -83,14 +92,14 @@ public class Parser {
      * If {@link Option} is null, that means the option is not provided in the {@link OptionsList}
      * and will be created as an extra {@link Option}.
      *
-     * @param option     option which should be processed, can be null
-     * @param optionName string representation of one of the {@link Option}'s switches (either short or long)
-     * @param switchType switch type by which can be the {@link Option} found
-     * @param value      string representation of {@link Option}'s argument value, can be null if no argument was provided
+     * @param option       option which should be processed, can be null
+     * @param optionSwitch string representation of one of the {@link Option}'s switches (either short or long)
+     * @param switchType   switch type by which can be the {@link Option} found
+     * @param value        string representation of {@link Option}'s argument value, can be null if no argument was provided
      */
-    private void processOption(@Nullable Option option, String optionName, Option.Builder.SwitchType switchType, @Nullable String value) {
+    private void processOption(@Nullable Option option, String optionSwitch, Option.Builder.SwitchType switchType, @Nullable String value) {
         if (option == null) {
-            createExtraOption(optionName, switchType, value);
+            createExtraOption(optionSwitch, switchType, value);
             return;
         }
         Option.ParseResult optionParseResult = Option.ParseResult.SUCCESS;
@@ -115,6 +124,9 @@ public class Parser {
     private Option.ParseResult setOptionArgValue(Option option, String value, Option.ParseResult optionParseResult) {
         try {
             final Argument argument = option.getArgument();
+            if (argument == null) {
+                return optionParseResult;
+            }
             Object parsedArgValue = argument.getArgumentParser().parse(value);
             //noinspection unchecked
             argument.setValue(parsedArgValue);
@@ -133,20 +145,23 @@ public class Parser {
 
     /**
      * Creates an {@link Option} with the {@link DPPParser.options.Option.ParseResult#EXTRA} flag set.
+     * {@link Option} created in this method might have illegal switch.
      *
      * @param optionName string representation of {@link Option}'s switch (either short or long)
      * @param switchType type of switch by which can be the {@link Option} found
      * @param value      value of {@link Option}'s argument, can be null if no argument was provided
      */
     private void createExtraOption(String optionName, Option.Builder.SwitchType switchType, String value) {
-        Option.Builder builder = new Option.Builder(optionName, switchType);
+        Option.Builder builder = new Option.Builder(optionName, switchType, true);
         if (value != null) {
             builder.setOptionalArgument(new Argument<String>(new StringArgumentParser()));
         }
         Option option = builder.build();
         if (option.hasArgument() && value != null) {
-            //noinspection unchecked
-            option.getArgument().setValue(value);
+            if (option.getArgument() != null) {
+                //noinspection unchecked
+                option.getArgument().setValue(value);
+            }
             option.setParseResult(Option.ParseResult.EXTRA);
         }
         optionsList.add(option);
@@ -154,17 +169,23 @@ public class Parser {
 
     /**
      * @param arg
-     * @return true if arg doesn't represent option or regular arguments delimiter
+     * @return true if arg does represent option
      */
-    private boolean isArgOption(String arg) {
-        return arg.startsWith("-") && !arg.equals("--");
+    private boolean isOption(String arg) {
+        try {
+            //noinspection ResultOfMethodCallIgnored
+            Double.parseDouble(arg);
+            return false;
+        } catch (NumberFormatException ignore) {
+        }
+        return arg.startsWith("-") && !isRegularArgsDelimiter(arg);
     }
 
     /**
      * Removes dashes in the beginning of option.
      * If provided string does not contain '-' or "--" in the beginning, nothing is changed.
      *
-     * @param arg provided string representing the {@link Option}
+     * @param arg provided string representing the {@link Option} switch
      * @return string with removed leading '-' or "--"
      */
     private String getOptionName(String arg) {
@@ -178,6 +199,7 @@ public class Parser {
     }
 
     /**
+     * Returns list of {@link Option}s for which {@link Option#isFailed()} returns true
      * @return list of failed options
      */
     public List<Option> getFailedOptions() {
@@ -191,6 +213,10 @@ public class Parser {
     }
 
     /**
+     * Returns list of {@link Option}s for which {@link Option#isExtra()} returns true, those are
+     * {@link Option}s which weren't defined in the {@link OptionsList}. Note that these {@link Option}s
+     * might have illegal switch. Also all extra {@link Option}s have a {@link Argument}&lt;String&gt; set.
+     * This {@link Argument} might not have value.
      * @return list of extra options
      */
     public List<Option> getExtraOptions() {
@@ -204,6 +230,8 @@ public class Parser {
     }
 
     /**
+     * Returns list of {@link Option}s, for which {@link Option#isMissed()} returns true, those are mandatory
+     * {@link Option}s which weren't set on the command line
      * @return list of missed options
      */
     public List<Option> getMissedOptions() {

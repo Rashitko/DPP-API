@@ -84,6 +84,9 @@ public class Argument<T> {
         return null;
     }
 
+    /**
+     * @return errors from {@link ArgumentParser}
+     */
     @Nullable
     private String getParsingError() {
         if (value == null) {
@@ -93,6 +96,9 @@ public class Argument<T> {
 
     }
 
+    /**
+     * @return errors from {@link Constraint}
+     */
     @Nullable
     private String getConstraintError() {
         if (value != null) {
@@ -103,10 +109,16 @@ public class Argument<T> {
         return null;
     }
 
+    /**
+     * @return true if value is set
+     */
     public boolean hasValue() {
         return value != null;
     }
 
+    /**
+     * @return true, if constraint is set
+     */
     public boolean hasConstraint() {
         return constraint != null;
     }
