@@ -176,7 +176,6 @@ public class Option {
     }
 
     /**
-     *
      * @return true if {@link Option#getParseResult()} returns
      * {@link DPPParser.options.Option.ParseResult#SUCCESS} or {@link DPPParser.options.Option.ParseResult#EXTRA}
      */
