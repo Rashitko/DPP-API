@@ -146,9 +146,6 @@ public class Parser {
     private Option.ParseResult setOptionArgValue(Option option, String value, Option.ParseResult optionParseResult) {
         try {
             final Argument argument = option.getArgument();
-            if (argument == null) {
-                return optionParseResult;
-            }
             Object parsedArgValue = argument.getArgumentParser().parse(value);
             argument.setValue(parsedArgValue);
             if (argument.hasConstraint()) {
@@ -187,6 +184,7 @@ public class Parser {
     }
 
     /**
+     * Everything that starts with - and cannot be parsed as number is considered as an {@link Option}
      * @param arg
      * @return true if arg does represent option
      */
@@ -279,13 +277,13 @@ public class Parser {
      * the "456" will be unmatched argument
      */
     public List<String> getUnmatchedArguments() {
-        return unmatchedArguments;
+        return new ArrayList<String>(unmatchedArguments);
     }
 
     /**
      * @return list of arguments after "--" delimiter
      */
     public List<String> getRegularArguments() {
-        return regularArguments;
+        return new ArrayList<String>(regularArguments);
     }
 }
