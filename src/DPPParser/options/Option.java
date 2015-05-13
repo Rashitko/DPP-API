@@ -156,7 +156,7 @@ public class Option {
     /**
      * Gets parse result
      *
-     * @return parse result
+     * @return parse result, or null if option is not mandatory and wasn't set
      * @see ParseResult
      */
     @Nullable
@@ -171,6 +171,15 @@ public class Option {
      */
     void setParseResult(ParseResult parseResult) {
         this.parseResult = parseResult;
+    }
+
+    /**
+     *
+     * @return true if {@link Option#getParseResult()} returns
+     * {@link DPPParser.options.Option.ParseResult#SUCCESS} or {@link DPPParser.options.Option.ParseResult#EXTRA}
+     */
+    public boolean isSuccessful() {
+        return parseResult == ParseResult.SUCCESS || parseResult == ParseResult.EXTRA;
     }
 
     /**

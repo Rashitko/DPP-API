@@ -54,7 +54,8 @@ public class Parser {
                     switchType = Option.Builder.SwitchType.SHORT_SWITCH;
                 }
                 String argValue = null;
-                if (!args.isEmpty() && !isOption(args.get(0))) {
+                final boolean optionTakesArg = option == null || option.hasArgument();
+                if (optionTakesArg && !args.isEmpty() && !isOption(args.get(0))) {
                     argValue = args.remove(0);
                 }
                 processOption(option, optionName, switchType, argValue);

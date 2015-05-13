@@ -100,7 +100,7 @@
                 <pathelement path="${example.classes.dir}"/>
                 <pathelement path="${dist.dir}/${libName}-${libVersion}.jar"/>
             </classpath>
-            <arg line="-short --uberlongoption 20"/>
+            <arg line="--size 15 -- --zulu"/>
         </java>
     </target>
 

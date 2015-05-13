@@ -4,7 +4,7 @@ import DPPParser.arguments.Constraint;
 
 /**
  * This class represent a constraint which is fulfilled when the argument value is higher or equal than
- * the specified lower bound
+ * the specified lower bound. This bound is inclusive.
  *
  * @param <T> type for which the lower bound is defined
  */
