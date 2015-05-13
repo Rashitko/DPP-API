@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Testy pro Byte, Long, Short a Integer parsers hotovy">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DPPParser/options/Option.java" afterPath="$PROJECT_DIR$/src/DPPParser/options/Option.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/OptionTest.java" afterPath="$PROJECT_DIR$/src/tests/OptionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/testng.xml" afterPath="$PROJECT_DIR$/src/tests/testng.xml" />
+    <list default="true" id="86f72335-d4b0-4d0d-8a85-9115a7a2dad9" name="Default" comment="Testy Option hotovy">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/ExampleProgram.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="du2.iws" />
@@ -37,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OptionTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OptionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/OptionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4056604">
+            <state vertical-scroll-proportion="-3.6440678">
               <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
               <folding>
                 <element signature="e#2387#2395#0" expanded="true" />
@@ -50,22 +48,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExampleProgram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/examples/ExampleProgram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-              <folding />
+            <state vertical-scroll-proportion="1.1918505">
+              <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+              <folding>
+                <element signature="e#696#705#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,14 +64,14 @@
         <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Option.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.0">
-              <caret line="493" column="33" selection-start-line="493" selection-start-column="33" selection-end-line="493" selection-end-column="33" />
+              <caret line="491" column="33" selection-start-line="491" selection-start-column="33" selection-end-line="491" selection-end-column="33" />
               <folding>
                 <element signature="e#1399#1400#0" expanded="true" />
                 <element signature="e#1457#1458#0" expanded="true" />
                 <element signature="e#3629#3630#0" expanded="true" />
                 <element signature="e#3663#3664#0" expanded="true" />
-                <element signature="e#4813#4814#0" expanded="true" />
-                <element signature="e#4847#4848#0" expanded="true" />
+                <element signature="e#4816#4817#0" expanded="true" />
+                <element signature="e#4850#4851#0" expanded="true" />
                 <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
                 <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
               </folding>
@@ -851,7 +841,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431338081400</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Testy Option hotovy">
+      <created>1431516061530</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1431516061530</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -878,26 +874,26 @@
     <frame x="-1" y="30" width="1368" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937598" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -916,7 +912,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ArgumentPresence enum vytahnut z option tridy a vytvoren pro nej vlastni soubor" />
     <MESSAGE value="Cele okomentovane. Z enumu ArgumentPresence odebrana hodnota Fordbidden. Delalo by to pak bordel kdyby uzivatel volal v Builderu metodu setArgument a nastavil mu, ze je forbidden. Pokud je forbidden, tak ho tam nenastavuji. Myslim ze by to pak akorat odpovidalo spatne na metodu ptajici se zda ma dana optiona argument" />
     <MESSAGE value="Metoda setArgument nahrazena dvemi, setMandatoryArgument a setOptionalArgument. U setMandatoryArgument pridan parameter rikajici jaka ma byt vyhozena hlaska, pokud tam mandatory argument chybi. U optional to neni treba. To pred tim neslo, jelikoz tato funkcionalita byla uzavrena v jedne metode" />
     <MESSAGE value="Nejake dalsi upravy v optinech, pridano reseni chyb v optionech. Bude to ale treba jeste prodiskutovat na chvilku. My umoznujeme uzivateli volat metody neprikald getParsingErrors jeste predtim nez probehne samotne parsovani. Pokud ale budeme vzdy vracet treba null ze jeste nedoslo k sparsovani tak je to aso dobre oduvodnene" />
@@ -941,7 +936,8 @@
     <MESSAGE value="Pridany testy pro kontrolu hranic pro IntegerArgumentParser" />
     <MESSAGE value="Testy pro ShortParser ( stejny pattern jako pro IntegerParser) pridany" />
     <MESSAGE value="Testy pro Byte, Long, Short a Integer parsers hotovy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testy pro Byte, Long, Short a Integer parsers hotovy" />
+    <MESSAGE value="Testy Option hotovy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testy Option hotovy" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -995,8 +991,8 @@
             <element signature="e#1457#1458#0" expanded="true" />
             <element signature="e#3629#3630#0" expanded="true" />
             <element signature="e#3663#3664#0" expanded="true" />
-            <element signature="e#4813#4814#0" expanded="true" />
-            <element signature="e#4847#4848#0" expanded="true" />
+            <element signature="e#4816#4817#0" expanded="true" />
+            <element signature="e#4850#4851#0" expanded="true" />
             <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
             <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
           </folding>
@@ -1074,8 +1070,8 @@
             <element signature="e#1457#1458#0" expanded="true" />
             <element signature="e#3629#3630#0" expanded="true" />
             <element signature="e#3663#3664#0" expanded="true" />
-            <element signature="e#4813#4814#0" expanded="true" />
-            <element signature="e#4847#4848#0" expanded="true" />
+            <element signature="e#4816#4817#0" expanded="true" />
+            <element signature="e#4850#4851#0" expanded="true" />
             <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
             <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
           </folding>
@@ -1153,8 +1149,8 @@
             <element signature="e#1457#1458#0" expanded="true" />
             <element signature="e#3629#3630#0" expanded="true" />
             <element signature="e#3663#3664#0" expanded="true" />
-            <element signature="e#4813#4814#0" expanded="true" />
-            <element signature="e#4847#4848#0" expanded="true" />
+            <element signature="e#4816#4817#0" expanded="true" />
+            <element signature="e#4850#4851#0" expanded="true" />
             <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
             <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
           </folding>
@@ -1372,22 +1368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/ExampleProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1399,14 +1379,14 @@
     <entry file="file://$PROJECT_DIR$/src/DPPParser/options/Option.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
-          <caret line="493" column="33" selection-start-line="493" selection-start-column="33" selection-end-line="493" selection-end-column="33" />
+          <caret line="491" column="33" selection-start-line="491" selection-start-column="33" selection-end-line="491" selection-end-column="33" />
           <folding>
             <element signature="e#1399#1400#0" expanded="true" />
             <element signature="e#1457#1458#0" expanded="true" />
             <element signature="e#3629#3630#0" expanded="true" />
             <element signature="e#3663#3664#0" expanded="true" />
-            <element signature="e#4813#4814#0" expanded="true" />
-            <element signature="e#4847#4848#0" expanded="true" />
+            <element signature="e#4816#4817#0" expanded="true" />
+            <element signature="e#4850#4851#0" expanded="true" />
             <element signature="method#setMandatoryArgument#0;class#Builder#0;class#Option#0" expanded="false" />
             <element signature="method#setOptionalArgument#0;class#Builder#0;class#Option#0" expanded="false" />
           </folding>
@@ -1415,11 +1395,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/OptionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4056604">
+        <state vertical-scroll-proportion="-3.6440678">
           <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
           <folding>
             <element signature="e#2387#2395#0" expanded="true" />
             <element signature="e#3098#3106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1918505">
+          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+          <folding>
+            <element signature="e#696#705#0" expanded="true" />
           </folding>
         </state>
       </provider>
